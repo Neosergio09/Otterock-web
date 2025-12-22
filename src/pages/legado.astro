@@ -1,0 +1,156 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Image } from 'astro:assets';
+
+// --- IMPORTACIÓN DE IMÁGENES ---
+import rockoImg from '../assets/rocko-legado.jpg'; 
+import certIA from '../assets/certificados/ia.png';
+import certWeb from '../assets/certificados/html.png';
+import certDocker from '../assets/certificados/docker.png';
+import certJS from '../assets/certificados/js.png';
+
+const sandTextColor = "#F5E6CA";
+---
+
+<MainLayout title="El Legado | Otterock">
+  <section class="max-w-4xl mx-auto py-20 px-6">
+    
+    <div class="mb-16 text-center">
+      <p class="text-otter-deep font-bold tracking-widest uppercase text-sm mb-4 font-body">Nuestra Esencia</p>
+      
+      <h1 class="text-4xl md:text-6xl font-black text-otter-deep leading-tight font-display">
+        Donde la lealtad se transforma en código.
+      </h1>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <div class="space-y-6 text-lg leading-relaxed text-slate-700 font-body">
+        <p>
+          Otterock no nació en una oficina fría, nació de un vínculo inquebrantable. Este proyecto es una dedicatoria a <strong class="text-otter-deep">Rocko</strong>, mi compañero de vida.
+        </p>
+        <p>
+          Rocko no buscaba encajar en estándares; era un alma única con cuerpo de Schnauzer blanco. Con el paso de los años, el tiempo dejó su marca en él: su ojito se tornó blanco por una catarata, una señal de los años compartidos y de una nobleza que solo el tiempo otorga.
+        </p>
+      </div>
+      
+      <div class="relative group rounded-2xl overflow-hidden shadow-2xl aspect-square bg-otter-deep">
+        <Image 
+          src={rockoImg} 
+          alt="Rocko, el Schnauzer blanco que inspira Otterock" 
+          width={800}            
+          quality="mid"          
+          format="webp"          
+          loading="eager"        
+          fetchpriority="high"   
+          class="w-full h-full object-cover object-left transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-otter-deep/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+          <p class="text-otter-sand font-medium italic">"Rocko: El alma detrás de cada línea de código."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white/50 border border-otter-deep/10 rounded-3xl p-10 shadow-sm mb-20">
+      <h2 class="text-2xl font-bold mb-8 text-center font-display text-otter-deep">Inspirados por su camino, prometemos:</h2>
+      <div class="grid md:grid-cols-3 gap-8 font-body text-center">
+        <div>
+          <div class="text-otter-accent text-3xl mb-3">◈</div>
+          <h3 class="font-bold mb-2 text-otter-deep">Fidelidad</h3>
+          <p class="text-sm text-slate-600">No somos un proveedor, somos tu socio tecnológico hasta el final.</p>
+        </div>
+        <div>
+          <div class="text-otter-accent text-3xl mb-3">◈</div>
+          <h3 class="font-bold mb-2 text-otter-deep">Visión Clara</h3>
+          <p class="text-sm text-slate-600">Como el ojito de Rocko, vemos más allá de lo superficial para optimizar tu SEO.</p>
+        </div>
+        <div>
+          <div class="text-otter-accent text-3xl mb-3">◈</div>
+          <h3 class="font-bold mb-2 text-otter-deep">Solidez</h3>
+          <p class="text-sm text-slate-600">Construimos webs que resisten el tiempo, firmes como una roca.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-10">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-black text-otter-deep mb-2 font-display">Respaldo Técnico de Élite</h2>
+        <p class="text-slate-600 font-body">Certificaciones que avalan nuestra capacidad de crear soluciones modernas.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="group overflow-hidden rounded-2xl border border-otter-deep/10 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="aspect-video overflow-hidden bg-slate-100">
+            <Image 
+              src={certIA} 
+              alt="Certificado Platzi IA" 
+              width={500}
+              quality="low"
+              format="webp"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+          </div>
+          <div class="p-4 bg-otter-deep text-white text-center">
+            <p class="font-bold text-xs tracking-widest uppercase font-body">IA & Machine Learning Specialist</p>
+          </div>
+        </div>
+
+        <div class="group overflow-hidden rounded-2xl border border-otter-deep/10 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="aspect-video overflow-hidden bg-slate-100">
+            <Image 
+              src={certWeb} 
+              alt="Certificado Platzi Frontend" 
+              width={500}
+              quality="low"
+              format="webp"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+          </div>
+          <div class="p-4 bg-otter-deep text-white text-center">
+            <p class="font-bold text-xs tracking-widest uppercase font-body">Frontend Architecture Expert</p>
+          </div>
+        </div>
+
+        <div class="group overflow-hidden rounded-2xl border border-otter-deep/10 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="aspect-video overflow-hidden bg-slate-100">
+            <Image 
+              src={certDocker} 
+              alt="Certificado Platzi Docker" 
+              width={500}
+              quality="low"
+              format="webp"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+          </div>
+          <div class="p-4 bg-otter-deep text-white text-center">
+            <p class="font-bold text-xs tracking-widest uppercase font-body">Cloud Infrastructure & Docker</p>
+          </div>
+        </div>
+
+        <div class="group overflow-hidden rounded-2xl border border-otter-deep/10 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="aspect-video overflow-hidden bg-slate-100">
+            <Image 
+              src={certJS} 
+              alt="Certificado Platzi JavaScript" 
+              width={500}
+              quality="low"
+              format="webp"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            />
+          </div>
+          <div class="p-4 bg-otter-deep text-white text-center">
+            <p class="font-bold text-xs tracking-widest uppercase font-body">JavaScript Logic & Development</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-24 text-center bg-otter-sand/30 p-12 rounded-3xl border border-dashed border-otter-deep/20">
+      <p class="text-otter-deep font-body italic mb-6">"Desarrollo con alma: Honrando un legado en cada pixel."</p>
+      
+      <a href="/contacto" class="inline-block bg-otter-accent text-otter-deep font-bold py-4 px-10 rounded-full hover:bg-otter-deep hover:text-white transition-all shadow-lg hover:-translate-y-1 font-body">
+        Hablemos de tu proyecto
+      </a>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,43 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Blog">
+  <section class="flex flex-col items-center justify-center min-h-[70vh] px-6">
+    <div class="max-w-3xl w-full text-center">
+      <h2 id="typewriter" class="text-3xl md:text-5xl font-mono text-otter-deep leading-relaxed min-h-[150px]">
+        </h2>
+      
+      <div id="blog-content" class="opacity-0 transition-opacity duration-1000 mt-12">
+        <p class="text-slate-500 mb-8 italic text-xl">Historias sobre código, lealtad y el futuro digital.</p>
+        <div class="grid gap-6">
+          <div class="p-6 border-2 border-otter-deep/10 rounded-2xl hover:border-otter-accent transition-colors text-left group cursor-pointer">
+            <span class="text-otter-accent font-bold text-sm">PRÓXIMAMENTE</span>
+            <h3 class="text-2xl font-bold text-otter-deep mt-2 group-hover:text-otter-accent">La Guía Definitiva de Velocidad Web 2025</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const text = "In the world of code, every letter tells a story... This is ours.";
+    const typewriterElement = document.getElementById('typewriter');
+    const contentElement = document.getElementById('blog-content');
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        typewriterElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 50); // Velocidad de la letra
+      } else {
+        // Mostrar el resto del contenido cuando termine de escribir
+        contentElement.classList.remove('opacity-0');
+      }
+    }
+
+    // Iniciar la magia
+    window.onload = type;
+  </script>
+</MainLayout>

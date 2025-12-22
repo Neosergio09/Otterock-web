@@ -1,16 +1,29 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Inicio">
+  <section class="flex flex-col items-center justify-center min-h-[80vh] py-20 px-6 text-center">
+    <span class="bg-otter-accent/10 text-otter-accent px-4 py-1 rounded-full text-sm font-bold mb-6">
+      BIENVENIDO A LA AGENCIA 🐾
+    </span>
+
+    <h1 class="text-5xl md:text-8xl font-black text-otter-deep tracking-tighter leading-tight">
+      Desarrollo con <span class="text-otter-accent">alma.</span>
+    </h1>
+    
+    <p class="mt-8 text-xl text-slate-600 max-w-2xl leading-relaxed">
+      En <strong>Otterock</strong>, transformamos la solidez del código en huellas digitales con propósito. 
+      Inspirados en la lealtad de nuestro legado, construimos el futuro de tu marca.
+    </p>
+
+    <div class="mt-12 flex flex-col sm:flex-row gap-4">
+      <a href="/contacto" class="bg-otter-deep text-otter-sand px-10 py-4 rounded-full font-bold hover:bg-otter-accent transition-all shadow-lg hover:shadow-otter-accent/20 text-center">
+        Inicia tu proyecto
+      </a>
+      <a href="/legado" class="border-2 border-otter-deep text-otter-deep px-10 py-4 rounded-full font-bold hover:bg-otter-deep hover:text-otter-sand transition-all text-center">
+        Nuestra historia
+      </a>
+    </div>
+  </section>
+</MainLayout>

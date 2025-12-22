@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* Definimos nuestros colores de marca aquí para la versión 4 */
+  --color-otter-deep: #083344;
+  --color-otter-sand: #F5F5F4;
+  --color-otter-accent: #8B5CF6;
+}
+
+/* Aplicamos el fondo arena por defecto a toda la web */
+@layer base {
+  body {
+    background-color: var(--color-otter-sand);
+    color: var(--color-otter-deep);
+  }
+}

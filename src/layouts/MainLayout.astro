@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Otterock: Huellas digitales con propósito y alma" } = Astro.props;
+const { pathname } = Astro.url;
+
+// Lógica de idiomas (se mantiene igual, funciona bien)
+const esPath = pathname.startsWith('/en') ? pathname.replace('/en', '') || '/' : pathname;
+const enPath = pathname.startsWith('/en') ? pathname : `/en${pathname === '/' ? '' : pathname}`;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<title>{title} | Otterock - Desarrollo Web con Alma</title>
+		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow" />
+		
+		<link rel="canonical" href={Astro.url} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Otterock | Huellas digitales con alma" />
+		<meta property="og:description" content="Desarrollo web boutique inspirado en la lealtad y la solidez técnica." />
+		<meta property="og:image" content="/img/og-image.jpg" />
+		<meta name="google-site-verification" content="9GvIoMfUqvCGUNPcOsBMVERznQe0G4Su6grkfPNyBBY" />
+	</head>
+	
+	<body class="min-h-screen flex flex-col bg-otter-sand">
+		<header class="p-6 max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-4">
+			<a href="/" class="text-2xl font-bold text-otter-deep hover:opacity-80 transition-opacity">
+				Otterock<span class="text-otter-accent">.</span>
+			</a>
+			
+			<nav class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-base font-medium text-otter-deep">
+				<a href="/" class="hover:text-otter-accent transition">Inicio</a>
+				<a href="/servicios" class="hover:text-otter-accent transition">Servicios</a>
+				<a href="/legado" class="hover:text-otter-accent transition">El Legado</a>
+				
+				<a href="/blog" class="font-bold text-otter-deep hover:text-otter-accent transition">Blog</a>
+				
+				<div class="flex items-center gap-6 pl-4 border-l border-otter-deep/20 ml-2">
+					<div class="flex gap-2 text-sm uppercase font-bold text-otter-deep">
+						<a href={esPath} class="hover:text-otter-accent transition-colors">ES</a>
+						<span class="text-otter-deep/30">|</span>
+						<a href={enPath} class="hover:text-otter-accent transition-colors">EN</a>
+					</div>
+					
+					<a href="/contacto" class="bg-otter-deep text-white px-6 py-2 rounded-full font-bold hover:bg-otter-accent transition-all shadow-md hover:-translate-y-0.5">
+						Contacto
+					</a>
+				</div>
+			</nav>
+		</header>
+
+		<main class="flex-grow">
+			<slot />
+		</main>
+
+		<footer class="bg-otter-deep text-otter-sand p-10 mt-20">
+			<div class="max-w-7xl mx-auto text-center">
+				<p class="text-lg font-medium">Otterock</p>
+				<p class="text-sm opacity-80 mt-2">Construido con amor y código sólido en honor a Rocko.</p>
+				<p class="text-xs opacity-80 mt-6">© 2025 Otterock – Desarrollo web que trasciende.</p>
+			</div>
+		</footer>
+	</body>
+</html>
