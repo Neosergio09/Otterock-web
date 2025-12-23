@@ -17,7 +17,6 @@ const sandTextColor = "#F5E6CA";
     
     <div class="mb-16 text-center">
       <p class="text-otter-deep font-bold tracking-widest uppercase text-sm mb-4 font-body">Nuestra Esencia</p>
-      
       <h1 class="text-4xl md:text-6xl font-black text-otter-deep leading-tight font-display">
         Donde la lealtad se transforma en código.
       </h1>
@@ -29,7 +28,7 @@ const sandTextColor = "#F5E6CA";
           Otterock no nació en una oficina fría, nació de un vínculo inquebrantable. Este proyecto es una dedicatoria a <strong class="text-otter-deep">Rocko</strong>, mi compañero de vida.
         </p>
         <p>
-          Rocko no buscaba encajar en estándares; era un alma única con cuerpo de Schnauzer blanco. Con el paso de los años, el tiempo dejó su marca en él: su ojito se tornó blanco por una catarata, una señal de los años compartidos y de una nobleza que solo el tiempo otorga.
+          Rocko era un alma única con cuerpo de Schnauzer blanco. Con el paso de los años, el tiempo dejó su marca en él: su ojito se tornó blanco por una catarata, una señal de una nobleza que solo el tiempo otorga.
         </p>
       </div>
       
@@ -71,6 +70,26 @@ const sandTextColor = "#F5E6CA";
       </div>
     </div>
 
+    <div class="mb-20 bg-otter-sand/40 border-2 border-dashed border-otter-accent/40 rounded-[2.5rem] p-8 md:p-12">
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="text-center md:text-left md:w-2/3">
+          <span class="text-otter-accent font-bold tracking-tighter text-sm uppercase block mb-2">🐾 Lealtad en Acción</span>
+          <h2 class="text-3xl font-black text-otter-deep mb-6 font-display">Nuestra Huella Social</h2>
+          <p class="text-slate-700 text-lg leading-relaxed font-body">
+            En honor a la lealtad de Rocko, hemos decidido que cada proyecto exitoso en <strong>Otterock</strong> debe alimentar una esperanza. 
+            <br><br>
+            <strong>Por cada sitio web que construimos, destinamos parte de nuestras ganancias para donar bultos de alimento a fundaciones de perritos rescatados en Bogotá.</strong> 
+            No solo entregamos código sólido; entregamos bienestar a quienes no tienen voz.
+          </p>
+        </div>
+        <div class="md:w-1/3 flex justify-center">
+           <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center text-5xl shadow-xl border-4 border-otter-accent shadow-otter-accent/10">
+            🦴
+           </div>
+        </div>
+      </div>
+    </div>
+
     <div class="py-10">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-black text-otter-deep mb-2 font-display">Respaldo Técnico de Élite</h2>
@@ -78,17 +97,9 @@ const sandTextColor = "#F5E6CA";
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
         <div class="group overflow-hidden rounded-2xl border border-otter-deep/10 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
           <div class="aspect-video overflow-hidden bg-slate-100">
-            <Image 
-              src={certIA} 
-              alt="Certificado Platzi IA" 
-              width={500}
-              quality="low"
-              format="webp"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-            />
+            <Image src={certIA} alt="Certificado Platzi IA" width={500} quality="low" format="webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-4 bg-otter-deep text-white text-center">
             <p class="font-bold text-xs tracking-widest uppercase font-body">IA & Machine Learning Specialist</p>
@@ -97,59 +108,24 @@ const sandTextColor = "#F5E6CA";
 
         <div class="group overflow-hidden rounded-2xl border border-otter-deep/10 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
           <div class="aspect-video overflow-hidden bg-slate-100">
-            <Image 
-              src={certWeb} 
-              alt="Certificado Platzi Frontend" 
-              width={500}
-              quality="low"
-              format="webp"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-            />
+            <Image src={certWeb} alt="Certificado Platzi Frontend" width={500} quality="low" format="webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-4 bg-otter-deep text-white text-center">
             <p class="font-bold text-xs tracking-widest uppercase font-body">Frontend Architecture Expert</p>
           </div>
         </div>
-
-        <div class="group overflow-hidden rounded-2xl border border-otter-deep/10 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
-          <div class="aspect-video overflow-hidden bg-slate-100">
-            <Image 
-              src={certDocker} 
-              alt="Certificado Platzi Docker" 
-              width={500}
-              quality="low"
-              format="webp"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-            />
-          </div>
-          <div class="p-4 bg-otter-deep text-white text-center">
-            <p class="font-bold text-xs tracking-widest uppercase font-body">Cloud Infrastructure & Docker</p>
-          </div>
+        
         </div>
-
-        <div class="group overflow-hidden rounded-2xl border border-otter-deep/10 bg-white shadow-sm hover:shadow-xl transition-all duration-500">
-          <div class="aspect-video overflow-hidden bg-slate-100">
-            <Image 
-              src={certJS} 
-              alt="Certificado Platzi JavaScript" 
-              width={500}
-              quality="low"
-              format="webp"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-            />
-          </div>
-          <div class="p-4 bg-otter-deep text-white text-center">
-            <p class="font-bold text-xs tracking-widest uppercase font-body">JavaScript Logic & Development</p>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <div class="mt-24 text-center bg-otter-sand/30 p-12 rounded-3xl border border-dashed border-otter-deep/20">
-      <p class="text-otter-deep font-body italic mb-6">"Desarrollo con alma: Honrando un legado en cada pixel."</p>
+    <div class="mt-24 text-center bg-otter-deep p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
+      <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+      <p class="text-otter-sand font-body italic mb-6 text-xl relative z-10">
+        "Desarrollemos con alma y dejemos una huella juntos."
+      </p>
       
-      <a href="/contacto" class="inline-block bg-otter-accent text-otter-deep font-bold py-4 px-10 rounded-full hover:bg-otter-deep hover:text-white transition-all shadow-lg hover:-translate-y-1 font-body">
-        Hablemos de tu proyecto
+      <a href="/contacto" class="inline-block bg-otter-accent text-otter-deep font-bold py-4 px-12 rounded-full hover:bg-white transition-all shadow-xl hover:-translate-y-1 font-body relative z-10">
+        Empezar mi proyecto y ayudar
       </a>
     </div>
   </section>
