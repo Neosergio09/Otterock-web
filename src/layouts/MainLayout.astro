@@ -6,7 +6,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 interface Props {
   title: string;
   description?: string;
-  image?: string; // Nuevo: Para poder cambiar la imagen al compartir en redes
+  image?: string; // Para poder cambiar la imagen al compartir en redes
 }
 
 const { 
@@ -21,13 +21,11 @@ const { pathname } = Astro.url;
 // Si la URL empieza por /en, el idioma es inglés, si no, español.
 const lang = pathname.startsWith('/en') ? 'en' : 'es';
 
-// Lógica de navegación (se mantiene)
+// Lógica de navegación
 const esPath = pathname.startsWith('/en') ? pathname.replace('/en', '') || '/' : pathname;
 const enPath = pathname.startsWith('/en') ? pathname : `/en${pathname === '/' ? '' : pathname}`;
 
 // 2. Canonical URL Limpia
-// Usamos Astro.site para asegurar que sea la URL absoluta base definida en tu config
-// new URL(pathname, Astro.site) genera la URL perfecta sin parámetros raros (?fbclid=...)
 const canonicalURL = new URL(pathname, Astro.site);
 ---
 
@@ -53,6 +51,31 @@ const canonicalURL = new URL(pathname, Astro.site);
     <meta name="google-site-verification" content="9GvIoMfUqvCGUNPcOsBMVERznQe0G4Su6grkfPNyBBY" />
     
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Otterock",
+      "image": new URL("/img/og-image.jpg", Astro.site), 
+      "@id": Astro.site,
+      "url": Astro.site,
+      "logo": new URL("/favicon.svg", Astro.site),
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogotá",
+        "addressRegion": "Cundinamarca",
+        "addressCountry": "CO"
+      },
+      "description": "Agencia de desarrollo web en Bogotá experta en Astro y Tailwind. Especialistas en sitios web rápidos y SEO técnico. Tecnología con propósito social: donamos alimento a refugios caninos por cada proyecto.",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "City",
+        "name": "Bogotá"
+      },
+      "knowsAbout": ["Desarrollo Web", "Astro Framework", "SEO", "Tailwind CSS", "Diseño Web"],
+      "slogan": "Donde tu crecimiento alimenta una esperanza."
+    })}>
+    </script>
   </head>
   
   <body class="min-h-screen flex flex-col bg-otter-sand">
