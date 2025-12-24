@@ -5,9 +5,13 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // ¡ESTA LÍNEA ES LA QUE QUITA EL ERROR 404!
-  site: 'https://otterock-web.vercel.app', 
+  site: 'https://otterock-web.vercel.app',
   
+  // AGREGA ESTA LÍNEA:
+  // Fuerza a que las URLs no tengan barra al final (ej: /about)
+  // Esto evita errores de redirección en Google Search Console.
+  trailingSlash: 'never',
+
   vite: {
     plugins: [tailwindcss()]
   },
