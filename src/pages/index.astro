@@ -2,28 +2,81 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Inicio">
-  <section class="flex flex-col items-center justify-center min-h-[80vh] py-20 px-6 text-center">
-    <span class="bg-otter-accent/10 text-otter-accent px-4 py-1 rounded-full text-sm font-bold mb-6">
-      BIENVENIDO A LA AGENCIA 🐾
+<MainLayout title="Inicio | Desarrollo Web con Propósito">
+  <section class="flex flex-col items-center justify-center min-h-[85vh] py-20 px-6 text-center bg-gradient-to-b from-white to-otter-sand/20">
+    <span class="bg-otter-accent/10 text-otter-accent px-4 py-1 rounded-full text-sm font-bold mb-6 tracking-wide animate-fade-in">
+      TECNOLOGÍA CON ALMA 🐾
     </span>
 
-    <h1 class="text-5xl md:text-8xl font-black text-otter-deep tracking-tighter leading-tight">
-      Desarrollo con <span class="text-otter-accent">alma.</span>
+    <h1 class="text-5xl md:text-8xl font-black text-otter-deep tracking-tighter leading-tight max-w-5xl">
+      Donde tu crecimiento alimenta una <span class="text-otter-accent">esperanza.</span>
     </h1>
     
-    <p class="mt-8 text-xl text-slate-600 max-w-2xl leading-relaxed">
-      En <strong>Otterock</strong>, transformamos la solidez del código en huellas digitales con propósito. 
-      Inspirados en la lealtad de nuestro legado, construimos el futuro de tu marca.
+    <p class="mt-8 text-xl text-slate-600 max-w-2xl leading-relaxed font-body">
+      En <strong>Otterock</strong>, fusionamos ingeniería web de élite con un propósito mayor. 
+      Creamos tu huella digital mientras dejamos una huella real en el mundo.
     </p>
 
     <div class="mt-12 flex flex-col sm:flex-row gap-4">
-      <a href="/contacto" class="bg-otter-deep text-otter-sand px-10 py-4 rounded-full font-bold hover:bg-otter-accent transition-all shadow-lg hover:shadow-otter-accent/20 text-center">
+      <a href="/contacto" class="bg-otter-deep text-otter-sand px-10 py-4 rounded-full font-bold hover:bg-otter-accent transition-all shadow-lg hover:shadow-otter-accent/20 text-center transform hover:-translate-y-1">
         Inicia tu proyecto
       </a>
       <a href="/legado" class="border-2 border-otter-deep text-otter-deep px-10 py-4 rounded-full font-bold hover:bg-otter-deep hover:text-otter-sand transition-all text-center">
-        Nuestra historia
+        Conoce el legado
       </a>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-white relative overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="bg-otter-deep rounded-[3rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 shadow-2xl relative z-10">
+        
+        <div class="lg:w-1/2 text-otter-sand">
+          <h2 class="text-4xl md:text-5xl font-black mb-6 font-display leading-tight">
+            Una web terminada, <br/>
+            <span class="text-otter-accent">un bulto entregado.</span>
+          </h2>
+          <p class="text-lg opacity-90 mb-8 font-body leading-relaxed">
+            Nuestra agencia nació en honor a Rocko, y su lealtad nos guía. Por eso, hemos decidido que parte de la inversión de cada uno de nuestros clientes se destina directamente a <strong>donar bultos de alimento</strong> para fundaciones de perritos rescatados en Bogotá.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="border-l-4 border-otter-accent pl-4">
+              <span class="block text-3xl font-black">100%</span>
+              <span class="text-sm uppercase tracking-widest opacity-70">Transparencia</span>
+            </div>
+            <div class="border-l-4 border-otter-accent pl-4">
+              <span class="block text-3xl font-black">+Alimento</span>
+              <span class="text-sm uppercase tracking-widest opacity-70">Para refugios</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 relative">
+          <div class="bg-otter-sand/10 rounded-3xl p-8 border border-white/10 backdrop-blur-sm text-center">
+            <span class="text-6xl mb-6 block">🦴</span>
+            <h3 class="text-2xl font-bold text-white mb-4">¿Por qué lo hacemos?</h3>
+            <p class="text-otter-sand/80 text-sm mb-6">
+              Porque creemos que las empresas exitosas deben ser guardianes de quienes no tienen voz. Al trabajar con nosotros, tu marca no solo gana visibilidad, gana propósito.
+            </p>
+            <div class="inline-block bg-otter-accent text-otter-deep px-6 py-2 rounded-full font-black text-sm uppercase tracking-widest">
+              Impacto Otterock
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-otter-accent/5 rounded-full blur-3xl"></div>
+  </section>
+
+  <section class="py-20 px-6 max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-otter-deep mb-12 font-display">Tecnología respaldada por la excelencia</h2>
+    <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+      <span class="text-xl font-black font-display tracking-widest">ASTRO</span>
+      <span class="text-xl font-black font-display tracking-widest">TAILWIND</span>
+      <span class="text-xl font-black font-display tracking-widest">VERCEL</span>
+      <span class="text-xl font-black font-display tracking-widest">SEO 100%</span>
     </div>
   </section>
 </MainLayout>
