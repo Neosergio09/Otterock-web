@@ -3,37 +3,82 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Blog | Historias con Alma">
-  <section class="flex flex-col items-center justify-center min-h-[70vh] px-6 py-20">
-    <div class="max-w-3xl w-full text-center">
+  <section class="flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 bg-slate-50/50">
+    <div class="max-w-4xl w-full text-center">
       
-      <h2 id="typewriter" class="text-3xl md:text-5xl font-mono text-otter-deep leading-relaxed min-h-[150px]">
+      <h2 id="typewriter" class="text-3xl md:text-5xl font-mono text-otter-deep leading-relaxed min-h-[150px] mb-4">
       </h2>
       
-      <div id="blog-content" class="opacity-0 transition-opacity duration-1000 mt-12 text-left">
-        <p class="text-slate-500 mb-10 italic text-xl text-center">Historias sobre código, lealtad y el futuro digital.</p>
+      <div id="blog-content" class="opacity-0 translate-y-8 transition-all duration-1000 mt-12 text-left">
+        <p class="text-slate-500 mb-12 italic text-xl text-center font-body">
+          Historias sobre código, lealtad y el futuro digital.
+        </p>
         
-        <div class="grid gap-6">
+        <div class="grid gap-8">
           
-          <a href="/posts/artesania-digital" class="group block">
-            <div class="p-8 border-2 border-otter-deep/10 rounded-3xl hover:border-otter-accent transition-all bg-white hover:shadow-xl transform hover:-translate-y-1">
-              <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div>
-                  <span class="text-otter-accent font-bold text-xs tracking-widest uppercase mb-2 block">Filosofía Otterock</span>
-                  <h3 class="text-2xl font-bold text-otter-deep group-hover:text-otter-accent transition-colors font-display">
+          <a href="/posts/artesania-digital" class="blog-card group block opacity-0 translate-y-4 transition-all duration-700">
+            <div class="relative overflow-hidden p-8 border border-otter-deep/10 rounded-[2rem] bg-white hover:border-otter-accent/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all">
+              
+              <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div class="w-full md:w-32 h-32 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-4xl group-hover:bg-otter-accent/10 transition-colors shrink-0">
+                  ✨
+                </div>
+
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-3">
+                    <span class="bg-otter-sand text-otter-deep text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Filosofía</span>
+                    <span class="text-slate-400 text-xs font-body">5 min lectura</span>
+                  </div>
+                  
+                  <h3 class="text-2xl font-bold text-otter-deep group-hover:text-otter-accent transition-colors font-display mb-3">
                     Más que código: Por qué tu negocio merece "Artesanía Digital"
                   </h3>
-                  <p class="text-slate-600 mt-3 font-body leading-relaxed">
-                    Vivimos en la era de lo instantáneo. Descubre por qué dejar de buscar la web más rápida y empezar a buscar la web más humana es la mejor estrategia para 2025.
+                  <p class="text-slate-600 font-body leading-relaxed text-base">
+                    Descubre por qué dejar de buscar la web más rápida y empezar a buscar la web más humana es la mejor estrategia para conectar de verdad.
                   </p>
                 </div>
-                <div class="text-otter-deep/20 group-hover:text-otter-accent text-4xl transition-colors">
-                  →
+
+                <div class="hidden md:block self-center">
+                  <div class="w-12 h-12 rounded-full border border-otter-deep/10 flex items-center justify-center group-hover:bg-otter-deep group-hover:text-white transition-all transform group-hover:translate-x-2">
+                    <span class="text-xl">→</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
 
-          </div>
+          <a href="/posts/palabras-clave" class="blog-card group block opacity-0 translate-y-4 transition-all duration-700">
+            <div class="relative overflow-hidden p-8 border border-otter-deep/10 rounded-[2rem] bg-white hover:border-otter-accent/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all">
+              
+              <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div class="w-full md:w-32 h-32 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-4xl group-hover:bg-otter-accent/10 transition-colors shrink-0">
+                  🔍
+                </div>
+
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-3">
+                    <span class="bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Estrategia</span>
+                    <span class="text-slate-400 text-xs font-body">4 min lectura</span>
+                  </div>
+                  
+                  <h3 class="text-2xl font-bold text-otter-deep group-hover:text-otter-accent transition-colors font-display mb-3">
+                    ¿Tu web habla el mismo idioma que tus clientes?
+                  </h3>
+                  <p class="text-slate-600 font-body leading-relaxed text-base">
+                    La verdad sobre las palabras clave y cómo el lenguaje correcto puede convertir tu web de un folleto invisible en un imán de ventas.
+                  </p>
+                </div>
+
+                <div class="hidden md:block self-center">
+                  <div class="w-12 h-12 rounded-full border border-otter-deep/10 flex items-center justify-center group-hover:bg-otter-deep group-hover:text-white transition-all transform group-hover:translate-x-2">
+                    <span class="text-xl">→</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
       </div>
     </div>
   </section>
@@ -42,20 +87,27 @@ import MainLayout from '../layouts/MainLayout.astro';
     const text = "En el mundo del código, cada letra cuenta una historia... Esta es la nuestra.";
     const typewriterElement = document.getElementById('typewriter');
     const contentElement = document.getElementById('blog-content');
+    const cards = document.querySelectorAll('.blog-card');
     let i = 0;
 
     function type() {
-      if (i < text.length) {
+      if (typewriterElement && i < text.length) {
         typewriterElement.innerHTML += text.charAt(i);
         i++;
-        setTimeout(type, 50); // Velocidad de la letra
+        setTimeout(type, 40); 
       } else {
-        // Mostrar el resto del contenido cuando termine de escribir
-        contentElement.classList.remove('opacity-0');
+        // Revelar contenedor principal
+        contentElement?.classList.remove('opacity-0', 'translate-y-8');
+        
+        // Revelar tarjetas una por una (Staggered)
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.remove('opacity-0', 'translate-y-4');
+          }, 300 * (index + 1));
+        });
       }
     }
 
-    // Iniciar la magia
     window.onload = type;
   </script>
 </MainLayout>
