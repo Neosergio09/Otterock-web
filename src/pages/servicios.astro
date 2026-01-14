@@ -2,110 +2,111 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Servicios | Otterock">
+<MainLayout title="Servicios | Otterock - Ingeniería Digital con Propósito">
   <section class="max-w-6xl mx-auto py-20 px-6">
     
     <div class="text-center mb-20">
-      <h1 class="text-5xl md:text-6xl font-black text-otter-deep mb-6 font-display">
-        Soluciones con Propósito
+      <span class="text-otter-accent font-bold tracking-widest uppercase text-xs mb-4 block font-body">Lo que hacemos por ti</span>
+      <h1 class="text-5xl md:text-7xl font-black text-otter-deep mb-6 font-display leading-tight">
+        Soluciones que <span class="text-otter-accent">dejan huella.</span>
       </h1>
-      <p class="text-xl text-slate-700 max-w-3xl mx-auto font-body">
-        No solo entregamos código; construimos herramientas de crecimiento diseñadas para durar, ser encontradas y evolucionar.
+      <p class="text-xl text-slate-700 max-w-3xl mx-auto font-body leading-relaxed">
+        Fusionamos la ingeniería de vanguardia con un propósito social. Construimos herramientas digitales que no solo crecen, sino que transforman realidades.
       </p>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       
-      <div class="bg-white p-8 rounded-3xl border border-otter-deep/5 shadow-sm hover:shadow-xl transition-all group">
-        <div class="w-14 h-14 bg-otter-sand rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-otter-accent group-hover:text-white transition-colors">
+      <div class="bg-white p-8 rounded-[2.5rem] border border-otter-deep/5 shadow-sm hover:shadow-2xl transition-all group hover:-translate-y-2 duration-500">
+        <div class="w-16 h-16 bg-otter-sand rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-otter-deep group-hover:text-otter-sand transition-all duration-500 shadow-inner">
           🚀
         </div>
-        <h2 class="text-xl font-bold mb-4 font-display text-otter-deep">Ingeniería Web</h2>
-        <p class="text-slate-600 mb-6 text-sm font-body">
-          Webs ultra-rápidas con Astro. Optimizamos cada milisegundo para una experiencia sin esperas.
+        <h2 class="text-2xl font-bold mb-4 font-display text-otter-deep">Frontend de Élite</h2>
+        <p class="text-slate-600 mb-6 text-sm font-body leading-relaxed">
+          Webs ultra-rápidas con <strong>Astro</strong>. Optimizamos cada milisegundo para que Google te ame y tus clientes no esperen.
         </p>
-        <ul class="text-xs space-y-2 text-otter-deep/70 font-body">
-          <li>• Core Web Vitals al 100%</li>
-          <li>• Arquitectura escalable</li>
-          <li>• Seguridad garantizada</li>
+        <ul class="text-[11px] space-y-2 text-otter-deep/70 font-bold uppercase tracking-wider font-body">
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> Core Web Vitals 100/100</li>
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> Carga Instantánea</li>
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> SEO Técnico Nativo</li>
         </ul>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl border border-otter-deep/5 shadow-sm hover:shadow-xl transition-all group">
-        <div class="w-14 h-14 bg-otter-sand rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-otter-accent group-hover:text-white transition-colors">
+      <div class="bg-white p-8 rounded-[2.5rem] border-2 border-otter-accent/20 shadow-md hover:shadow-2xl transition-all group hover:-translate-y-2 duration-500 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+          <span class="text-4xl">⚡</span>
+        </div>
+        <div class="w-16 h-16 bg-otter-accent/10 rounded-2xl flex items-center justify-center text-3xl mb-6 text-otter-accent group-hover:bg-otter-accent group-hover:text-white transition-all duration-500">
+          🔋
+        </div>
+        <h2 class="text-2xl font-bold mb-4 font-display text-otter-deep">Backend Dinámico</h2>
+        <p class="text-slate-600 mb-6 text-sm font-body leading-relaxed">
+          Potenciamos tu web con <strong>Supabase</strong>. Gestión de datos, usuarios y contenido en tiempo real con seguridad bancaria.
+        </p>
+        <ul class="text-[11px] space-y-2 text-otter-deep/70 font-bold uppercase tracking-wider font-body">
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> Bases de Datos Real-time</li>
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> Autenticación Segura</li>
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> Escalabilidad Total</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-8 rounded-[2.5rem] border border-otter-deep/5 shadow-sm hover:shadow-2xl transition-all group hover:-translate-y-2 duration-500">
+        <div class="w-16 h-16 bg-otter-sand rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-otter-deep group-hover:text-otter-sand transition-all duration-500 shadow-inner">
           🔍
         </div>
-        <h2 class="text-xl font-bold mb-4 font-display text-otter-deep">SEO de Autoridad</h2>
-        <p class="text-slate-600 mb-6 text-sm font-body">
-          Estrategias que te posicionan donde tus clientes están buscando activamente.
+        <h2 class="text-2xl font-bold mb-4 font-display text-otter-deep">SEO de Autoridad</h2>
+        <p class="text-slate-600 mb-6 text-sm font-body leading-relaxed">
+          No solo existes, destacas. Estrategias de palabras clave diseñadas para que el cliente te encuentre primero.
         </p>
-        <ul class="text-xs space-y-2 text-otter-deep/70 font-body">
-          <li>• Auditoría técnica</li>
-          <li>• Estrategia de Keywords</li>
-          <li>• SEO Semántico</li>
+        <ul class="text-[11px] space-y-2 text-otter-deep/70 font-bold uppercase tracking-wider font-body">
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> Auditoría Semántica</li>
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> Estrategia de Keywords</li>
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> Indexación Garantizada</li>
         </ul>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl border border-otter-accent/20 shadow-md hover:shadow-xl transition-all group ring-2 ring-otter-accent/10">
-        <div class="w-14 h-14 bg-otter-accent rounded-2xl flex items-center justify-center text-2xl mb-6 text-white transition-colors">
-          🛡️
-        </div>
-        <h2 class="text-xl font-bold mb-4 font-display text-otter-deep">Gestión Técnica</h2>
-        <p class="text-slate-600 mb-6 text-sm font-body">
-          Nos encargamos de que los robots de Google siempre encuentren tu puerta abierta y funcional.
-        </p>
-        <ul class="text-xs space-y-2 text-otter-deep/70 font-body">
-          <li>• Google Search Console</li>
-          <li>• Monitoreo de Speed Insights</li>
-          <li>• Reportes de salud mensual</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-8 rounded-3xl border border-otter-deep/5 shadow-sm hover:shadow-xl transition-all group">
-        <div class="w-14 h-14 bg-otter-sand rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-otter-accent group-hover:text-white transition-colors">
+      <div class="bg-white p-8 rounded-[2.5rem] border border-otter-deep/5 shadow-sm hover:shadow-2xl transition-all group hover:-translate-y-2 duration-500">
+        <div class="w-16 h-16 bg-otter-sand rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-otter-deep group-hover:text-otter-sand transition-all duration-500 shadow-inner">
           🎨
         </div>
-        <h2 class="text-xl font-bold mb-4 font-display text-otter-deep">Diseño Orgánico</h2>
-        <p class="text-slate-600 mb-6 text-sm font-body">
-          Interfaces que respiran. Experiencias que guían al usuario naturalmente a la conversión.
+        <h2 class="text-2xl font-bold mb-4 font-display text-otter-deep">Diseño Orgánico</h2>
+        <p class="text-slate-600 mb-6 text-sm font-body leading-relaxed">
+          Interfaces humanas que respiran. Diseñamos experiencias que guían al usuario naturalmente hacia la compra.
         </p>
-        <ul class="text-xs space-y-2 text-otter-deep/70 font-body">
-          <li>• Prototipado UX</li>
-          <li>• Diseño UI Moderno</li>
-          <li>• Optimización de Conversión</li>
+        <ul class="text-[11px] space-y-2 text-otter-deep/70 font-bold uppercase tracking-wider font-body">
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> UI Minimalista y Moderna</li>
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> UX enfocada en Conversión</li>
+          <li class="flex items-center gap-2"><span class="text-otter-accent">✔</span> Mobile First Design</li>
         </ul>
       </div>
 
     </div>
 
-    <div class="mt-20 p-10 bg-white rounded-[2.5rem] border border-otter-deep/5 flex flex-col md:flex-row items-center gap-10">
+    <div class="mt-20 p-10 bg-otter-deep rounded-[3rem] text-otter-sand flex flex-col md:flex-row items-center gap-12 shadow-2xl">
       <div class="md:w-1/2">
-        <h3 class="text-3xl font-bold text-otter-deep mb-4 font-display">Tú eres el dueño, nosotros los guardianes</h3>
-        <p class="text-slate-700 leading-relaxed font-body">
-          En <strong>Otterock</strong>, creemos en la transparencia total. Configuramos tus propiedades de <strong>Google Search Console</strong> para que tú mantengas la propiedad legal de tus datos, mientras nosotros gestionamos técnicamente tus sitemaps y errores de rastreo. Además, con <strong>Vercel Speed Insights</strong>, monitoreamos la experiencia real de tus usuarios en tiempo real para asegurar que el rendimiento nunca baje de la excelencia.
+        <span class="text-otter-accent font-black uppercase text-xs tracking-[0.2em] mb-4 block">Ecosistemas Dinámicos</span>
+        <h3 class="text-3xl md:text-4xl font-bold mb-6 font-display">Tus datos bajo tu control, potenciados por nosotros.</h3>
+        <p class="opacity-80 leading-relaxed font-body text-lg">
+          Con el poder de <strong>Supabase</strong>, creamos paneles personalizados donde puedes ver el impacto de tu negocio en tiempo real. Desde la gestión de tus clientes hasta el contador de bultos de alimento donados, todo fluye bajo una infraestructura segura y transparente.
         </p>
       </div>
-      <div class="md:w-1/2 grid grid-cols-2 gap-4">
-        <div class="p-6 bg-otter-sand/30 rounded-2xl text-center">
-          <span class="block text-3xl font-black text-otter-deep">100/100</span>
-          <span class="text-xs uppercase tracking-widest font-bold text-slate-500">Rendimiento Real</span>
+      <div class="md:w-1/2 grid grid-cols-1 gap-4">
+        <div class="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-sm">
+          <p class="text-otter-accent font-bold mb-2">● Gestión Transparente</p>
+          <p class="text-sm opacity-70">Usamos GitHub y Vercel para que veas cada cambio en tiempo real. Sin cajas negras.</p>
         </div>
-        <div class="p-6 bg-otter-sand/30 rounded-2xl text-center">
-          <span class="block text-3xl font-black text-otter-deep">Propio</span>
-          <span class="text-xs uppercase tracking-widest font-bold text-slate-500">Control de Datos</span>
+        <div class="p-8 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-sm">
+          <p class="text-otter-accent font-bold mb-2">● Propiedad Total</p>
+          <p class="text-sm opacity-70">Las cuentas de Supabase y Google son tuyas. Nosotros somos tus guardianes técnicos.</p>
         </div>
       </div>
     </div>
 
-    <div class="mt-24 bg-otter-deep rounded-[3rem] p-12 text-center text-otter-sand relative overflow-hidden">
-      <div class="absolute top-0 left-0 w-full h-full bg-white/5 pointer-events-none"></div>
-      
-      <div class="relative z-10">
-        <h2 class="text-3xl font-bold mb-6 font-display">¿Listo para que tu proyecto deje huella?</h2>
-        <a href="/contacto" class="inline-block bg-white text-otter-deep px-10 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-white transition-all hover:-translate-y-1 shadow-lg font-body">
-          Solicitar presupuesto
-        </a>
-      </div>
+    <div class="mt-24 text-center">
+      <h2 class="text-3xl font-bold text-otter-deep mb-8 font-display italic">¿Construimos algo que valga la pena?</h2>
+      <a href="/contacto" class="inline-block bg-otter-accent text-otter-deep px-12 py-5 rounded-full font-black uppercase tracking-widest hover:bg-otter-deep hover:text-white transition-all hover:scale-105 shadow-xl shadow-otter-accent/20">
+        Empezar mi transformación digital
+      </a>
     </div>
   </section>
 </MainLayout>
