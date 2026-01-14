@@ -2,16 +2,15 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
-
-import vercel from '@astrojs/vercel';
+import vercel from '@astrojs/vercel/serverless'; // Cambiamos a serverless para mejor compatibilidad
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://otterock-web.vercel.app',
+  
+  // 1. ACTIVAR EL MODO SERVIDOR (Indispensable para la API)
+  output: 'server', 
 
-  // AGREGA ESTA LÍNEA:
-  // Fuerza a que las URLs no tengan barra al final (ej: /about)
-  // Esto evita errores de redirección en Google Search Console.
   trailingSlash: 'never',
 
   vite: {
@@ -19,5 +18,9 @@ export default defineConfig({
   },
 
   integrations: [sitemap()],
-  adapter: vercel()
+  
+  // 2. CONFIGURAR EL ADAPTADOR
+  adapter: vercel({
+    webAnalytics: { enabled: true }, // Opcional: activa analíticas de Vercel
+  })
 });
