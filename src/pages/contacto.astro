@@ -27,12 +27,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
       <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-otter-deep/5">
         
-        <form action="https://formsubmit.co/otterock11@gmail.com" method="POST" class="space-y-6">
-          
-          <input type="hidden" name="_subject" value="🚀 ¡Nuevo mensaje desde la Web de Otterock!">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-
+        <form id="contact-form" class="space-y-6">
           <div>
             <label class="block text-sm font-bold text-otter-deep mb-2">Tu Nombre</label>
             <input 
@@ -66,12 +61,63 @@ import MainLayout from '../layouts/MainLayout.astro';
             ></textarea>
           </div>
 
-          <button type="submit" class="w-full bg-otter-deep text-otter-sand py-5 rounded-2xl font-black text-lg hover:bg-otter-accent hover:-translate-y-1 transition-all shadow-lg">
+          <button 
+            type="submit" 
+            id="submit-btn"
+            class="w-full bg-otter-deep text-otter-sand py-5 rounded-2xl font-black text-lg hover:bg-otter-accent hover:-translate-y-1 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          >
             Enviar Mensaje 🐾
           </button>
+
+          <p id="form-status" class="text-center font-bold mt-4 hidden"></p>
         </form>
       </div>
 
     </div>
   </section>
+
+  <script>
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const status = document.getElementById('form-status');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Estado de carga
+      btn.disabled = true;
+      btn.innerText = "Enviando mensaje...";
+      if (status) status.classList.add('hidden');
+
+      const formData = new FormData(form);
+
+      try {
+        // Enviamos los datos a nuestra propia ruta API
+        const response = await fetch('/api/send-email.json', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          if (status) {
+            status.innerText = "¡Mensaje enviado! Te escribiremos muy pronto. ✨";
+            status.className = "text-center font-bold mt-4 text-green-600";
+            status.classList.remove('hidden');
+          }
+          form.reset();
+        } else {
+          throw new Error();
+        }
+      } catch (error) {
+        if (status) {
+          status.innerText = "Ups, algo salió mal. Por favor intenta de nuevo.";
+          status.className = "text-center font-bold mt-4 text-red-600";
+          status.classList.remove('hidden');
+        }
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "Enviar Mensaje 🐾";
+      }
+    });
+  </script>
 </MainLayout>
