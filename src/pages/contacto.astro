@@ -93,7 +93,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
       try {
         // Enviamos los datos a nuestra propia ruta API
-        const response = await fetch('/api/send-email.json', {
+        const response = await fetch('/api/send', {
           method: 'POST',
           body: formData,
         });
