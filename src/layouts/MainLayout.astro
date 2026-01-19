@@ -1,29 +1,48 @@
 ---
-import '../styles/global.css';
-// Corrección: La importación de SpeedInsights debe estar limpia
+import "../styles/global.css";
+import SEOSchema from "../components/SEOSchema.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 
 interface Props {
   title: string;
   description?: string;
-  image?: string; // Para poder cambiar la imagen al compartir en redes
+  image?: string;
+  // SEO Props
+  type?: "website" | "article" | "profile" | "faq";
+  articleData?: {
+    publishedTime: string;
+    modifiedTime?: string;
+    authorName: string;
+    section?: string;
+    tags?: string[];
+  };
+  faqData?: {
+    question: string;
+    answer: string;
+  }[];
 }
 
-const { 
-  title, 
+const {
+  title,
   description = "Otterock: Huellas digitales con propósito y alma",
-  image = "/img/og-image.jpg"
+  image = "/img/og-image.jpg",
+  type = "website",
+  articleData,
+  faqData,
 } = Astro.props;
 
 const { pathname } = Astro.url;
 
 // 1. Lógica de Idioma Dinámico
-// Si la URL empieza por /en, el idioma es inglés, si no, español.
-const lang = pathname.startsWith('/en') ? 'en' : 'es';
+const lang = pathname.startsWith("/en") ? "en" : "es";
 
 // Lógica de navegación
-const esPath = pathname.startsWith('/en') ? pathname.replace('/en', '') || '/' : pathname;
-const enPath = pathname.startsWith('/en') ? pathname : `/en${pathname === '/' ? '' : pathname}`;
+const esPath = pathname.startsWith("/en")
+  ? pathname.replace("/en", "") || "/"
+  : pathname;
+const enPath = pathname.startsWith("/en")
+  ? pathname
+  : `/en${pathname === "/" ? "" : pathname}`;
 
 // 2. Canonical URL Limpia
 const canonicalURL = new URL(pathname, Astro.site);
@@ -35,70 +54,85 @@ const canonicalURL = new URL(pathname, Astro.site);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
+
     <title>{title}</title>
-    
+
     <meta name="description" content={description} />
-    
+
     <link rel="canonical" href={canonicalURL} />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, Astro.url)} />
 
-    <meta name="google-site-verification" content="9GvIoMfUqvCGUNPcOsBMVERznQe0G4Su6grkfPNyBBY" />
-    
+    <meta
+      name="google-site-verification"
+      content="9GvIoMfUqvCGUNPcOsBMVERznQe0G4Su6grkfPNyBBY"
+    />
+
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Otterock",
-      "image": new URL("/img/og-image.jpg", Astro.site), 
-      "@id": Astro.site,
-      "url": Astro.site,
-      "logo": new URL("/favicon.svg", Astro.site),
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bogotá",
-        "addressRegion": "Cundinamarca",
-        "addressCountry": "CO"
-      },
-      "description": "Agencia de desarrollo web en Bogotá experta en Astro y Tailwind. Especialistas en sitios web rápidos y SEO técnico. Tecnología con propósito social: donamos alimento a refugios caninos por cada proyecto.",
-      "priceRange": "$$",
-      "areaServed": {
-        "@type": "City",
-        "name": "Bogotá"
-      },
-      "knowsAbout": ["Desarrollo Web", "Astro Framework", "SEO", "Tailwind CSS", "Diseño Web"],
-      "slogan": "Donde tu crecimiento alimenta una esperanza."
-    })}>
-    </script>
+    <SEOSchema
+      title={title}
+      description={description}
+      image={image}
+      type={type}
+      articleData={articleData}
+      faqData={faqData}
+    />
   </head>
-  
+
   <body class="min-h-screen flex flex-col bg-otter-sand">
-    <header class="p-6 max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-4">
-      <a href="/" class="text-2xl font-bold text-otter-deep hover:opacity-80 transition-opacity">
+    <header
+      class="p-6 max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-4"
+    >
+      <a
+        href="/"
+        class="text-2xl font-bold text-otter-deep hover:opacity-80 transition-opacity"
+      >
         Otterock<span class="text-otter-accent">.</span>
       </a>
-      
-      <nav class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-base font-medium text-otter-deep">
+
+      <nav
+        class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-base font-medium text-otter-deep"
+      >
         <a href="/" class="hover:text-otter-accent transition">Inicio</a>
-        <a href="/servicios" class="hover:text-otter-accent transition">Servicios</a>
-        <a href="/legado" class="hover:text-otter-accent transition">El Legado</a>
-        
-        <a href="/blog" class="font-bold text-otter-deep hover:text-otter-accent transition">Blog</a>
-        
-        <div class="flex items-center gap-6 pl-4 border-l border-otter-deep/20 ml-2">
+        <a href="/servicios" class="hover:text-otter-accent transition"
+          >Servicios</a
+        >
+        <a href="/legado" class="hover:text-otter-accent transition"
+          >El Legado</a
+        >
+
+        <a
+          href="/blog"
+          class="font-bold text-otter-deep hover:text-otter-accent transition"
+          >Blog</a
+        >
+
+        <div
+          class="flex items-center gap-6 pl-4 border-l border-otter-deep/20 ml-2"
+        >
           <div class="flex gap-2 text-sm uppercase font-bold text-otter-deep">
-            <a href={esPath} class={`hover:text-otter-accent transition-colors ${lang === 'es' ? 'text-otter-accent' : ''}`}>ES</a>
+            <a
+              href={esPath}
+              class={`hover:text-otter-accent transition-colors ${lang === "es" ? "text-otter-accent" : ""}`}
+              >ES</a
+            >
             <span class="text-otter-deep/30">|</span>
-            <a href={enPath} class={`hover:text-otter-accent transition-colors ${lang === 'en' ? 'text-otter-accent' : ''}`}>EN</a>
+            <a
+              href={enPath}
+              class={`hover:text-otter-accent transition-colors ${lang === "en" ? "text-otter-accent" : ""}`}
+              >EN</a
+            >
           </div>
-          
-          <a href="/contacto" class="bg-otter-deep text-white px-6 py-2 rounded-full font-bold hover:bg-otter-accent transition-all shadow-md hover:-translate-y-0.5">
+
+          <a
+            href="/contacto"
+            class="bg-otter-deep text-white px-6 py-2 rounded-full font-bold hover:bg-otter-accent transition-all shadow-md hover:-translate-y-0.5"
+          >
             Contacto
           </a>
         </div>
@@ -112,11 +146,15 @@ const canonicalURL = new URL(pathname, Astro.site);
     <footer class="bg-otter-deep text-otter-sand p-10 mt-20">
       <div class="max-w-7xl mx-auto text-center">
         <p class="text-lg font-medium">Otterock</p>
-        <p class="text-sm opacity-80 mt-2">Construido con amor y código sólido en honor a Rocko.</p>
-        <p class="text-xs opacity-80 mt-6">© 2025 Otterock – Desarrollo web que trasciende.</p>
+        <p class="text-sm opacity-80 mt-2">
+          Construido con amor y código sólido en honor a Rocko.
+        </p>
+        <p class="text-xs opacity-80 mt-6">
+          © 2025 Otterock – Desarrollo web que trasciende.
+        </p>
       </div>
     </footer>
-    
+
     <SpeedInsights />
   </body>
 </html>

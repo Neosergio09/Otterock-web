@@ -1,0 +1,118 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    image: string;
+    type?: "website" | "article" | "profile" | "faq";
+    articleData?: {
+        publishedTime: string;
+        modifiedTime?: string;
+        authorName: string;
+        section?: string;
+        tags?: string[];
+    };
+    faqData?: {
+        question: string;
+        answer: string;
+    }[];
+}
+
+const {
+    title,
+    description,
+    image,
+    type = "website",
+    articleData,
+    faqData,
+} = Astro.props;
+
+const siteUrl = Astro.site ? Astro.site.toString() : "https://otterock.com"; // Fallback
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
+const imageUrl = new URL(image, siteUrl);
+const logoUrl = new URL("/favicon.svg", siteUrl);
+
+// Base Schema - Organization / LocalBusiness
+const organizationSchema: Record<string, any> = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Otterock",
+    url: siteUrl,
+    logo: logoUrl.toString(),
+    image: imageUrl.toString(),
+    description:
+        "Agencia de desarrollo web en Bogotá experta en Astro y Tailwind. Especialistas en sitios web rápidos y SEO técnico.",
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Bogotá",
+        addressRegion: "Cundinamarca",
+        addressCountry: "CO",
+    },
+    priceRange: "$$",
+    areaServed: {
+        "@type": "City",
+        name: "Bogotá",
+    },
+    sameAs: [
+        // Add social profiles here if available
+    ],
+};
+
+// Article Schema
+let articleSchema: Record<string, any> | null = null;
+if (type === "article" && articleData) {
+    articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": canonicalUrl.toString(),
+        },
+        headline: title.substring(0, 110),
+        description: description,
+        image: imageUrl.toString(),
+        author: {
+            "@type": "Person",
+            name: articleData.authorName,
+            url: new URL("/legado", siteUrl).toString(), // Linking to 'Legado' or author page
+        },
+        publisher: {
+            "@type": "Organization",
+            name: "Otterock",
+            logo: {
+                "@type": "ImageObject",
+                url: logoUrl.toString(),
+            },
+        },
+        datePublished: articleData.publishedTime,
+        dateModified: articleData.modifiedTime || articleData.publishedTime,
+    };
+}
+
+// FAQ Schema
+let faqSchema: Record<string, any> | null = null;
+if (faqData && faqData.length > 0) {
+    faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqData.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+            },
+        })),
+    };
+}
+
+// Combine all schemas
+const schemas = [organizationSchema];
+if (articleSchema) schemas.push(articleSchema);
+if (faqSchema) schemas.push(faqSchema);
+---
+
+{
+    schemas.map((schema) => (
+        <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))
+}
