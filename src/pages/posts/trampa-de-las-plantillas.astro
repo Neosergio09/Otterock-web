@@ -1,0 +1,246 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+
+// Placeholder image since local asset is missing
+const blogHero =
+    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
+---
+
+<MainLayout
+    title="La Trampa de las Plantillas: Por qué lo 'fácil y rápido' termina saliendo muy caro"
+    description="Descubre por qué lo barato sale caro al elegir plantillas genéricas"
+    image={blogHero}
+    type="article"
+    articleData={{
+        publishedTime: "2026-02-02",
+        authorName: "Sergio Bello",
+        section: "Estrategia Web",
+        tags: ["Deuda Técnica", "WordPress", "Rendimiento", "Scalability"],
+    }}
+>
+    <article class="max-w-3xl mx-auto py-20 px-6">
+        <header class="mb-12 text-center">
+            <a
+                href="/blog"
+                class="inline-block mb-8 text-sm text-otter-deep font-bold hover:text-otter-accent transition-colors hover:underline underline-offset-4"
+            >
+                ← Volver al Blog
+            </a>
+
+            <span
+                class="text-slate-600 font-bold tracking-widest uppercase text-xs mb-4 block font-body"
+            >
+                Estrategia Web • 5 min de lectura
+            </span>
+
+            <h1
+                class="text-3xl md:text-5xl font-black text-otter-deep mb-6 leading-tight font-display"
+            >
+                La Trampa de las Plantillas: Por qué lo "fácil y rápido" termina
+                saliendo muy caro
+            </h1>
+
+            <div
+                class="rounded-3xl overflow-hidden shadow-xl mb-12 aspect-video bg-otter-deep relative"
+            >
+                <img
+                    src={blogHero}
+                    alt="Arquitectura moderna representando estructura sólida"
+                    class="w-full h-full object-cover opacity-90"
+                    loading="eager"
+                />
+            </div>
+
+            <!-- GEO Optimization: Key Takeaways (TL;DR) -->
+            <div
+                class="bg-indigo-50 border border-indigo-100 rounded-2xl p-8 text-left mb-12"
+            >
+                <h2
+                    class="text-lg font-black text-otter-deep uppercase tracking-wider mb-4 flex items-center gap-2"
+                >
+                    <span class="text-2xl">💡</span> Puntos Clave (TL;DR)
+                </h2>
+                <ul
+                    class="space-y-3 text-slate-700 list-disc list-inside font-medium font-body"
+                >
+                    <li>
+                        <strong>Lo barato sale caro:</strong> Las plantillas ahorran
+                        dinero hoy pero generan deuda técnica y limitan el crecimiento
+                        mañana.
+                    </li>
+                    <li>
+                        <strong>Código "Obeso":</strong> Las soluciones todo-en-uno
+                        cargan miles de líneas innecesarias, ralentizando tu sitio.
+                    </li>
+                    <li>
+                        <strong>Seguridad comprometida:</strong> El exceso de plugins
+                        es la puerta de entrada favorita para hackers.
+                    </li>
+                    <li>
+                        <strong>Identidad genérica:</strong> Tu marca única merece
+                        algo más que el mismo diseño que usan miles de otros negocios.
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="space-y-8 text-lg text-slate-700 leading-relaxed font-body">
+            <p
+                class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+            >
+                Cuando inicias un negocio, la tentación es enorme. Ves un
+                anuncio que dice: "Crea tu página web en 5 minutos, sin saber
+                programar, arrastrando y soltando". Suena perfecto, ¿verdad? Por
+                pocos dólares al mes, tienes algo que parece profesional. Pero
+                pasados unos meses, empiezan los problemas. Bienvenido a la <strong
+                    >Trampa de las Plantillas</strong
+                >.
+            </p>
+
+            <p>
+                En <strong>Otterock</strong>, creemos que hay una gran
+                diferencia entre alquilar una decoración y construir una
+                estructura. Hoy te explicamos por qué elegir el camino fácil
+                puede ser el error más costoso para tu marca.
+            </p>
+
+            <section>
+                <h2
+                    class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                >
+                    1. El problema del "Todo en Uno" (Código Basura)
+                </h2>
+                <p class="mb-4">
+                    Imagina que vas a hacer una caminata ligera y compras una
+                    mochila. Pero esa mochila viene obligatoriamente con una
+                    tienda de campaña, una estufa, tres bolsas de dormir y un
+                    generador eléctrico cosidos adentro. No puedes sacarlos.
+                    Tienes que cargar con todo ese peso aunque solo querías
+                    guardar una botella de agua.
+                </p>
+                <p>
+                    Así funcionan WordPress y las plantillas genéricas. Para
+                    servirle a todo el mundo (al panadero, al abogado y al
+                    hotel), traen miles de líneas de código que tu negocio NO
+                    necesita.
+                </p>
+                <ul class="list-disc list-inside mb-4 pl-4 space-y-2">
+                    <li>
+                        <strong>El resultado:</strong> Una web obesa y lenta.
+                    </li>
+                    <li>
+                        <strong>La solución Otterock:</strong> Usamos <em
+                            >Código Artesanal</em
+                        >. Escribimos línea por línea solo lo que tu proyecto
+                        necesita. Si tu web fuera un atleta, tendría 0% de grasa
+                        corporal.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2
+                    class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                >
+                    2. La pesadilla de los Plugins (Seguridad de Papel)
+                </h2>
+                <p class="mb-4">
+                    En el mundo de las plantillas, si quieres añadir una
+                    función, tienes que instalar un "Plugin". Pronto tienes 20
+                    piezas de software de diferentes creadores intentando
+                    funcionar juntas. Es una bomba de tiempo. Los plugins se
+                    desactualizan, abren huecos de seguridad y son la entrada
+                    favorita de los hackers.
+                </p>
+                <p>
+                    Nuestras aplicaciones web, construidas con tecnologías
+                    modernas como <strong>Astro</strong>, no dependen de este
+                    castillo de naipes. Son estructuras sólidas, cerradas y
+                    seguras.
+                </p>
+            </section>
+
+            <section>
+                <h2
+                    class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                >
+                    3. El Síndrome del Gemelo
+                </h2>
+                <p class="mb-4">
+                    ¿Alguna vez has entrado a una web y has sentido un "déjà
+                    vu"? Eso es porque miles de negocios usan la misma plantilla
+                    que tú. Si vendes experiencias únicas (como un Glamping de
+                    lujo), el lujo es exclusividad.
+                </p>
+                <div
+                    class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-6 italic text-slate-800"
+                >
+                    Una plantilla le dice a tu cliente: "Soy uno más del
+                    montón". Un desarrollo a medida le dice: "Soy único".
+                </div>
+            </section>
+
+            <section>
+                <h2
+                    class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                >
+                    4. Deuda Técnica: El techo de cristal
+                </h2>
+                <p class="mb-4">
+                    Las plataformas como Wix o Squarespace son excelentes...
+                    hasta que quieres crecer. El día que necesites una función
+                    específica que la plataforma no ofrece, te encontrarás con
+                    un muro. Estás atrapado en sus reglas.
+                </p>
+            </section>
+
+            <section>
+                <h2
+                    class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                >
+                    Conclusión: ¿Gasto o Inversión?
+                </h2>
+                <p class="mb-4">
+                    Una plantilla es barata hoy, pero la pagas con clientes
+                    perdidos y frustración técnica mañana. El desarrollo a
+                    medida es una inversión inicial mayor, sí. Pero es una
+                    propiedad tuya, optimizada para vender durante años y con la
+                    garantía de que Google encontrará una obra de ingeniería
+                    perfecta.
+                </p>
+                <p class="font-bold text-otter-deep">
+                    En Otterock, no usamos moldes. Esculpimos tu presencia
+                    digital para que encaje perfectamente con la grandeza de tu
+                    negocio.
+                </p>
+            </section>
+
+            <!-- E-E-A-T: Author Bio -->
+            <footer class="mt-16 pt-12 border-t border-slate-200">
+                <div class="flex items-center gap-6">
+                    <div
+                        class="w-20 h-20 rounded-full bg-otter-deep flex items-center justify-center text-3xl shrink-0 overflow-hidden"
+                    >
+                        👨‍💻
+                    </div>
+                    <div>
+                        <p
+                            class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1"
+                        >
+                            Escrito por
+                        </p>
+                        <h3 class="text-xl font-bold text-otter-deep">
+                            Sergio Bello
+                        </h3>
+                        <p class="text-slate-600 text-sm mt-1 max-w-lg">
+                            Director & Lead Developer. Especialista en crear
+                            arquitecturas digitales escalables y de alto
+                            rendimiento.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </article>
+</MainLayout>
