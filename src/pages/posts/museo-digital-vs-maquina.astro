@@ -1,14 +1,13 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-
-const blogHero =
-    "https://images.unsplash.com/photo-1542314831-c6a4d14b8ba2?auto=format&fit=crop&q=80&w=2070";
+import { Image } from "astro:assets";
+import blogHero from "../../assets/museo-difital.png";
 ---
 
 <MainLayout
     title="Tu web es hermosa, ¿pero vende?"
     description="La diferencia entre un museo digital y una máquina de reservas enfocada en conversión."
-    image={blogHero}
+    image={blogHero.src}
     type="article"
     articleData={{
         publishedTime: new Date().toISOString().split("T")[0],
@@ -42,9 +41,9 @@ const blogHero =
             <div
                 class="rounded-3xl overflow-hidden shadow-xl mb-12 aspect-video bg-otter-deep relative"
             >
-                <img
+                <Image
                     src={blogHero}
-                    alt="Interior de Hotel de Lujo - Diseño Estratégico"
+                    alt="Diferencia entre un diseño estético y un diseño funcional para conversión"
                     class="w-full h-full object-cover opacity-90"
                     loading="eager"
                 />

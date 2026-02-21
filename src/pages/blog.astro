@@ -1,5 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import blogHero from "../assets/museo-difital.png";
 ---
 
 <MainLayout title="Blog | Historias con Alma">
@@ -32,9 +34,13 @@ import MainLayout from "../layouts/MainLayout.astro";
             >
               <div class="flex flex-col md:flex-row gap-8 items-start">
                 <div
-                  class="w-full md:w-32 h-32 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-4xl group-hover:bg-otter-accent/10 transition-colors shrink-0"
+                  class="w-full md:w-32 h-32 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-4xl group-hover:bg-otter-accent/10 transition-colors shrink-0 overflow-hidden"
                 >
-                  🏛️
+                  <Image
+                    src={blogHero}
+                    alt="Diferencia entre un diseño estético y un diseño funcional para conversión"
+                    class="w-full h-full object-cover"
+                  />
                 </div>
 
                 <div class="flex-1">
