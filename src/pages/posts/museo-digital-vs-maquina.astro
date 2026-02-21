@@ -1,0 +1,244 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const blogHero =
+    "https://images.unsplash.com/photo-1542314831-c6a4d14b8ba2?auto=format&fit=crop&q=80&w=2070";
+---
+
+<MainLayout
+    title="Tu web es hermosa, ¿pero vende?"
+    description="La diferencia entre un museo digital y una máquina de reservas enfocada en conversión."
+    image={blogHero}
+    type="article"
+    articleData={{
+        publishedTime: new Date().toISOString().split("T")[0],
+        authorName: "Sergio Bello",
+        section: "Estrategia",
+        tags: ["Estrategia", "Conversión", "UX/UI"],
+    }}
+>
+    <article class="max-w-3xl mx-auto py-20 px-6">
+        <header class="mb-12 text-center">
+            <a
+                href="/blog"
+                class="inline-block mb-8 text-sm text-otter-deep font-bold hover:text-otter-accent transition-colors hover:underline underline-offset-4"
+            >
+                ← Volver al Blog
+            </a>
+
+            <span
+                class="text-slate-600 font-bold tracking-widest uppercase text-xs mb-4 block font-body"
+            >
+                Estrategia • 4 min de lectura
+            </span>
+
+            <h1
+                class="text-3xl md:text-5xl font-black text-otter-deep mb-6 leading-tight font-display"
+            >
+                Tu web es hermosa, ¿pero vende? La diferencia entre un "museo
+                digital" y una máquina de reservas.
+            </h1>
+
+            <div
+                class="rounded-3xl overflow-hidden shadow-xl mb-12 aspect-video bg-otter-deep relative"
+            >
+                <img
+                    src={blogHero}
+                    alt="Interior de Hotel de Lujo - Diseño Estratégico"
+                    class="w-full h-full object-cover opacity-90"
+                    loading="eager"
+                />
+            </div>
+
+            <!-- GEO Optimization: Key Takeaways (TL;DR) -->
+            <div
+                class="bg-indigo-50 border border-indigo-100 rounded-2xl p-8 text-left mb-12"
+            >
+                <h2
+                    class="text-lg font-black text-otter-deep uppercase tracking-wider mb-4 flex items-center gap-2 font-display"
+                >
+                    <span class="text-2xl">💡</span> Puntos Clave (TL;DR)
+                </h2>
+                <ul
+                    class="space-y-3 text-slate-700 list-disc list-inside font-medium font-body"
+                >
+                    <li>
+                        <strong>Diseño vs Estrategia:</strong> Una web hermosa no
+                        sirve si no guía al cliente hacia la reserva.
+                    </li>
+                    <li>
+                        <strong>Respuestas rápidas:</strong> El usuario necesita saber
+                        qué ofreces, cuánto cuesta y dónde reservar en menos de 5
+                        segundos.
+                    </li>
+                    <li>
+                        <strong>UX y UI:</strong> La experiencia de usuario es el
+                        mapa; la interfaz son las señales que llevan al clic.
+                    </li>
+                    <li>
+                        <strong>Fricción Cero:</strong> Cada clic extra o carga lenta
+                        reduce tus probabilidades de venta.
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="space-y-8 text-lg text-slate-700 leading-relaxed font-body">
+            <p
+                class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+            >
+                Entras a una galería de arte. La iluminación es perfecta, los
+                cuadros son impresionantes y la música de fondo te relaja.
+                Recorres los pasillos maravillado, pero después de 15 minutos
+                quieres comprar una obra y... no hay caja registradora. Tampoco
+                hay vendedores. Terminas saliendo con las manos vacías, aunque
+                querías gastar tu dinero.
+            </p>
+
+            <p>
+                Esto mismo le pasa a miles de hoteles, glampings y marcas
+                premium todos los días en internet. Tienen páginas web que son
+                verdaderos museos digitales: hermosas para mirar, pero terribles
+                para vender. En Otterock, siempre le decimos a nuestros clientes
+                que el diseño no es solo estética; el diseño es estrategia.
+            </p>
+
+            <section>
+                <h2
+                    class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                >
+                    1. El Síndrome del Museo Digital
+                </h2>
+                <p class="mb-4">
+                    Muchos negocios cometen el error de diseñar sus páginas para
+                    satisfacer su propio ego. Llenan la pantalla de animaciones
+                    complejas y videos pesados que solo logran confundir al
+                    usuario. Cuando un cliente entra desde su celular buscando
+                    desconectarse un fin de semana, no quiere descifrar un
+                    laberinto artístico. Quiere saber tres cosas en menos de
+                    cinco segundos:
+                </p>
+                <ul
+                    class="list-disc list-inside mb-4 pl-4 space-y-2 font-bold text-otter-deep"
+                >
+                    <li>¿Qué me ofreces?</li>
+                    <li>¿Cuánto cuesta?</li>
+                    <li>¿Dónde reservo?</li>
+                </ul>
+                <p>
+                    Si tu diseño oculta estas respuestas, estás perdiendo dinero
+                    por culpa de la estética.
+                </p>
+            </section>
+
+            <section>
+                <h2
+                    class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                >
+                    2. UX y UI: El mapa y las señales
+                </h2>
+                <p class="mb-4">
+                    En la Artesanía Digital, no damos puntadas sin dedal. Usamos
+                    dos disciplinas que trabajan juntas:
+                </p>
+                <ul class="list-disc list-inside mb-4 pl-4 space-y-2">
+                    <li>
+                        <strong>UX (Experiencia de Usuario):</strong> Es el mapa.
+                        Es entender el camino más corto entre que el cliente entra
+                        a tu web y que paga la reserva.
+                    </li>
+                    <li>
+                        <strong>UI (Interfaz de Usuario):</strong> Son las señales.
+                        Se asegura de que el botón de "Reservar Ahora" tenga el color
+                        y la ubicación exacta para que el ojo vaya directo a él.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2
+                    class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                >
+                    3. La Regla de la Fricción Cero
+                </h2>
+                <p class="mb-4">
+                    Cada clic extra es una oportunidad para que el usuario se
+                    arrepienta. Las plantillas genéricas suelen estar llenas de
+                    esta "fricción". Nuestro enfoque con Astro nos permite crear
+                    flujos limpios. La relajación de tu huésped no empieza
+                    cuando llega a tu glamping, empieza cuando navega por tu web
+                    sin baches técnicos.
+                </p>
+            </section>
+
+            <section>
+                <h2
+                    class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                >
+                    4. La Belleza de lo Funcional
+                </h2>
+                <p class="mb-4">
+                    La belleza debe estar al servicio de la venta. Una
+                    aplicación web de alto rendimiento permite tener un diseño
+                    inmersivo y fotos de alta calidad, pero con una estructura
+                    tan inteligente que el botón de pago siempre está a un toque
+                    de distancia.
+                </p>
+            </section>
+
+            <!-- Conversion CTA -->
+            <section
+                class="mt-16 bg-otter-deep text-otter-sand rounded-3xl p-10 text-center shadow-2xl"
+            >
+                <h3
+                    class="text-3xl md:text-4xl font-black font-display mb-4 text-white"
+                >
+                    ¿Tu web es un museo o una máquina?
+                </h3>
+                <p
+                    class="text-lg opacity-90 mb-8 max-w-xl mx-auto font-body text-slate-300"
+                >
+                    Deja de perder reservas por culpa de un diseño que no
+                    convierte. Hablemos sobre cómo optimizar la experiencia de
+                    tus clientes.
+                </p>
+                <a
+                    href="/contacto"
+                    class="inline-block bg-otter-accent text-otter-deep font-bold text-lg px-8 py-4 rounded-full hover:bg-white transition-all shadow-lg hover:-translate-y-1"
+                >
+                    Construyamos una Máquina de Reservas 🚀
+                </a>
+            </section>
+
+            <!-- E-E-A-T: Author Bio -->
+            <footer class="mt-16 pt-12 border-t border-slate-200">
+                <div class="flex items-center gap-6">
+                    <div
+                        class="w-20 h-20 rounded-full bg-otter-deep flex items-center justify-center text-3xl shrink-0 overflow-hidden"
+                    >
+                        👨‍💻
+                    </div>
+                    <div>
+                        <p
+                            class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1 font-body"
+                        >
+                            Escrito por
+                        </p>
+                        <h3
+                            class="text-xl font-bold text-otter-deep font-display"
+                        >
+                            Sergio Bello
+                        </h3>
+                        <p
+                            class="text-slate-600 text-sm mt-1 max-w-lg font-body"
+                        >
+                            Director & Lead Developer. Especialista en crear
+                            arquitecturas digitales escalables y de alto
+                            rendimiento.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </article>
+</MainLayout>
