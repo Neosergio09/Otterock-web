@@ -7,9 +7,9 @@ import vercel from '@astrojs/vercel'; // <--- CAMBIO: Importación limpia sin /s
 // https://astro.build/config
 export default defineConfig({
   site: 'https://otterock-web.vercel.app',
-  
+
   // ACTIVAR EL MODO SERVIDOR
-  output: 'server', 
+  output: 'server',
 
   trailingSlash: 'never',
 
@@ -26,7 +26,9 @@ export default defineConfig({
   },
 
   integrations: [sitemap()],
-  
+
   // CONFIGURAR EL ADAPTADOR
-  adapter: vercel()
+  adapter: vercel({
+    imageService: true,
+  })
 });
