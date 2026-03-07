@@ -1,0 +1,291 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+
+// Asumo que tienes una imagen para este post, si no, puedes reutilizar la anterior o una nueva
+import blogHero from "../../../assets/rocko-legado.jpg";
+---
+
+<MainLayout
+    title="The 3-Second Rule: Does your website invite people in? | Otterock Blog"
+    description="Discover why 53% of users abandon your site if it takes more than 3 seconds to load and how to fix it with Astro."
+    image={blogHero.src}
+    type="article"
+    articleData={{
+        publishedTime: "2024-01-15T08:00:00-05:00",
+        authorName: "Sergio Bello",
+        section: "Web Performance",
+        tags: ["SEO", "Performance", "Astro", "Core Web Vitals"],
+    }}
+>
+    <article class="max-w-3xl mx-auto py-20 px-6">
+        <header class="mb-12 text-center">
+                    <a
+                        href="/en/blog"
+                        class="inline-block mb-8 text-sm text-otter-deep font-bold hover:text-otter-accent transition-colors hover:underline underline-offset-4"
+                    >
+                        ← Back to Blog
+                    </a>
+
+                    <span
+                        class="text-slate-600 font-bold tracking-widest uppercase text-xs mb-4 block font-body"
+                    >
+                        Performance • 4 min read
+                    </span>
+
+                    <h1
+                        class="text-3xl md:text-5xl font-black text-otter-deep mb-6 leading-tight font-display"
+                    >
+                        The 3-Second Rule: Does your website invite people in or slam the door in their face?
+                    </h1>
+
+                    <p class="text-xl text-slate-700 italic font-body mb-8">
+                        "In the digital world, slowness is the language of distrust."
+                    </p>
+
+                    <div
+                        class="rounded-3xl overflow-hidden shadow-xl mb-12 aspect-video bg-otter-deep"
+                    >
+                        <Image
+                            src={blogHero}
+                            alt="Speed optimization and web performance"
+                            width={800}
+                            quality="mid"
+                            format="webp"
+                            loading="eager"
+                            fetchpriority="high"
+                            class="w-full h-full object-cover opacity-90"
+                        />
+                    </div>
+
+                    <!-- GEO Optimization: Key Takeaways (TL;DR) -->
+                    <div
+                        class="bg-indigo-50 border border-indigo-100 rounded-2xl p-8 text-left mb-12"
+                    >
+                        <h2
+                            class="text-lg font-black text-otter-deep uppercase tracking-wider mb-4 flex items-center gap-2"
+                        >
+                            <span class="text-2xl">⚡</span> Key Takeaways (TL;DR)
+                        </h2>
+                        <ul
+                            class="space-y-3 text-slate-700 list-disc list-inside font-medium font-body"
+                        >
+                            <li>
+                                The <strong>3-Second Rule</strong> dictates that 53% 
+                                of users abandon if loading exceeds this time.
+                            </li>
+                            <li>
+                                Speed is a <strong>critical ranking factor for Google in 2026</strong>.
+                            </li>
+                            <li>
+                                Generic platforms like WordPress often add "dead weight"; 
+                                <strong>Astro</strong> eliminates the unnecessary.
+                            </li>
+                            <li>
+                                The first digital impression is speed: a fast website 
+                                conveys respect for the client's time.
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+
+                <div
+                    class="space-y-8 text-lg text-slate-700 leading-relaxed font-body"
+                >
+                    <p
+                        class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+                    >
+                        Imagine you decide to treat yourself and go to that luxury 
+                        restaurant everyone is talking about. You get to the entrance, 
+                        push the door... and it doesn't open. It's stuck. You struggle a 
+                        bit, wait, look through the glass, but no one approaches. How 
+                        much time would pass before you simply turn around and find another place?
+                    </p>
+
+                    <p>
+                        In the physical world, you might wait a minute out of politeness. 
+                        On the internet, <strong>you only have 3 seconds.</strong>
+                    </p>
+
+                    <section>
+                        <h2
+                            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                        >
+                            The invisible timer of desire
+                        </h2>
+                        <p class="mb-4">
+                            When a potential client clicks your link from Instagram or 
+                            Google, a mental timer activates. It's not something they 
+                            decide; it's pure instinct.
+                        </p>
+
+                        <div
+                            class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-6"
+                        >
+                            <p class="text-slate-800 italic">
+                                "The statistics are relentless: if your page takes more 
+                                than 3 seconds to load, <strong>53% of users</strong> will 
+                                abandon the site before even seeing your first photo."
+                            </p>
+                        </div>
+
+                        <p>
+                            At <strong>Otterock</strong>, we say that speed isn't just 
+                            a technical metric; it's the first impression of your service. 
+                            If you sell a "Premium" experience but your website is slow, 
+                            you are sending a contradictory message to your client: 
+                            <em>"My place is amazing, but getting there is a headache"</em>.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2
+                            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                        >
+                            Why does Google hate waiting?
+                        </h2>
+                        <p class="mb-4">
+                            Google has a mission: for the user to find what they're 
+                            looking for quickly. If Google sends someone to your website 
+                            and that person leaves after 2 seconds because "it won't load", 
+                            the search engine scores a negative point for you.
+                        </p>
+                        <p>
+                            For the algorithm, a slow website is a low-quality website. 
+                            It doesn't matter if you have the best prices; if you're not 
+                            fast, you'll end up on page 10 of the results, where no one ever goes.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2
+                            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                        >
+                            The "Weight" of Generic vs. The Lightness of Craftsmanship
+                        </h2>
+                        <p class="mb-4">
+                            Most current pages (built on WordPress or Wix) are like a 
+                            suitcase full of things you don't need. They carry extra code 
+                            and heavy plugins that the client's phone has to process before 
+                            showing anything.
+                        </p>
+
+                        <p
+                            class="text-xl font-bold text-otter-deep text-center my-8 font-display bg-white/60 border border-otter-deep/10 p-8 rounded-2xl italic"
+                        >
+                            "At Otterock, we use next-generation technologies like Astro 
+                            to build only what your business needs. Not an ounce of extra code."
+                        </p>
+
+                        <div
+                            class="grid md:grid-cols-3 gap-4 text-center text-sm mt-8"
+                        >
+                            <div
+                                class="p-6 bg-white border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                            >
+                                <div class="text-3xl mb-2">🍃</div>
+                                <p class="text-slate-700">
+                                    <strong>No bloat:</strong> Clean code built from scratch 
+                                    for your brand.
+                                </p>
+                            </div>
+                            <div
+                                class="p-6 bg-white border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                            >
+                                <div class="text-3xl mb-2">📱</div>
+                                <p class="text-slate-700">
+                                    <strong>Mobile First:</strong> Instant loading even 
+                                    with weak signals.
+                                </p>
+                            </div>
+                            <div
+                                class="p-6 bg-white border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                            >
+                                <div class="text-3xl mb-2">💯</div>
+                                <p class="text-slate-700">
+                                    <strong>Real Metrics:</strong> 100/100 scores on 
+                                    Google PageSpeed.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2
+                            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+                        >
+                            Speed is the New Luxury
+                        </h2>
+                        <p>
+                            Today, true luxury is fluidity. A website that loads instantly 
+                            conveys trust and professionalism. It tells the client: 
+                            <strong>"We value your time"</strong>.
+                        </p>
+                        <p>
+                            Don't test your site yourself (because your browser already 
+                            knows it). Use real tools like Google PageSpeed. If the number 
+                            is red, you're losing money every time someone clicks.
+                        </p>
+                    </section>
+
+                    <hr class="border-otter-deep/10 my-12" />
+
+                    <section
+                        class="bg-otter-deep text-white p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
+                    >
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 blur-2xl"
+                        >
+                        </div>
+
+                        <h3
+                            class="text-2xl font-bold font-display mb-4 relative z-10"
+                        >
+                            Does your website pass the 3-second rule?
+                        </h3>
+                        <p
+                            class="mb-8 opacity-90 leading-relaxed relative z-10"
+                        >
+                            Don't let your clients give up before they even meet you. 
+                            At <strong>Otterock</strong> we build high-speed formulas 
+                            so your technology runs as fast as your dreams.
+                            <br /><br />
+                            Do you want a free performance audit?
+                        </p>
+
+                        <a
+                            href="/en/contacto"
+                            class="inline-block bg-white text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-white transition-all hover:-translate-y-1 shadow-lg relative z-10"
+                        >
+                            Request a Speed Audit 🚀
+                        </a>
+                    </section>
+
+                    <!-- E-E-A-T: Author Bio -->
+                    <footer class="mt-16 pt-12 border-t border-slate-200">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="w-20 h-20 rounded-full bg-otter-deep flex items-center justify-center text-3xl shrink-0 overflow-hidden"
+                            >
+                                👨‍💻 <!-- Placeholder for Author Image -->
+                            </div>
+                            <div>
+                                <p
+                                    class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1"
+                                >
+                                    Written by
+                                </p>
+                                <h3 class="text-xl font-bold text-otter-deep">
+                                    Sergio Bello
+                                </h3>
+                                <p class="text-slate-600 text-sm mt-1 max-w-lg">
+                                    Sr. Specialist in Technical SEO and Growth Strategy. 
+                                    Passionate about creating websites that are as fast 
+                                    as they are human.
+                                </p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+</MainLayout>

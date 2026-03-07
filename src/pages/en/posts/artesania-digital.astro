@@ -1,0 +1,211 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+
+// Usamos la imagen de Rocko que ya tienes como portada del artículo
+import blogHero from "../../../assets/rocko-legado.jpg";
+---
+
+<MainLayout title="Digital Craftsmanship | Otterock Blog">
+  <article class="max-w-3xl mx-auto py-20 px-6">
+    <header class="mb-12 text-center">
+      <a
+        href="/en/blog"
+        class="inline-block mb-8 text-sm text-otter-deep font-bold hover:text-otter-accent transition-colors hover:underline underline-offset-4"
+      >
+        ← Back to Blog
+      </a>
+
+      <span
+        class="text-slate-600 font-bold tracking-widest uppercase text-xs mb-4 block font-body"
+      >
+        Otterock Philosophy • 5 min read
+      </span>
+
+      <h1
+        class="text-3xl md:text-5xl font-black text-otter-deep mb-6 leading-tight font-display"
+      >
+        More than code: Why your business deserves "Digital Craftsmanship"
+      </h1>
+
+      <p class="text-xl text-slate-700 italic font-body mb-8">
+        "Stop looking for the fastest website and start looking for the most human website."
+      </p>
+
+      <div
+        class="rounded-3xl overflow-hidden shadow-xl mb-12 aspect-video bg-otter-deep"
+      >
+        <Image
+          src={blogHero}
+          alt="Handcrafted programming with soul"
+          width={800}
+          quality="mid"
+          format="webp"
+          loading="eager"
+          fetchpriority="high"
+          class="w-full h-full object-cover opacity-90"
+        />
+      </div>
+    </header>
+
+    <div class="space-y-8 text-lg text-slate-700 leading-relaxed font-body">
+      <p
+        class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+      >
+        We live in the era of instant gratification. Everyone wants results now.
+        And in that frantic race, the internet has become filled with "noise": 
+        identical websites, generic templates that break after a month, and empty 
+        designs that convey nothing.
+      </p>
+
+      <p>
+        If you have arrived at <strong>Otterock</strong> and watched the text write
+        itself letter by letter on your screen, you might have paused for a second.
+        <br />
+        <span class="text-otter-deep font-bold italic"
+          >That is exactly our intention: to make you pause.</span
+        >
+      </p>
+
+      <p>
+        Because a solid business isn't built in a rush, and its digital presence
+        shouldn't be either. Today I want to explain why at our agency we don't 
+        manufacture websites in bulk as if they were hamburgers, but instead, we 
+        tailor-make them with soul and strategy.
+      </p>
+
+      <hr class="border-otter-deep/10 my-12" />
+
+      <section>
+        <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display">
+          1. The difference between "Being on the internet" and "Standing out on the internet"
+        </h2>
+        <p class="mb-4">
+          Anyone can put your business online in 5 minutes. There are thousands of 
+          automated tools for that. But have you ever wondered why those websites don't sell?
+        </p>
+        <p class="mb-4">
+          Because they lack identity. They are a one-size-fits-all suit that looks bad on everyone.
+        </p>
+
+        <div
+          class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-6"
+        >
+          <p class="font-bold text-otter-deep">
+            We believe in custom programming.
+          </p>
+          <p class="text-sm mt-2 text-slate-800">
+            We don't use heavy "molds" that make your website load slowly (and that 
+            Google hates). We write the code thinking specifically about your 
+            bakery, your law firm, or your clothing store.
+          </p>
+        </div>
+
+        <ul class="list-disc pl-6 space-y-2 text-slate-700">
+          <li>
+            <strong>The result:</strong> A lightweight, fast, and robust website.
+          </li>
+          <li>
+            <strong>The benefit:</strong> Your clients notice the quality, and when 
+            a client perceives quality on your website, they assume your product is 
+            also high quality.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12">
+          2. Speed isn't a rush; it's respect
+        </h2>
+        <p class="mb-4">
+          You've probably heard of "optimization" or "SEO". Forget the technical terms for a moment.
+        </p>
+
+        <p
+          class="text-xl font-bold text-otter-deep text-center my-8 font-display bg-white/60 border border-otter-deep/10 p-8 rounded-2xl italic"
+        >
+          "For us, a fast website is a sign of respect for your client's time."
+        </p>
+
+        <p>
+          If a user logs onto your site from their phone and has to wait 10 seconds 
+          for an image to appear, they feel ignored. We use cutting-edge technologies 
+          (the same ones used by companies like Netflix or Uber) to ensure your 
+          site flies. Not because we like numbers, but because we want your client 
+          to have a smooth, pleasant, and frictionless experience.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12">
+          3. Development with Soul: The human factor
+        </h2>
+        <p class="mb-4">
+          This is where we separate ourselves from the rest. Many developers see your 
+          project as "just another file". For us, your website is the digital extension 
+          of your dream.
+        </p>
+        <p class="mb-6">
+          At Otterock, we believe that technology must have "soul". That means:
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-4 text-center text-sm">
+          <div
+            class="p-6 bg-white border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div class="text-3xl mb-2">👂</div>
+            <p class="text-slate-700">
+              <strong>Listening</strong> to you to understand what makes your business unique.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-white border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div class="text-3xl mb-2">🤖</div>
+            <p class="text-slate-700">
+              <strong>Designing</strong> with people in mind, not just the Google bot.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-white border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div class="text-3xl mb-2">✨</div>
+            <p class="text-slate-700">
+              <strong>Crafting details</strong> that make people fall in love and invite them to stay.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-otter-deep/10 my-12" />
+
+      <section
+        class="bg-otter-deep text-white p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 blur-2xl"
+        >
+        </div>
+
+        <h3 class="text-2xl font-bold font-display mb-4 relative z-10">
+          Conclusion
+        </h3>
+        <p class="mb-8 opacity-90 leading-relaxed relative z-10">
+          We don't aim to be the agency that makes a thousand websites a month. We aim 
+          to be the agency that makes <strong>your website</strong>. The one that will 
+          make you feel proud every time you share the link on WhatsApp.
+          <br /><br />
+          If you are someone who values work well done, careful details, and is looking 
+          for a real tool to grow, welcome. You are in the right place.
+        </p>
+
+        <a
+          href="/en/contacto"
+          class="inline-block bg-white text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-white transition-all hover:-translate-y-1 shadow-lg relative z-10"
+        >
+          Let's talk about your project
+        </a>
+      </section>
+    </div>
+  </article>
+</MainLayout>
