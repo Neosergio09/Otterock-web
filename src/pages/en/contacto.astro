@@ -1,0 +1,260 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Contact | Otterock"
+  type="faq"
+  faqData={[
+    {
+      question: "Do you design custom websites or use templates?",
+      answer:
+        "At Otterock we create 100% custom and 'Handcrafted' designs. We write clean code from scratch using Astro and Tailwind to guarantee speed and exclusivity. We do not use generic WordPress templates.",
+    },
+    {
+      question: "How long does it take for my website to be ready?",
+      answer:
+        "Depending on the complexity, a 'Lightweight' corporate website takes 2 to 4 weeks. E-commerce or custom web platforms can take from 6 to 12 weeks.",
+    },
+    {
+      question: "What does the SEO and Optimization service include?",
+      answer:
+        "We include advanced Technical SEO: speed optimization (Core Web Vitals), semantic structure, meta tags, Schema.org, and image optimization. Your website is born ready to compete on Google.",
+    },
+    {
+      question: "Why are your websites faster?",
+      answer:
+        "We use Astro, a modern architecture that ships 'Zero JavaScript' by default to the browser. This makes our websites load instantly, even on slow connections, unlike heavy visual builders.",
+    },
+  ]}
+>
+  <section class="max-w-6xl mx-auto py-20 px-6">
+    <div class="grid md:grid-cols-2 gap-16">
+      <div class="flex flex-col justify-center">
+        <h2
+          class="text-otter-accent font-bold tracking-widest uppercase text-sm mb-4"
+        >
+          Let's talk
+        </h2>
+        <h1 class="text-5xl font-black text-otter-deep mb-8">
+          Ready to leave your mark?
+        </h1>
+        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+          Tell us about your project, your goals, and your dreams. At Otterock,
+          we take every message with the seriousness of an eternal commitment.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-otter-deep text-otter-sand rounded-full flex items-center justify-center"
+            >
+              📍
+            </div>
+            <p class="font-medium">Bogotá, Colombia - Conexión Global</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-otter-deep text-otter-sand rounded-full flex items-center justify-center"
+            >
+              ✉️
+            </div>
+            <p class="font-medium">otterock11@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- FAQ Section for GEO -->
+        <div class="mt-16">
+          <h3 class="text-2xl font-bold text-otter-deep mb-6 font-display">
+            Frequently Asked Questions
+          </h3>
+          <div class="space-y-6">
+            <details
+              class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
+            >
+              <summary
+                class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
+              >
+                <span>Do you design custom websites?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg
+                    fill="none"
+                    height="24"
+                    shape-rendering="geometricPrecision"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    ><path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p class="text-slate-600 mt-4 text-sm leading-relaxed">
+                Yes. At Otterock we create 100% custom and 'Handcrafted'
+                designs. We develop clean code from scratch using Astro and
+                Tailwind.
+              </p>
+            </details>
+            <details
+              class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
+            >
+              <summary
+                class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
+              >
+                <span>Why are your websites faster?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg
+                    fill="none"
+                    height="24"
+                    shape-rendering="geometricPrecision"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    ><path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p class="text-slate-600 mt-4 text-sm leading-relaxed">
+                We use Astro, an architecture that sends 'Zero JavaScript' by
+                default. This guarantees highly instant loads and scores of 100
+                in Google.
+              </p>
+            </details>
+            <details
+              class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
+            >
+              <summary
+                class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
+              >
+                <span>How long does web development take?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg
+                    fill="none"
+                    height="24"
+                    shape-rendering="geometricPrecision"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    ><path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p class="text-slate-600 mt-4 text-sm leading-relaxed">
+                Standard corporate projects: 2-4 weeks. Complex projects: 6-12
+                weeks. We always prioritize quality over hasty urgency.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-otter-deep/5 sticky top-24 self-start"
+      >
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <label class="block text-sm font-bold text-otter-deep mb-2"
+              >Your Name</label
+            >
+            <input
+              type="text"
+              name="nombre"
+              required
+              placeholder="e.g. John Doe"
+              class="w-full px-5 py-4 rounded-2xl bg-otter-sand border-none focus:ring-2 focus:ring-otter-accent transition-all"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold text-otter-deep mb-2"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="you@email.com"
+              class="w-full px-5 py-4 rounded-2xl bg-otter-sand border-none focus:ring-2 focus:ring-otter-accent transition-all"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold text-otter-deep mb-2"
+              >Tell us about your idea</label
+            >
+            <textarea
+              name="mensaje"
+              required
+              rows="4"
+              placeholder="How can we help you transcend?"
+              class="w-full px-5 py-4 rounded-2xl bg-otter-sand border-none focus:ring-2 focus:ring-otter-accent transition-all"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            id="submit-btn"
+            class="w-full bg-otter-deep text-otter-sand py-5 rounded-2xl font-black text-lg hover:bg-otter-accent hover:-translate-y-1 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Send Message 🐾
+          </button>
+
+          <p id="form-status" class="text-center font-bold mt-4 hidden"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    const btn = document.getElementById("submit-btn") as HTMLButtonElement;
+    const status = document.getElementById("form-status");
+
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Estado de carga
+      btn.disabled = true;
+      btn.innerText = "Sending message...";
+      if (status) status.classList.add("hidden");
+
+      const formData = new FormData(form);
+
+      try {
+        // Enviamos los datos a nuestra propia ruta API
+        const response = await fetch("/api/send", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          if (status) {
+            status.innerText = "Message sent! We will contact you soon. ✨";
+            status.className = "text-center font-bold mt-4 text-green-600";
+            status.classList.remove("hidden");
+          }
+          form.reset();
+        } else {
+          throw new Error();
+        }
+      } catch (error) {
+        if (status) {
+          status.innerText = "Oops, something went wrong. Please try again.";
+          status.className = "text-center font-bold mt-4 text-red-600";
+          status.classList.remove("hidden");
+        }
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "Send Message 🐾";
+      }
+    });
+  </script>
+</MainLayout>

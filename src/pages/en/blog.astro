@@ -1,43 +1,317 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
+import MainLayout from "../../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import blogHero from "../../assets/museo-difital.png";
 ---
 
-<MainLayout title="Blog">
-  <section class="flex flex-col items-center justify-center min-h-[70vh] px-6">
-    <div class="max-w-3xl w-full text-center">
-      <h2 id="typewriter" class="text-3xl md:text-5xl font-mono text-otter-deep leading-relaxed min-h-[150px]">
-        </h2>
-      
-      <div id="blog-content" class="opacity-0 transition-opacity duration-1000 mt-12">
-        <p class="text-slate-500 mb-8 italic text-xl">Historias sobre código, lealtad y el futuro digital.</p>
-        <div class="grid gap-6">
-          <div class="p-6 border-2 border-otter-deep/10 rounded-2xl hover:border-otter-accent transition-colors text-left group cursor-pointer">
-            <span class="text-otter-accent font-bold text-sm">PRÓXIMAMENTE</span>
-            <h3 class="text-2xl font-bold text-otter-deep mt-2 group-hover:text-otter-accent">La Guía Definitiva de Velocidad Web 2025</h3>
-          </div>
+<MainLayout title="Blog | Stories with Soul">
+  <section
+    class="flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 bg-slate-50/50"
+  >
+    <div class="max-w-4xl w-full text-center">
+      <h1
+        id="typewriter"
+        class="text-3xl md:text-5xl font-mono text-otter-deep leading-relaxed min-h-[150px] mb-4"
+      >
+      </h1>
+
+      <div
+        id="blog-content"
+        class="opacity-0 translate-y-8 transition-all duration-1000 mt-12 text-left"
+      >
+        <p class="text-slate-500 mb-12 italic text-xl text-center font-body">
+          Stories about code, loyalty, and the digital future.
+        </p>
+
+        <!-- Main Blog Hero Image -->
+        <div
+          class="w-full aspect-[21/9] md:aspect-[3/1] mb-16 rounded-[2rem] overflow-hidden shadow-xl border border-otter-deep/10 bg-otter-deep/5 relative group"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2070"
+            alt="Modern Minimalist Workspace"
+            class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="grid gap-8">
+          <!-- Post: Digital Museum vs Booking Machine -->
+          <a
+            href="/posts/museo-digital-vs-maquina"
+            class="blog-card group block opacity-0 translate-y-4 transition-all duration-700"
+          >
+            <div
+              class="relative overflow-hidden p-8 border border-otter-deep/10 rounded-[2rem] bg-white hover:border-otter-accent/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all"
+            >
+              <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div
+                  class="w-full md:w-32 h-32 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-4xl group-hover:bg-otter-accent/10 transition-colors shrink-0"
+                >
+                  🏛️
+                </div>
+
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-3">
+                    <span
+                      class="bg-emerald-50 text-emerald-600 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"
+                      >Strategy</span
+                    >
+                    <span class="text-slate-400 text-xs font-body"
+                      >4 min read</span
+                    >
+                  </div>
+
+                  <h2
+                    class="text-2xl font-bold text-otter-deep group-hover:text-otter-accent transition-colors font-display mb-3"
+                  >
+                    Digital Museum vs. Booking Machine
+                  </h2>
+                  <p class="text-slate-600 font-body leading-relaxed text-base">
+                    The difference between a "digital museum" that's beautiful
+                    to look at and a strategically designed booking machine that
+                    converts.
+                  </p>
+                </div>
+
+                <div class="hidden md:block self-center">
+                  <div
+                    class="w-12 h-12 rounded-full border border-otter-deep/10 flex items-center justify-center group-hover:bg-otter-deep group-hover:text-white transition-all transform group-hover:translate-x-2"
+                  >
+                    <span class="text-xl">→</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Post: La Trampa de las Plantillas -->
+          <a
+            href="/posts/trampa-de-las-plantillas"
+            class="blog-card group block opacity-0 translate-y-4 transition-all duration-700"
+          >
+            <div
+              class="relative overflow-hidden p-8 border border-otter-deep/10 rounded-[2rem] bg-white hover:border-otter-accent/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all"
+            >
+              <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div
+                  class="w-full md:w-32 h-32 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-4xl group-hover:bg-otter-accent/10 transition-colors shrink-0"
+                >
+                  🏗️
+                </div>
+
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-3">
+                    <span
+                      class="bg-rose-50 text-rose-600 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"
+                      >Web Strategy</span
+                    >
+                    <span class="text-slate-400 text-xs font-body"
+                      >5 min read</span
+                    >
+                  </div>
+
+                  <h2
+                    class="text-2xl font-bold text-otter-deep group-hover:text-otter-accent transition-colors font-display mb-3"
+                  >
+                    The Template Trap
+                  </h2>
+                  <p class="text-slate-600 font-body leading-relaxed text-base">
+                    Is your website a house you own or a rented room? The truth
+                    about why the easy path of templates destroys your
+                    scalability.
+                  </p>
+                </div>
+
+                <div class="hidden md:block self-center">
+                  <div
+                    class="w-12 h-12 rounded-full border border-otter-deep/10 flex items-center justify-center group-hover:bg-otter-deep group-hover:text-white transition-all transform group-hover:translate-x-2"
+                  >
+                    <span class="text-xl">→</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Post: Regla de los 3 Segundos -->
+          <article
+            class="blog-card group block opacity-0 translate-y-4 transition-all duration-700"
+          >
+            <a href="/posts/regla-3-segundos" class="block">
+              <div
+                class="relative overflow-hidden p-8 border border-otter-deep/10 rounded-[2rem] bg-white hover:border-otter-accent/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all"
+              >
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                  <!-- Emoji Icon (Hourglass) -->
+                  <div
+                    class="w-full md:w-32 h-32 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-4xl group-hover:bg-otter-accent/10 transition-colors shrink-0"
+                  >
+                    ⏳
+                  </div>
+
+                  <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-3">
+                      <span
+                        class="bg-indigo-50 text-otter-deep text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"
+                        >Performance</span
+                      >
+                      <span class="text-slate-400 text-xs font-body"
+                        >4 min read</span
+                      >
+                    </div>
+
+                    <h2
+                      class="text-2xl font-bold text-otter-deep group-hover:text-otter-accent transition-colors font-display mb-3"
+                    >
+                      The 3-Second Rule
+                    </h2>
+                    <p
+                      class="text-slate-600 font-body leading-relaxed text-base"
+                    >
+                      Does your website invite people in or slam the door in
+                      their face? Discover why speed is the new language of
+                      trust.
+                    </p>
+                  </div>
+
+                  <div class="hidden md:block self-center">
+                    <div
+                      class="w-12 h-12 rounded-full border border-otter-deep/10 flex items-center justify-center group-hover:bg-otter-deep group-hover:text-white transition-all transform group-hover:translate-x-2"
+                    >
+                      <span class="text-xl">→</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          <a
+            href="/posts/artesania-digital"
+            class="blog-card group block opacity-0 translate-y-4 transition-all duration-700"
+          >
+            <div
+              class="relative overflow-hidden p-8 border border-otter-deep/10 rounded-[2rem] bg-white hover:border-otter-accent/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all"
+            >
+              <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div
+                  class="w-full md:w-32 h-32 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-4xl group-hover:bg-otter-accent/10 transition-colors shrink-0"
+                >
+                  ✨
+                </div>
+
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-3">
+                    <span
+                      class="bg-otter-sand text-otter-deep text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"
+                      >Philosophy</span
+                    >
+                    <span class="text-slate-400 text-xs font-body"
+                      >5 min read</span
+                    >
+                  </div>
+
+                  <h3
+                    class="text-2xl font-bold text-otter-deep group-hover:text-otter-accent transition-colors font-display mb-3"
+                  >
+                    More than code: Why your business deserves "Digital
+                    Craftsmanship"
+                  </h3>
+                  <p class="text-slate-600 font-body leading-relaxed text-base">
+                    Discover why stopping the search for the fastest website and
+                    starting the search for the most human website is the best
+                    strategy to truly connect.
+                  </p>
+                </div>
+
+                <div class="hidden md:block self-center">
+                  <div
+                    class="w-12 h-12 rounded-full border border-otter-deep/10 flex items-center justify-center group-hover:bg-otter-deep group-hover:text-white transition-all transform group-hover:translate-x-2"
+                  >
+                    <span class="text-xl">→</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="/posts/palabras-clave"
+            class="blog-card group block opacity-0 translate-y-4 transition-all duration-700"
+          >
+            <div
+              class="relative overflow-hidden p-8 border border-otter-deep/10 rounded-[2rem] bg-white hover:border-otter-accent/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all"
+            >
+              <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div
+                  class="w-full md:w-32 h-32 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-4xl group-hover:bg-otter-accent/10 transition-colors shrink-0"
+                >
+                  🔍
+                </div>
+
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-3">
+                    <span
+                      class="bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"
+                      >Strategy</span
+                    >
+                    <span class="text-slate-400 text-xs font-body"
+                      >4 min read</span
+                    >
+                  </div>
+
+                  <h3
+                    class="text-2xl font-bold text-otter-deep group-hover:text-otter-accent transition-colors font-display mb-3"
+                  >
+                    Does your website speak the same language as your clients?
+                  </h3>
+                  <p class="text-slate-600 font-body leading-relaxed text-base">
+                    The truth about keywords and how the right language can turn
+                    your website from an invisible brochure into a sales magnet.
+                  </p>
+                </div>
+
+                <div class="hidden md:block self-center">
+                  <div
+                    class="w-12 h-12 rounded-full border border-otter-deep/10 flex items-center justify-center group-hover:bg-otter-deep group-hover:text-white transition-all transform group-hover:translate-x-2"
+                  >
+                    <span class="text-xl">→</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <script>
-    const text = "In the world of code, every letter tells a story... This is ours.";
-    const typewriterElement = document.getElementById('typewriter');
-    const contentElement = document.getElementById('blog-content');
+    const text =
+      "In the coding world, every letter tells a story... This is ours.";
+    const typewriterElement = document.getElementById("typewriter");
+    const contentElement = document.getElementById("blog-content");
+    const cards = document.querySelectorAll(".blog-card");
     let i = 0;
 
     function type() {
-      if (i < text.length) {
+      if (typewriterElement && i < text.length) {
         typewriterElement.innerHTML += text.charAt(i);
         i++;
-        setTimeout(type, 50); // Velocidad de la letra
+        setTimeout(type, 40);
       } else {
-        // Mostrar el resto del contenido cuando termine de escribir
-        contentElement.classList.remove('opacity-0');
+        // Revelar contenedor principal
+        contentElement?.classList.remove("opacity-0", "translate-y-8");
+
+        // Revelar tarjetas una por una (Staggered)
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.remove("opacity-0", "translate-y-4");
+          }, 300 * (index + 1));
+        });
       }
     }
 
-    // Iniciar la magia
     window.onload = type;
   </script>
 </MainLayout>

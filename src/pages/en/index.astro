@@ -1,28 +1,153 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
+import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Inicio">
-  <section class="flex flex-col items-center justify-center min-h-[80vh] py-20 px-6 text-center">
-    <span class="bg-otter-accent/10 text-otter-accent px-4 py-1 rounded-full text-sm font-bold mb-6">
-      WELCOME TO THE AGENCY 🐾
+<MainLayout
+  title="Web Development Agency in Bogotá | Otterock - Technology with Purpose"
+>
+  <section
+    class="flex flex-col items-center justify-center min-h-[85vh] py-20 px-6 text-center bg-otter-sand"
+  >
+    <span
+      class="bg-otter-accent/10 text-otter-accent px-4 py-1 rounded-full text-sm font-bold mb-6 tracking-wide animate-fade-in"
+    >
+      TECHNOLOGY WITH SOUL 🐾
     </span>
 
-    <h1 class="text-5xl md:text-8xl font-black text-otter-deep tracking-tighter leading-tight">
-       Soulful <span class="text-otter-accent">development. </span>
+    <h1
+      class="text-4xl md:text-7xl font-black text-otter-deep tracking-tighter leading-tight max-w-6xl"
+    >
+      Web Development in Bogotá that <br class="hidden md:block" />
+      <span class="text-otter-accent">feeds a hope.</span>
     </h1>
-    
-    <p class="mt-8 text-xl text-slate-600 max-w-2xl leading-relaxed">
-      At <strong>Otterock</strong>, we transform the strength of code into purposeful digital footprints. Inspired by the loyalty of our legacy, we build the future of your brand.
+
+    <p class="mt-8 text-xl text-slate-700 max-w-3xl leading-relaxed font-body">
+      At <strong>Otterock</strong>, we fuse the speed of <strong>Astro</strong> with
+      the power of <strong>Supabase</strong> to create dynamic and scalable sites.
+      We don't just deliver elite code; for every project, we donate food to animal
+      shelters. Your digital transformation leaves a real footprint.
     </p>
 
     <div class="mt-12 flex flex-col sm:flex-row gap-4">
-      <a href="/contacto" class="bg-otter-deep text-otter-sand px-10 py-4 rounded-full font-bold hover:bg-otter-accent transition-all shadow-lg hover:shadow-otter-accent/20 text-center">
-        Start your project
+      <a
+        href="/en/contacto"
+        class="bg-otter-deep text-otter-sand px-10 py-4 rounded-full font-bold hover:bg-otter-accent transition-all shadow-lg hover:shadow-otter-accent/20 text-center transform hover:-translate-y-1"
+      >
+        Quote my project
       </a>
-      <a href="/legado" class="border-2 border-otter-deep text-otter-deep px-10 py-4 rounded-full font-bold hover:bg-otter-deep hover:text-otter-sand transition-all text-center">
-        Our legacy
+      <a
+        href="/en/legado"
+        class="border-2 border-otter-deep text-otter-deep px-10 py-4 rounded-full font-bold hover:bg-otter-deep hover:text-otter-sand transition-all text-center"
+      >
+        Discover the legacy
       </a>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-otter-sand relative overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div
+        class="bg-otter-deep rounded-[3rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 shadow-2xl relative z-10"
+      >
+        <div class="lg:w-1/2 text-otter-sand">
+          <h2
+            class="text-3xl md:text-5xl font-black mb-6 font-display leading-tight"
+          >
+            Web design with a social impact: <br />
+            <span class="text-otter-accent">one bag of food delivered.</span>
+          </h2>
+          <p class="text-lg opacity-90 mb-8 font-body leading-relaxed">
+            Our agency was born in honor of Rocko. By integrating intelligent
+            databases and cutting-edge design, we ensure your investment
+            translates into <strong>direct donations</strong> for rescued dogs in
+            Bogotá.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="border-l-4 border-otter-accent pl-4">
+              <span class="block text-3xl font-black">100%</span>
+              <span class="text-sm uppercase tracking-widest opacity-70"
+                >Transparency</span
+              >
+            </div>
+            <div class="border-l-4 border-otter-accent pl-4">
+              <span class="block text-3xl font-black">Full-Stack</span>
+              <span class="text-sm uppercase tracking-widest opacity-70"
+                >Astro + Supabase</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 relative">
+          <div
+            class="bg-otter-sand/10 rounded-3xl p-8 border border-white/10 backdrop-blur-sm text-center"
+          >
+            <span class="text-6xl mb-6 block">🦴</span>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Why choose Otterock?
+            </h3>
+            <p class="text-otter-sand/80 text-sm mb-6">
+              Because we master the technologies Google loves (Astro) and the
+              ones your business needs to grow (Supabase). Your brand gains
+              technical power and social purpose.
+            </p>
+            <a
+              href="/en/legado"
+              class="inline-block bg-otter-accent text-otter-deep px-6 py-3 rounded-full font-black text-sm uppercase tracking-widest hover:bg-white transition-all hover:scale-105 shadow-lg shadow-otter-accent/20"
+            >
+              Otterock Impact
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-otter-accent/10 rounded-full blur-3xl"
+    >
+    </div>
+  </section>
+
+  <section class="py-20 px-6 max-w-6xl mx-auto text-center bg-otter-sand">
+    <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display">
+      Experts in Astro, Supabase, and Technical SEO
+    </h2>
+    <p class="text-slate-500 mb-12 font-body italic">
+      Our toolbox to build your success
+    </p>
+
+    <div
+      class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-700 cursor-default"
+    >
+      <span
+        class="text-xl font-black font-display tracking-widest hover:text-[#FF5D01] transition-colors"
+        >ASTRO</span
+      >
+
+      <span
+        class="text-xl font-black font-display tracking-widest hover:text-[#3ECF8E] transition-colors"
+        >SUPABASE</span
+      >
+
+      <span
+        class="text-xl font-black font-display tracking-widest hover:text-[#38BDF8] transition-colors"
+        >TAILWIND</span
+      >
+
+      <span
+        class="text-xl font-black font-display tracking-widest hover:text-black transition-colors"
+        >GITHUB</span
+      >
+
+      <span
+        class="text-xl font-black font-display tracking-widest hover:text-[#000000] transition-colors"
+        >VERCEL</span
+      >
+
+      <span
+        class="text-xl font-black font-display tracking-widest hover:text-green-600 transition-colors"
+        >SEO 100%</span
+      >
     </div>
   </section>
 </MainLayout>

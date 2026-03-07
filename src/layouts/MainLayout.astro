@@ -1,10 +1,17 @@
 ---
 import "../styles/global.css";
 import SEOSchema from "../components/SEOSchema.astro";
-import SpeedInsights from "@vercel/speed-insights/astro";
+// import SpeedInsights from "@vercel/speed-insights/astro";
+import LanguagePicker from "../components/LanguagePicker.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
 
 interface Props {
   title: string;
+  lang?: "es" | "en";
   description?: string;
   image?: string;
   // SEO Props
@@ -29,26 +36,23 @@ const {
   type = "website",
   articleData,
   faqData,
+  lang = getLangFromUrl(Astro.url),
 } = Astro.props;
 
 const { pathname } = Astro.url;
 
-// 1. Lógica de Idioma Dinámico
-const lang = pathname.startsWith("/en") ? "en" : "es";
-
-// Lógica de navegación
-const esPath = pathname.startsWith("/en")
-  ? pathname.replace("/en", "") || "/"
-  : pathname;
-const enPath = pathname.startsWith("/en")
-  ? pathname
-  : `/en${pathname === "/" ? "" : pathname}`;
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 // 2. Canonical URL Limpia
 const canonicalURL = new URL(pathname, Astro.site);
+
+// Hreflang URLs
+const esUrl = new URL(useTranslatedPath("es")(pathname), Astro.site);
+const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
@@ -60,6 +64,11 @@ const canonicalURL = new URL(pathname, Astro.site);
     <meta name="description" content={description} />
 
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="es" href={esUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={esUrl} />
 
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
@@ -98,42 +107,36 @@ const canonicalURL = new URL(pathname, Astro.site);
       <nav
         class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-base font-medium text-otter-deep"
       >
-        <a href="/" class="hover:text-otter-accent transition">Inicio</a>
-        <a href="/servicios" class="hover:text-otter-accent transition"
-          >Servicios</a
-        >
-        <a href="/legado" class="hover:text-otter-accent transition"
-          >El Legado</a
-        >
+        <a href={translatePath("/")} class="hover:text-otter-accent transition"
+          >{t("nav.home")}
+        </a>
+        <a
+          href={translatePath("/servicios")}
+          class="hover:text-otter-accent transition"
+          >{t("nav.services")}
+        </a>
+        <a
+          href={translatePath("/legado")}
+          class="hover:text-otter-accent transition"
+          >{t("nav.legacy")}
+        </a>
 
         <a
-          href="/blog"
+          href={translatePath("/blog")}
           class="font-bold text-otter-deep hover:text-otter-accent transition"
-          >Blog</a
-        >
+          >{t("nav.blog")}
+        </a>
 
         <div
           class="flex items-center gap-6 pl-4 border-l border-otter-deep/20 ml-2"
         >
-          <div class="flex gap-2 text-sm uppercase font-bold text-otter-deep">
-            <a
-              href={esPath}
-              class={`hover:text-otter-accent transition-colors ${lang === "es" ? "text-otter-accent" : ""}`}
-              >ES</a
-            >
-            <span class="text-otter-deep/30">|</span>
-            <a
-              href={enPath}
-              class={`hover:text-otter-accent transition-colors ${lang === "en" ? "text-otter-accent" : ""}`}
-              >EN</a
-            >
-          </div>
+          <LanguagePicker />
 
           <a
-            href="/contacto"
+            href={translatePath("/contacto")}
             class="bg-otter-deep text-white px-6 py-2 rounded-full font-bold hover:bg-otter-accent transition-all shadow-md hover:-translate-y-0.5"
           >
-            Contacto
+            {t("nav.contact")}
           </a>
         </div>
       </nav>
@@ -147,14 +150,14 @@ const canonicalURL = new URL(pathname, Astro.site);
       <div class="max-w-7xl mx-auto text-center">
         <p class="text-lg font-medium">Otterock</p>
         <p class="text-sm opacity-80 mt-2">
-          Construido con amor y código sólido en honor a Rocko.
+          {t("footer.subtitle")}
         </p>
         <p class="text-xs opacity-80 mt-6">
-          © 2025 Otterock – Desarrollo web que trasciende.
+          {t("footer.copyright")}
         </p>
       </div>
     </footer>
 
-    <SpeedInsights />
+    <!-- <SpeedInsights /> -->
   </body>
 </html>
