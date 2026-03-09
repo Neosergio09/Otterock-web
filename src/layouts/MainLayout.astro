@@ -8,6 +8,7 @@ import {
   useTranslations,
   useTranslatedPath,
 } from "../i18n/utils";
+import MagicNavbar from "../components/MagicNavbar.astro";
 
 interface Props {
   title: string;
@@ -94,9 +95,7 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
   </head>
 
   <body class="min-h-screen flex flex-col bg-otter-sand">
-    <header
-      class="p-6 max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-4"
-    >
+    <header class="p-6 max-w-7xl mx-auto w-full flex flex-row items-center justify-between">
       <a
         href="/"
         class="text-2xl font-bold text-otter-deep hover:opacity-80 transition-opacity"
@@ -104,8 +103,14 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
         Otterock<span class="text-otter-accent">.</span>
       </a>
 
+      <!-- Mobile Right Section (Language Picker Only) -->
+      <div class="md:hidden flex items-center">
+        <LanguagePicker />
+      </div>
+
+      <!-- Desktop Nav -->
       <nav
-        class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-base font-medium text-otter-deep"
+        class="hidden md:flex flex-wrap justify-center items-center gap-8 text-base font-medium text-otter-deep"
       >
         <a href={translatePath("/")} class="hover:text-otter-accent transition"
           >{t("nav.home")}
@@ -120,7 +125,6 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
           class="hover:text-otter-accent transition"
           >{t("nav.legacy")}
         </a>
-
         <a
           href={translatePath("/blog")}
           class="font-bold text-otter-deep hover:text-otter-accent transition"
@@ -146,7 +150,7 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
       <slot />
     </main>
 
-    <footer class="bg-otter-deep text-otter-sand p-10 mt-20">
+    <footer class="bg-otter-deep text-otter-sand p-10 mt-20 mb-[100px] md:mb-0">
       <div class="max-w-7xl mx-auto text-center">
         <p class="text-lg font-medium">Otterock</p>
         <p class="text-sm opacity-80 mt-2">
@@ -159,5 +163,6 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
     </footer>
 
     <!-- <SpeedInsights /> -->
+    <MagicNavbar />
   </body>
 </html>

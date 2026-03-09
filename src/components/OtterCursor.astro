@@ -1,0 +1,234 @@
+---
+// OtterCursor.astro
+// Interactive canvas-based cursor shaped like a swimming otter
+---
+
+<canvas id="otter-cursor-canvas" class="fixed inset-0 pointer-events-none z-[9999]"></canvas>
+
+<script>
+  const canvas = document.getElementById('otter-cursor-canvas') as HTMLCanvasElement;
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    
+    // Config - More segments for a smoother, higher-polygon look
+    const NUM_SEGMENTS = 45; 
+    const SEGMENT_LENGTH = 2.5; 
+    const BASE_RADIUS = 14; // Thicker, chunkier body
+    const OTTER_COLOR = '#1A181C'; // otter-deep
+    const PAW_SIZE = 4;
+    
+    let isMouseActive = false;
+    let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2, tx: window.innerWidth / 2, ty: window.innerHeight / 2 };
+    let points = Array.from({ length: NUM_SEGMENTS }, () => ({ x: mouse.x, y: mouse.y }));
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    const updateMouse = (x: number, y: number) => {
+      mouse.tx = x;
+      mouse.ty = y;
+      if (!isMouseActive) {
+        points.forEach(p => { p.x = mouse.tx; p.y = mouse.ty; });
+        isMouseActive = true;
+      }
+    };
+
+    window.addEventListener('mousemove', (e) => updateMouse(e.clientX, e.clientY));
+    window.addEventListener('touchmove', (e) => updateMouse(e.touches[0].clientX, e.touches[0].clientY));
+
+    function drawEllipse(x: number, y: number, rx: number, ry: number, angle: number, color: string) {
+      if (!ctx) return;
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(angle);
+      ctx.beginPath();
+      // Use bezier curves if ellipse is not perfectly smooth or just ellipse
+      ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function animate() {
+      if (!ctx) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (!isMouseActive) {
+        requestAnimationFrame(animate);
+        return;
+      }
+
+      // Smooth mouse follow
+      mouse.x += (mouse.tx - mouse.x) * 0.15;
+      mouse.y += (mouse.ty - mouse.y) * 0.15;
+      
+      points[0].x = mouse.x;
+      points[0].y = mouse.y;
+
+      // Inverse Kinematics
+      for (let i = 1; i < NUM_SEGMENTS; i++) {
+        let dx = points[i - 1].x - points[i].x;
+        let dy = points[i - 1].y - points[i].y;
+        let dist = Math.sqrt(dx * dx + dy * dy);
+        let angle = Math.atan2(dy, dx);
+        points[i].x = points[i - 1].x - Math.cos(angle) * SEGMENT_LENGTH;
+        points[i].y = points[i - 1].y - Math.sin(angle) * SEGMENT_LENGTH;
+      }
+
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      
+      // Calculate body outline
+      ctx.beginPath();
+      let leftSide = [];
+      let rightSide = [];
+      
+      for (let i = 0; i < NUM_SEGMENTS; i++) {
+        let angle = 0;
+        if (i < NUM_SEGMENTS - 1) {
+          angle = Math.atan2(points[i + 1].y - points[i].y, points[i + 1].x - points[i].x);
+        } else {
+          angle = Math.atan2(points[i].y - points[i - 1].y, points[i].x - points[i - 1].x);
+        }
+        
+        let radius = BASE_RADIUS;
+        
+        // Shape the otter: thick neck, thick body, thick tail base, tapering at the very end
+        if (i < 5) {
+            // Neck transitions smoothly from head
+            radius = BASE_RADIUS * 0.9;
+        } else if (i >= 5 && i < NUM_SEGMENTS * 0.4) {
+            // Torso is thickest
+            radius = BASE_RADIUS * 1.1; 
+        } else if (i >= NUM_SEGMENTS * 0.4) {
+            // Taper starting mid-body through tail
+            let t = (i - NUM_SEGMENTS * 0.4) / (NUM_SEGMENTS * 0.6);
+            // Non-linear taper so tail base stays thick
+            radius = (BASE_RADIUS * 1.1) * (1 - Math.pow(t, 1.5));
+            // Ensure minimum thickness for the tail tip
+            radius = Math.max(radius, 2);
+        }
+
+        let nx = Math.cos(angle + Math.PI / 2) * radius;
+        let ny = Math.sin(angle + Math.PI / 2) * radius;
+        
+        leftSide.push({ x: points[i].x + nx, y: points[i].y + ny });
+        rightSide.push({ x: points[i].x - nx, y: points[i].y - ny });
+      }
+
+      // Draw rounded polygon for body
+      ctx.moveTo(leftSide[0].x, leftSide[0].y);
+      for (let i = 1; i < leftSide.length; i++) {
+        ctx.lineTo(leftSide[i].x, leftSide[i].y);
+      }
+      // Round the tail tip
+      let tailAngle = Math.atan2(points[NUM_SEGMENTS - 1].y - points[NUM_SEGMENTS - 2].y, points[NUM_SEGMENTS - 1].x - points[NUM_SEGMENTS - 2].x);
+      ctx.arc(points[NUM_SEGMENTS - 1].x, points[NUM_SEGMENTS - 1].y, 2, tailAngle + Math.PI/2, tailAngle - Math.PI/2, true);
+      
+      for (let i = rightSide.length - 1; i >= 0; i--) {
+        ctx.lineTo(rightSide[i].x, rightSide[i].y);
+      }
+      ctx.closePath();
+      ctx.fillStyle = OTTER_COLOR;
+      ctx.fill();
+
+      // Head
+      let headAngle = Math.atan2(points[2].y - points[0].y, points[2].x - points[0].x) + Math.PI;
+      
+      // Broader, rounder head
+      drawEllipse(points[0].x, points[0].y, BASE_RADIUS * 1.2, BASE_RADIUS * 1.3, headAngle, OTTER_COLOR);
+      
+      // Shorter, wider snout
+      let snoutDistance = BASE_RADIUS * 0.6;
+      let snoutX = points[0].x + Math.cos(headAngle) * snoutDistance;
+      let snoutY = points[0].y + Math.sin(headAngle) * snoutDistance;
+      drawEllipse(snoutX, snoutY, BASE_RADIUS * 1.0, BASE_RADIUS * 0.9, headAngle, OTTER_COLOR);
+      
+      // Nose
+      let noseDist = snoutDistance + BASE_RADIUS * 0.7;
+      ctx.beginPath();
+      ctx.arc(points[0].x + Math.cos(headAngle) * noseDist, points[0].y + Math.sin(headAngle) * noseDist, 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = '#333';
+      ctx.fill();
+
+      // Small round ears (closer to the head)
+      let earDist = BASE_RADIUS * 0.9;
+      let earAngleOffset = Math.PI * 0.35;
+      let earRadius = BASE_RADIUS * 0.4;
+      
+      // Left Ear
+      let leftEarX = points[0].x + Math.cos(headAngle - earAngleOffset) * earDist;
+      let leftEarY = points[0].y + Math.sin(headAngle - earAngleOffset) * earDist;
+      ctx.beginPath();
+      ctx.arc(leftEarX, leftEarY, earRadius, 0, Math.PI * 2);
+      ctx.fillStyle = OTTER_COLOR;
+      ctx.fill();
+
+      // Right Ear
+      let rightEarX = points[0].x + Math.cos(headAngle + earAngleOffset) * earDist;
+      let rightEarY = points[0].y + Math.sin(headAngle + earAngleOffset) * earDist;
+      ctx.beginPath();
+      ctx.arc(rightEarX, rightEarY, earRadius, 0, Math.PI * 2);
+      ctx.fillStyle = OTTER_COLOR;
+      ctx.fill();
+
+      // Limbs (Stubbier, more like flippers/paws, tucked closer to body when swimming fast)
+      let frontLimbIdx = 8;
+      let backLimbIdx = Math.floor(NUM_SEGMENTS * 0.55);
+      
+      let speed = Math.sqrt(Math.pow(mouse.tx - mouse.x, 2) + Math.pow(mouse.ty - mouse.y, 2));
+      let time = Date.now() * 0.006;
+      let isSwimmingFast = speed > 3;
+      let swimPhase = (isSwimmingFast ? time : 0);
+      
+      const drawLimb = (idx: number, isLeft: boolean, phaseOffset: number) => {
+        if (idx >= points.length - 1) return;
+        
+        let p = points[idx];
+        let pNext = points[idx + 1];
+        let bodyAng = Math.atan2(pNext.y - p.y, pNext.x - p.x);
+        
+        let sideOffsetAngle = bodyAng + (isLeft ? Math.PI / 2 : -Math.PI / 2);
+        
+        let swimAng = Math.sin(swimPhase + phaseOffset) * 0.4;
+        
+        // When swimming fast, limbs tuck back closer to the body
+        let tuckAngle = isSwimmingFast ? 0.3 : 0;
+        let finalLimbAng = bodyAng + (isLeft ? -swimAng - tuckAngle : swimAng + tuckAngle) + Math.PI;
+        
+        let baseX = p.x + Math.cos(sideOffsetAngle) * BASE_RADIUS * 0.9;
+        let baseY = p.y + Math.sin(sideOffsetAngle) * BASE_RADIUS * 0.9;
+        
+        // Shorter limbs for an otter
+        let limbLength = BASE_RADIUS * 0.9; 
+        
+        let pawX = baseX + Math.cos(finalLimbAng) * limbLength;
+        let pawY = baseY + Math.sin(finalLimbAng) * limbLength;
+        
+        ctx.beginPath();
+        ctx.moveTo(baseX, baseY);
+        ctx.lineTo(pawX, pawY);
+        ctx.strokeStyle = OTTER_COLOR;
+        ctx.lineWidth = PAW_SIZE * 2; // Thicker limbs
+        ctx.stroke();
+        
+        // Webbed/rounder paws
+        drawEllipse(pawX, pawY, PAW_SIZE * 1.8, PAW_SIZE * 1.2, finalLimbAng, OTTER_COLOR);
+      };
+
+      drawLimb(frontLimbIdx, true, 0);
+      drawLimb(frontLimbIdx, false, Math.PI);
+      drawLimb(backLimbIdx, true, Math.PI * 0.5);
+      drawLimb(backLimbIdx, false, Math.PI * 1.5);
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }
+</script>
