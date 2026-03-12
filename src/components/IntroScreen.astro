@@ -1,44 +1,53 @@
 ---
+/**
+ * Otterock Cinematic Intro v3.0 - "The Ring of Fire"
+ * Efecto de aros de fuego (Carbón -> Naranja -> Amarillo) dejando el centro transparente y blanco.
+ */
 ---
 
 <div id="intro-overlay" class="fixed inset-0 z-[10000] flex items-center justify-center bg-white overflow-hidden">
-  <!-- Brand Message (Revealed behind the burning paper) -->
-  <div class="absolute inset-0 flex items-center justify-center px-6 text-center pointer-events-none">
+  
+  <div class="absolute inset-0 flex items-center justify-center px-6 text-center z-[1]">
     <p class="brand-message opacity-0 text-3xl md:text-5xl lg:text-6xl font-serif text-otter-deep tracking-tight leading-tight max-w-4xl">
       Construimos artesanalmente <br class="hidden md:block" /> lo que la gente siente
     </p>
   </div>
 
-  <!-- Burning Paper Background -->
-  <div id="paper-layer" class="absolute inset-0 will-change-[filter]">
+  <div id="paper-layer" class="absolute inset-0 z-[2] pointer-events-none">
     <svg class="w-full h-full" preserveAspectRatio="none">
       <defs>
-        <!-- Jagged edge filter for the burn hole -->
-        <filter id="burn-edge-filter">
-          <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="5" result="noise" />
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="G" />
+        <filter id="jagged-edge">
+          <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="1" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="40" xChannelSelector="R" yChannelSelector="G" />
         </filter>
 
-        <!-- Incandescent glow filter for the burning edges -->
-        <filter id="ember-glow-filter" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#ff4d00" flood-opacity="0.8" />
-          <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ff7b00" flood-opacity="0.9" />
-          <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#ffcc00" />
+        <filter id="glow-edge">
+          <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="1" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="40" xChannelSelector="R" yChannelSelector="G" result="jagged" />
+          <feGaussianBlur in="jagged" stdDeviation="4" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="jagged" />
+          </feMerge>
         </filter>
 
-        <mask id="paper-mask">
-          <rect x="0" y="0" width="100%" height="100%" fill="white" />
-          <circle id="burn-circle" cx="50%" cy="50%" r="0" fill="black" filter="url(#burn-edge-filter)" />
+        <mask id="hole-mask">
+          <rect width="100%" height="100%" fill="white" />
+          <circle class="burn-sync" cx="50%" cy="50%" r="0" fill="black" filter="url(#jagged-edge)" />
         </mask>
       </defs>
 
-      <!-- The white paper rect with mask and ember glow -->
-      <rect x="0" y="0" width="100%" height="100%" fill="white" mask="url(#paper-mask)" filter="url(#ember-glow-filter)" />
+      <circle class="burn-sync" cx="50%" cy="50%" r="0" fill="none" stroke="#ffcc00" stroke-width="70" filter="url(#glow-edge)" opacity="0.9" />
+      
+      <circle class="burn-sync" cx="50%" cy="50%" r="0" fill="none" stroke="#ff4d00" stroke-width="45" filter="url(#glow-edge)" opacity="0.9" />
+      
+      <circle class="burn-sync" cx="50%" cy="50%" r="0" fill="none" stroke="#1a1a1a" stroke-width="15" filter="url(#jagged-edge)" />
+
+      <rect width="100%" height="100%" fill="white" mask="url(#hole-mask)" />
     </svg>
 
-    <!-- Logo (Must also be masked to burn along with paper) -->
-    <div class="absolute inset-0 flex items-center justify-center pointer-events-none" style="mask: url(#paper-mask); -webkit-mask: url(#paper-mask);">
-      <h1 class="logo-text text-6xl md:text-8xl font-black text-otter-deep tracking-tighter opacity-0 scale-95">
+    <div class="absolute inset-0 flex items-center justify-center" style="mask: url(#hole-mask); -webkit-mask: url(#hole-mask);">
+      <h1 class="logo-text text-6xl md:text-8xl font-black text-otter-deep tracking-tighter opacity-0 scale-95 font-display">
         otterock
       </h1>
     </div>
@@ -49,42 +58,31 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-  .font-serif {
-    font-family: 'Playfair Display', serif;
-  }
+  .font-serif { font-family: 'Playfair Display', serif; }
 
-  #paper-layer {
-    mask: url(#paper-mask);
-    -webkit-mask: url(#paper-mask);
-  }
-
-  /* Initial Logo Animation */
+  /* Animación de entrada del Logo */
   .logo-text {
-    animation: logo-fade-in 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: logo-reveal 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: 0.2s;
   }
 
-  @keyframes logo-fade-in {
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  @keyframes logo-reveal {
+    to { opacity: 1; transform: scale(1); }
   }
 
-  /* Burn Transition */
-  #burn-circle {
-    transition: r 4s cubic-bezier(0.45, 0, 0.55, 1);
-    transition-delay: 2s;
+  /* Expansión sincronizada del hueco y los aros de fuego */
+  .burn-sync {
+    transition: r 4.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  #intro-overlay.is-burning #burn-circle {
-    r: 150vmax;
+  #intro-overlay.is-burning .burn-sync {
+    r: 160vmax; /* Expande más allá de los bordes de cualquier pantalla */
   }
 
-  /* Brand Message Appearance */
+  /* Animación del lema que queda en el fondo blanco */
   .brand-message {
-    transition: opacity 2s ease, transform 2s ease;
-    transition-delay: 2.5s;
+    transition: opacity 1.5s ease, transform 2s ease;
+    transition-delay: 2.5s; /* Aparece mientras el aro de fuego crece */
     transform: translateY(20px);
   }
 
@@ -93,11 +91,10 @@
     transform: translateY(0);
   }
 
-  /* Final Fade Out */
+  /* Desaparición suave hacia la web real */
   #intro-overlay.fade-out {
     opacity: 0;
-    transition: opacity 1s ease;
-    pointer-events: none;
+    transition: opacity 1s ease-in-out;
   }
 </style>
 
@@ -106,36 +103,29 @@
     const overlay = document.getElementById('intro-overlay');
     const body = document.body;
 
-    // Session check
-    if (sessionStorage.getItem('intro-played') === 'true') {
-      if (overlay) overlay.remove();
+    if (sessionStorage.getItem('otter-intro-done') === 'true' || !overlay) {
+      overlay?.remove();
       return;
     }
 
-    if (!overlay) return;
-
-    // Lock scroll
     body.style.overflow = 'hidden';
 
-    // Start Burn Effect
+    // Dispara el efecto de quemado después de mostrar el logo
     setTimeout(() => {
       overlay.classList.add('is-burning');
-    }, 100); // Small initial delay to ensure DOM is ready
+    }, 2200);
 
-    // Final Fade Out and cleanup
+    // Cierra la pantalla para mostrar la página web original
     setTimeout(() => {
       overlay.classList.add('fade-out');
-      
       setTimeout(() => {
         overlay.remove();
         body.style.overflow = '';
-        sessionStorage.setItem('intro-played', 'true');
-      }, 1000); // Match CSS transition duration
-    }, 6000);
+        sessionStorage.setItem('otter-intro-done', 'true');
+      }, 1000);
+    }, 7500);
   }
 
-  // Run on page load
   document.addEventListener('DOMContentLoaded', initIntro);
-  // Also run on Astro view transitions if they are enabled
   document.addEventListener('astro:after-swap', initIntro);
 </script>
