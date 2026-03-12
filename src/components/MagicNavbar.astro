@@ -7,40 +7,53 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 const pathname = Astro.url.pathname;
 
+// 1. Reordenamiento Estratégico: Home en el índice 2 (el centro de 5)
 const navItems = [
-  { href: translatePath('/'), icon: Home, label: t("nav.home") || 'Home' },
-  { href: translatePath('/servicios'), icon: Layers, label: t("nav.services") || 'Services' },
-  { href: translatePath('/legado'), icon: PawPrint, label: t("nav.legacy") || 'Legacy' },
+  { href: translatePath('/servicios'), icon: Layers, label: t("nav.services") || 'Servicios' },
   { href: translatePath('/blog'), icon: BookOpen, label: t("nav.blog") || 'Blog' },
-  { href: translatePath('/contacto'), icon: Mail, label: t("nav.contact") || 'Contact' },
+  { href: translatePath('/'), icon: Home, label: t("nav.home") || 'Inicio' }, // <-- EL CENTRO
+  { href: translatePath('/legado'), icon: PawPrint, label: t("nav.legacy") || 'Legado' },
+  { href: translatePath('/contacto'), icon: Mail, label: t("nav.contact") || 'Contacto' },
 ];
 
 const activeIndex = navItems.findIndex(item => {
-  if (item.href === '/' || item.href === '/en/') {
-    return pathname === item.href || pathname === item.href.slice(0, -1);
-  }
-  return pathname.startsWith(item.href);
+  const p = pathname.replace(/\/$/, '') || '/';
+  const h = item.href.replace(/\/$/, '') || '/';
+  return p === h || (h !== '/' && p.startsWith(h));
 });
 
-const currentIndex = activeIndex === -1 ? 0 : activeIndex;
+const currentIndex = activeIndex === -1 ? 2 : activeIndex; // Por defecto al centro (Home)
+const itemWidth = 70; 
 ---
 
-<div class="fixed bottom-0 left-0 w-full flex justify-center z-50 md:hidden bg-transparent pb-6 px-4 pointer-events-none">
-  <div class="navigation pointer-events-auto relative w-full h-[70px] bg-otter-deep rounded-2xl flex justify-center items-center px-2">
-    <div class="relative w-[300px]" style={`--active-index: ${currentIndex};`}>
-      <div class="indicator absolute -top-[50%] left-0 w-[60px] h-[60px] bg-otter-accent rounded-full border-[6px] border-otter-sand transition-transform duration-500 ease-in-out z-0">
-        <div class="before-curve absolute top-[50%] -left-[22px] w-[20px] h-[20px] bg-transparent rounded-tr-[20px] shadow-[1px_-10px_0_0_var(--color-otter-sand)]"></div>
-        <div class="after-curve absolute top-[50%] -right-[22px] w-[20px] h-[20px] bg-transparent rounded-tl-[20px] shadow-[-1px_-10px_0_0_var(--color-otter-sand)]"></div>
-      </div>
-      
-      <ul class="flex relative w-full justify-between items-center">
+<div class="fixed bottom-0 left-0 w-full flex justify-center z-50 md:hidden bg-transparent pb-8 px-4 pointer-events-none">
+  <div class="navigation pointer-events-auto relative w-[350px] h-[80px] bg-otter-deep rounded-3xl flex justify-center items-center shadow-2xl border border-white/5">
+    
+    <div class="indicator-lente absolute top-[-35px] left-1/2 -translate-x-1/2 w-[70px] h-[70px] bg-purple-600 rounded-full border-[6px] border-otter-sand z-0 shadow-[0_10px_20px_rgba(147,51,234,0.3)]">
+      <div class="before-curve absolute top-[38px] -left-[22px] w-[20px] h-[20px] bg-transparent rounded-tr-[20px] shadow-[2px_-10px_0_0_#F5F5F4]"></div>
+      <div class="after-curve absolute top-[38px] -right-[22px] w-[20px] h-[20px] bg-transparent rounded-tl-[20px] shadow-[-2px_-10px_0_0_#F5F5F4]"></div>
+    </div>
+    
+    <!-- Side Gradients for Carousel Effect -->
+    <div class="absolute inset-0 pointer-events-none z-10 rounded-3xl overflow-hidden">
+      <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-otter-deep to-transparent"></div>
+      <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-otter-deep to-transparent"></div>
+    </div>
+
+    <div class="list-wrapper relative w-full h-full flex items-center">
+      <ul 
+        class="flex transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]" 
+        style={`transform: translateX(calc(50% - (${currentIndex} * ${itemWidth}px) - (${itemWidth} / 2)px));`}
+      >
         {navItems.map((item, index) => (
-          <li class={`list relative w-[60px] h-[70px] z-10 flex-shrink-0 ${index === currentIndex ? 'active' : ''}`} data-index={index}>
-            <a href={item.href} aria-label={item.label} class="relative flex justify-center items-center flex-col w-full text-center font-medium h-full">
-              <span class="icon relative block text-2xl text-otter-sand transition-transform duration-500 flex justify-center items-center h-[70px] z-20">
-                <item.icon class="w-6 h-6 stroke-2" />
+          <li 
+            class={`list relative w-[70px] h-[80px] flex-shrink-0 flex justify-center items-center transition-all duration-500 ${index === currentIndex ? 'active' : 'opacity-30 scale-75'}`}
+          >
+            <a href={item.href} aria-label={item.label} class="relative flex justify-center items-center flex-col w-full h-full">
+              <span class="icon block text-otter-sand transition-all duration-500 z-20">
+                <item.icon class="w-7 h-7 stroke-[2.5px]" />
               </span>
-              <span class="text absolute text-otter-deep bg-otter-sand px-2 py-0.5 rounded-full text-[10px] opacity-0 transition-all duration-500 translate-y-5 font-bold tracking-wider z-10">
+              <span class="text absolute text-purple-700 bg-white px-3 py-1 rounded-full text-[10px] font-black tracking-widest opacity-0 transition-all duration-500 whitespace-nowrap z-30 shadow-sm uppercase">
                 {item.label}
               </span>
             </a>
@@ -52,26 +65,25 @@ const currentIndex = activeIndex === -1 ? 0 : activeIndex;
 </div>
 
 <style>
-  :root {
-    --color-otter-sand: #F5F5F4;
+  /* Side gradients are now handled by the .z-10 absolute overlay in HTML */
+
+
+  /* Posicionamiento del icono DENTRO del círculo morado */
+  .list.active .icon {
+    transform: translateY(-41px) scale(1.2); /* Alineación visual optimizada */
+    color: white;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  }
+
+  /* Animación del Nombre debajo de la burbuja */
+  .list.active .text {
+    opacity: 1;
+    transform: translateY(22px);
   }
 
   ul {
+    list-style: none;
     padding: 0;
     margin: 0;
-  }
-
-  .indicator {
-    transform: translateX(calc(var(--active-index) * 60px));
-  }
-
-  .list.active .icon {
-    transform: translateY(-32px);
-    color: #F5F5F4;
-  }
-
-  .list.active .text {
-    opacity: 1;
-    transform: translateY(12px);
   }
 </style>
