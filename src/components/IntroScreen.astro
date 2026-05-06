@@ -14,6 +14,22 @@
     </p>
   </div>
 
+  <div class="absolute inset-x-0 bottom-12 flex items-center justify-center px-6 text-center z-[1]">
+    <div class="brand-message opacity-0 text-lg md:text-xl font-black tracking-widest uppercase drop-shadow-sm will-change-transform">
+      {(() => {
+        const text = "Gracias Maria Alenjandra Catalina Del Pilar Alcazar Bello";
+        const colors = ['text-blue-600', 'text-green-600', 'text-black'];
+        let colorIndex = 0;
+        return text.split('').map((char) => {
+          if (char === ' ') return <span>&nbsp;</span>;
+          const colorClass = colors[colorIndex % 3];
+          colorIndex++;
+          return <span class={colorClass}>{char}</span>;
+        });
+      })()}
+    </div>
+  </div>
+
   <div id="paper-layer" class="absolute inset-0 z-[2] pointer-events-none" style="transform: translateZ(0); will-change: transform;">
     <svg class="w-full h-full" preserveAspectRatio="none" style="transform: translateZ(0);">
       <defs>
