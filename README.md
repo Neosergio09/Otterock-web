@@ -1,43 +1,56 @@
-# Astro Starter Kit: Minimal
+# 🐾 Otterock — Tecnología con Alma y Compromiso Social
 
-```sh
-npm create astro@latest -- --template minimal
-```
+> Agencia de desarrollo web de alto rendimiento con sede en Bogotá. Creamos software artesanal, ultrarrápido y escalable mientras convertimos cada proyecto en donaciones de alimento para perritos rescatados.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## ⚡ Stack Tecnológico
 
-Inside of your Astro project, you'll see the following folders and files:
+La plataforma de **Otterock** está construida con un stack de ingeniería de vanguardia enfocado en rendimiento, cero fricción y SEO técnico nativo:
+
+- **Core Web Framework:** [Astro 7](https://astro.build/) (Modo híbrido / SSR, Islands Architecture, cero JavaScript innecesario)
+- **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/) (Motor Vite de alto rendimiento y diseño responsivo)
+- **Tipado & Robustez:** [TypeScript](https://www.typescriptlang.org/) (Tipado estricto en componentes y endpoints)
+- **Efectos Visuales & Shaders:** [WebGL / GLSL](https://www.khronos.org/webgl/) (Animación de quemado de papel cinematográfica con ruido fractal Simplex/fBm)
+- **Despliegue & Edge:** [Vercel Edge Network](https://vercel.com/) (CDN global de ultra baja latencia con `@astrojs/vercel`)
+- **Email Transaccional:** [Resend](https://resend.com/) (API de entrega de correo de alta confiabilidad en `/api/send`)
+- **Base de Datos & Auth:** [Supabase](https://supabase.com/) (PostgreSQL en la nube, Row Level Security)
+- **SEO & Datos Estructurados:** Schema.org JSON-LD (`Organization`, `WebSite`, `Article`, `BreadcrumbList`), Open Graph, Twitter Cards y Sitemap dinámico i18n (`es` / `en`).
+
+---
+
+## 📂 Estructura del Proyecto
 
 ```text
 /
-├── public/
+├── public/                  # Favicons, robots.txt, banners Open Graph
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/              # Imágenes optimizadas, fotografías de Rocko y certificados
+│   ├── components/          # Componentes Astro (IntroScreen con shader WebGL, MagicNavbar, SEOSchema...)
+│   ├── i18n/                # Configuración y traducciones internacionales (ES / EN)
+│   ├── layouts/             # MainLayout con metaetiquetas SEO completas y Twitter Cards
+│   └── pages/               # Rutas estáticas y serverless (Home, Servicios, Blog, Legado, Contacto y API)
+│       ├── api/send.ts      # Endpoint serverless para envío de formularios vía Resend
+│       └── en/              # Rutas en inglés completamente espejadas
+├── astro.config.mjs         # Configuración de Astro, Vercel adapter, Sitemap i18n y Tailwind Vite
+├── package.json             # Dependencias del proyecto
+└── tsconfig.json            # Configuración de TypeScript
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🛠️ Comandos de Desarrollo
 
-Any static assets, like images, can be placed in the `public/` directory.
+| Comando | Acción |
+| :--- | :--- |
+| `npm install` | Instala todas las dependencias del proyecto |
+| `npm run dev` | Inicia el servidor de desarrollo local en `http://localhost:4321` |
+| `npm run astro check` | Valida tipos TypeScript y diagnósticos de componentes Astro |
+| `npm run build` | Compila el sitio para producción en `./dist/` |
+| `npm run preview` | Previsualiza la compilación de producción localmente |
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 🐾 El Legado de Rocko
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Por cada sitio web que construimos, destinamos un porcentaje de nuestras ganancias para donar bultos de alimento a refugios de animales en Bogotá.
