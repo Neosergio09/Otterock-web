@@ -6,7 +6,18 @@ import { Image } from "astro:assets";
 import blogHero from "../../../assets/rocko-legado.jpg";
 ---
 
-<MainLayout title="Digital Craftsmanship | Otterock Blog">
+<MainLayout
+  title="Digital Craftsmanship | Otterock Blog"
+  description="Discover how digital craftsmanship and bespoke web development with Astro outperform generic templates, creating experiences with purpose and soul."
+  image={blogHero.src}
+  type="article"
+  articleData={{
+    publishedTime: "2024-02-01T08:00:00-05:00",
+    authorName: "Sergio Bello",
+    section: "Otterock Philosophy",
+    tags: ["Digital Craftsmanship", "Web Development", "Astro", "Tailwind CSS"],
+  }}
+>
   <article class="max-w-3xl mx-auto py-20 px-6">
     <header class="mb-12 text-center">
       <a

@@ -6,7 +6,18 @@ import { Image } from "astro:assets";
 import blogHero from "../../../assets/soberania-digital.png";
 ---
 
-<MainLayout title="Digital Sovereignty: Why you should stop building on rented ground | Otterock Blog">
+<MainLayout
+  title="Digital Sovereignty: Why you should stop building on rented ground | Otterock Blog"
+  description="Why relying solely on social media or closed platforms is a business risk and how owning your custom website gives you complete digital sovereignty."
+  image={blogHero.src}
+  type="article"
+  articleData={{
+    publishedTime: "2024-03-10T08:00:00-05:00",
+    authorName: "Sergio Bello",
+    section: "Strategy",
+    tags: ["Digital Sovereignty", "Digital Business", "Custom Web", "Strategy"],
+  }}
+>
   <article class="max-w-3xl mx-auto py-20 px-6">
     <header class="mb-12 text-center">
       <a

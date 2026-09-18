@@ -6,7 +6,18 @@ import { Image } from "astro:assets";
 import blogHero from "../../../assets/fin-aplicaciones-pesadas.png";
 ---
 
-<MainLayout title="The end of heavy applications: Why the future is (and will be) 100% Web | Otterock Blog">
+<MainLayout
+  title="The end of heavy applications: Why the future is (and will be) 100% Web | Otterock Blog"
+  description="We analyze the decline of bloated desktop/native applications and why lightning-fast edge web architectures are replacing traditional software."
+  image={blogHero.src}
+  type="article"
+  articleData={{
+    publishedTime: "2024-02-15T08:00:00-05:00",
+    authorName: "Sergio Bello",
+    section: "Technology",
+    tags: ["Edge Computing", "Web Performance", "Astro", "Web Architecture"],
+  }}
+>
   <article class="max-w-3xl mx-auto py-20 px-6">
     <header class="mb-12 text-center">
       <a

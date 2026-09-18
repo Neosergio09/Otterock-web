@@ -4,7 +4,11 @@ import { Image } from "astro:assets";
 import blogHero from "../assets/museo-difital.png";
 ---
 
-<MainLayout title="Blog | Historias con Alma">
+<MainLayout 
+  title="Blog | Historias con Alma - Otterock"
+  description="Artículos, análisis y reflexiones sobre desarrollo web artesanal, arquitectura moderna con Astro, SEO técnico y soberanía digital."
+  image={blogHero.src}
+>
   <section
     class="flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 bg-slate-50/50"
   >

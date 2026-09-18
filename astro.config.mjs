@@ -6,7 +6,7 @@ import vercel from '@astrojs/vercel'; // <--- CAMBIO: Importación limpia sin /s
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://otterock-web.vercel.app',
+  site: 'https://otterock.tech',
 
   // ACTIVAR EL MODO SERVIDOR
   output: 'server',
@@ -26,7 +26,19 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      i18n: {
+        defaultLocale: 'es',
+        locales: {
+          es: 'es',
+          en: 'en',
+        },
+      },
+      changefreq: 'weekly',
+      lastmod: new Date(),
+    })
+  ],
 
   // CONFIGURAR EL ADAPTADOR
   adapter: vercel({

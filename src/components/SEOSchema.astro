@@ -26,12 +26,13 @@ const {
     faqData,
 } = Astro.props;
 
-const siteUrl = Astro.site ? Astro.site.toString() : "https://otterock.com"; // Fallback
+const siteUrl = Astro.site ? Astro.site.toString().replace(/\/$/, "") : "https://otterock.tech";
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
 const imageUrl = new URL(image, siteUrl);
-const logoUrl = new URL("/favicon.svg", siteUrl);
+// Google Structured Data requiere formato PNG o JPG para el logotipo de la organización
+const logoUrl = new URL("/favicon.png", siteUrl);
 
-// Base Schema - Organization / LocalBusiness
+// 1. Base Schema - Organization / LocalBusiness
 const organizationSchema: Record<string, any> = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -53,11 +54,11 @@ const organizationSchema: Record<string, any> = {
         name: "Bogotá",
     },
     sameAs: [
-        // Add social profiles here if available
+        "https://github.com/Neosergio09",
     ],
 };
 
-// Article Schema
+// 2. Article Schema
 let articleSchema: Record<string, any> | null = null;
 if (type === "article" && articleData) {
     articleSchema = {
@@ -73,7 +74,7 @@ if (type === "article" && articleData) {
         author: {
             "@type": "Person",
             name: articleData.authorName,
-            url: new URL("/legado", siteUrl).toString(), // Linking to 'Legado' or author page
+            url: new URL("/legado", siteUrl).toString(),
         },
         publisher: {
             "@type": "Organization",
@@ -85,10 +86,12 @@ if (type === "article" && articleData) {
         },
         datePublished: articleData.publishedTime,
         dateModified: articleData.modifiedTime || articleData.publishedTime,
+        articleSection: articleData.section,
+        keywords: articleData.tags?.join(", "),
     };
 }
 
-// FAQ Schema
+// 3. FAQ Schema
 let faqSchema: Record<string, any> | null = null;
 if (faqData && faqData.length > 0) {
     faqSchema = {
@@ -105,14 +108,83 @@ if (faqData && faqData.length > 0) {
     };
 }
 
-// Combine all schemas
+// 4. Breadcrumb Schema (Google Rich Snippets de migas de pan)
+let breadcrumbSchema: Record<string, any> | null = null;
+const pathSegments = Astro.url.pathname.split("/").filter(Boolean);
+
+if (pathSegments.length > 0) {
+    const isEn = pathSegments[0] === "en";
+    const homeName = isEn ? "Home" : "Inicio";
+    const homeUrl = isEn ? `${siteUrl}/en` : siteUrl;
+
+    const itemListElement: Array<{
+        "@type": string;
+        position: number;
+        name: string;
+        item: string;
+    }> = [
+        {
+            "@type": "ListItem",
+            position: 1,
+            name: homeName,
+            item: homeUrl,
+        },
+    ];
+
+    let accumulatedPath = isEn ? "/en" : "";
+    const segmentsToProcess = isEn ? pathSegments.slice(1) : pathSegments;
+
+    segmentsToProcess.forEach((segment) => {
+        accumulatedPath += `/${segment}`;
+        let name = segment;
+
+        if (segment === "blog") {
+            name = "Blog";
+        } else if (segment === "servicios") {
+            name = isEn ? "Services" : "Servicios";
+        } else if (segment === "contacto") {
+            name = isEn ? "Contact" : "Contacto";
+        } else if (segment === "legado") {
+            name = isEn ? "The Legacy" : "El Legado";
+        } else if (segment === "posts") {
+            // El segmento /posts/ intermedio se muestra como Blog
+            name = "Blog";
+            accumulatedPath = isEn ? "/en/blog" : "/blog";
+        } else {
+            // Título de la página o post limpio
+            name = title.split("|")[0].trim();
+        }
+
+        // Evitar duplicar el item "Blog" si venimos de /posts/
+        const alreadyExists = itemListElement.some((el) => el.item === `${siteUrl}${accumulatedPath}`);
+        if (!alreadyExists) {
+            itemListElement.push({
+                "@type": "ListItem",
+                position: itemListElement.length + 1,
+                name: name,
+                item: `${siteUrl}${accumulatedPath}`,
+            });
+        }
+    });
+
+    if (itemListElement.length > 1) {
+        breadcrumbSchema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: itemListElement,
+        };
+    }
+}
+
+// Combinar todos los esquemas activos
 const schemas = [organizationSchema];
 if (articleSchema) schemas.push(articleSchema);
 if (faqSchema) schemas.push(faqSchema);
+if (breadcrumbSchema) schemas.push(breadcrumbSchema);
 ---
 
 {
     schemas.map((schema) => (
-        <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+        <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
     ))
 }
