@@ -15,18 +15,36 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ message: "Faltan campos" }), { status: 400 });
   }
 
+  const htmlContent = `
+    <h1>Nuevo mensaje de contacto</h1>
+    <p><strong>Nombre:</strong> ${nombre}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Mensaje:</strong> ${mensaje}</p>
+  `;
+
   try {
-    const send = await resend.emails.send({
-      from: 'Otterock Web <onboarding@resend.dev>', // Luego podrás usar tu propio dominio
-      to: 'se.kamilo28@gmail.com',
+    let response = await resend.emails.send({
+      from: 'Otterock <sergio@otterock.tech>',
+      to: 'sergio@otterock.tech',
+      replyTo: email as string,
       subject: `🚀 Nuevo proyecto: ${nombre}`,
-      html: `
-        <h1>Nuevo mensaje de contacto</h1>
-        <p><strong>Nombre:</strong> ${nombre}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Mensaje:</strong> ${mensaje}</p>
-      `,
+      html: htmlContent,
     });
+
+    // Fallback si el dominio corporativo aún está propagándose en Resend
+    if (response.error) {
+      response = await resend.emails.send({
+        from: 'Otterock Web <onboarding@resend.dev>',
+        to: 'sergio@otterock.tech',
+        replyTo: email as string,
+        subject: `🚀 Nuevo proyecto: ${nombre}`,
+        html: htmlContent,
+      });
+    }
+
+    if (response.error) {
+      return new Response(JSON.stringify({ message: response.error.message }), { status: 500 });
+    }
 
     return new Response(JSON.stringify({ message: "¡Correo enviado con éxito!" }), { status: 200 });
   } catch (error) {
