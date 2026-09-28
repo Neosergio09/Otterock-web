@@ -29,9 +29,6 @@ const {
 const siteUrl = Astro.site ? Astro.site.toString().replace(/\/$/, "") : "https://otterock.tech";
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
 const imageUrl = new URL(image, siteUrl);
-// Google Structured Data requiere formato PNG o JPG para el logotipo de la organización
-const logoUrl = new URL("/favicon.png", siteUrl);
-
 // 1. Base Schema - Organization / LocalBusiness
 const organizationSchema: Record<string, any> = {
     "@context": "https://schema.org",
@@ -39,7 +36,6 @@ const organizationSchema: Record<string, any> = {
     name: "Otterock",
     url: siteUrl,
     email: "sergio@otterock.tech",
-    logo: logoUrl.toString(),
     image: imageUrl.toString(),
     description:
         "Agencia de desarrollo web en Bogotá experta en Astro y Tailwind. Especialistas en sitios web rápidos y SEO técnico.",
@@ -80,10 +76,6 @@ if (type === "article" && articleData) {
         publisher: {
             "@type": "Organization",
             name: "Otterock",
-            logo: {
-                "@type": "ImageObject",
-                url: logoUrl.toString(),
-            },
         },
         datePublished: articleData.publishedTime,
         dateModified: articleData.modifiedTime || articleData.publishedTime,

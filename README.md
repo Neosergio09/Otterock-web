@@ -23,10 +23,10 @@ La plataforma de **Otterock** está construida con un stack de ingeniería de va
 
 ```text
 /
-├── public/                  # Favicons, robots.txt, banners Open Graph
+├── public/                  # Robots.txt, banners Open Graph
 ├── src/
 │   ├── assets/              # Imágenes optimizadas, fotografías de Rocko y certificados
-│   ├── components/          # Componentes Astro (IntroScreen con shader WebGL, MagicNavbar, SEOSchema...)
+│   ├── components/          # Componentes Astro (MagicNavbar, SEOSchema...)
 │   ├── i18n/                # Configuración y traducciones internacionales (ES / EN)
 │   ├── layouts/             # MainLayout con metaetiquetas SEO completas y Twitter Cards
 │   └── pages/               # Rutas estáticas y serverless (Home, Servicios, Blog, Legado, Contacto y API)
