@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "otterock-web.vercel.app"
+        }
+      ],
+      "destination": "https://otterock.tech/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -15,10 +28,6 @@
         {
           "key": "Content-Type",
           "value": "application/xml"
-        },
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex"
         }
       ]
     },
@@ -28,10 +37,6 @@
         {
           "key": "Content-Type",
           "value": "application/xml"
-        },
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex"
         }
       ]
     }
