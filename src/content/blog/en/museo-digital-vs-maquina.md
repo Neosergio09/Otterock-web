@@ -17,10 +17,10 @@ card:
 ---
 
 <div
-        class="bg-otter-surface border border-otter-deep/10 rounded-2xl p-8 text-left mb-12"
+        class="bg-otter-surface border border-otter-stone/10 rounded-2xl p-8 text-left mb-12"
     >
         <h2
-            class="text-lg font-black text-otter-deep uppercase tracking-wider mb-4 flex items-center gap-2 font-display"
+            class="text-lg font-black text-otter-stone uppercase tracking-wider mb-4 flex items-center gap-2 font-display"
         >
             <span class="text-2xl">💡</span> Key Takeaways (TL;DR)
         </h2>
@@ -47,7 +47,7 @@ card:
     </div>
 <div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
     <p
-        class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+        class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-stone first-letter:mr-2 first-letter:float-left"
     >
         You enter an art gallery. The lighting is perfect, the paintings 
         are breathtaking, and the background music relaxes you. You wander 
@@ -65,7 +65,7 @@ card:
     </p>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             1. The Digital Museum Syndrome
         </h2>
@@ -78,7 +78,7 @@ card:
             They want to know three things in under five seconds:
         </p>
         <ul
-            class="list-disc list-inside mb-4 pl-4 space-y-2 font-bold text-otter-deep"
+            class="list-disc list-inside mb-4 pl-4 space-y-2 font-bold text-otter-stone"
         >
             <li>What do you offer me?</li>
             <li>How much does it cost?</li>
@@ -91,7 +91,7 @@ card:
     </section>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             2. UX and UI: The map and the signs
         </h2>
@@ -114,7 +114,7 @@ card:
     </section>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             3. The Zero Friction Rule
         </h2>
@@ -128,7 +128,7 @@ card:
     </section>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             4. The Beauty of Functionality
         </h2>
@@ -140,30 +140,30 @@ card:
         </p>
     </section>
     <section
-        class="mt-16 bg-otter-deep text-otter-sand rounded-3xl p-10 text-center shadow-2xl"
+        class="mt-16 bg-otter-forest text-otter-stone rounded-3xl p-10 text-center shadow-2xl"
     >
         <h3
-            class="text-3xl md:text-4xl font-black font-display mb-4 text-otter-surface"
+            class="text-3xl md:text-4xl font-black font-display mb-4 text-otter-stone"
         >
             Is your website a museum or a machine?
         </h3>
         <p
-            class="text-lg opacity-90 mb-8 max-w-xl mx-auto font-body text-otter-sand"
+            class="text-lg opacity-90 mb-8 max-w-xl mx-auto font-body text-otter-stone"
         >
             Stop losing bookings due to a design that doesn't convert. Let's 
             talk about how to optimize your clients' experience.
         </p>
         <a
             href="/en/contacto"
-            class="inline-block bg-otter-warm text-otter-surface hover:text-otter-deep font-bold text-lg px-8 py-4 rounded-full hover:bg-otter-surface transition-all shadow-lg hover:-translate-y-1"
+            class="inline-block bg-otter-warm text-otter-deep hover:text-otter-stone font-bold text-lg px-8 py-4 rounded-full hover:bg-otter-surface transition-all shadow-lg hover:-translate-y-1"
         >
             Let's Build a Booking Machine 🚀
         </a>
     </section>
-    <footer class="mt-16 pt-12 border-t border-otter-deep/10">
+    <footer class="mt-16 pt-12 border-t border-otter-stone/10">
         <div class="flex items-center gap-6">
             <div
-                class="w-20 h-20 rounded-full bg-otter-deep flex items-center justify-center text-3xl shrink-0 overflow-hidden"
+                class="w-20 h-20 rounded-full bg-otter-forest flex items-center justify-center text-3xl shrink-0 overflow-hidden"
             >
                 👨‍💻
             </div>
@@ -174,7 +174,7 @@ card:
                     Written by
                 </p>
                 <h3
-                    class="text-xl font-bold text-otter-deep font-display"
+                    class="text-xl font-bold text-otter-stone font-display"
                 >
                     Sergio Bello
                 </h3>

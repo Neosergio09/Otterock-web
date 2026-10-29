@@ -1,15 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* Paleta Monolito & Verde Bosque (Fondos Sólidos y Sobriedad Mineral) */
-  --color-otter-deep: #111615;
-  --color-otter-forest: #1B382F;
-  --color-otter-sand: #E7E8E3;
-  --color-otter-surface: #F5F5F2;
-  --color-otter-accent: #2D5A4C;
-  --color-otter-mint: #65B89E;
-  --color-otter-warm: #8C5A32;
-  --color-otter-muted: #4E5653;
+  /* Paleta Monolito & Verde Bosque — versión oscura (sitio siempre oscuro) */
+  --color-otter-deep: #111615;    /* Fondo base grafito */
+  --color-otter-surface: #1A201E; /* Tarjetas y contenedores elevados */
+  --color-otter-forest: #1B382F;  /* Bloques destacados */
+  --color-otter-stone: #E7E8E3;   /* Texto principal y botones claros */
+  --color-otter-muted: #A3ACA8;   /* Texto secundario */
+  --color-otter-accent: #65B89E;  /* Acento verde menta */
+  --color-otter-warm: #C98E5E;    /* Acento cálido / legado */
 
   /* Tipografías (cargadas con <Font /> en MainLayout) */
   --font-display: var(--font-playfair);
@@ -17,10 +16,13 @@
   --font-sans: var(--font-inter);
 }
 
-/* Aplicamos el fondo sólido Piedra Liquen por defecto a toda la web */
 @layer base {
+  :root {
+    color-scheme: dark;
+  }
+
   body {
-    background-color: var(--color-otter-sand);
-    color: var(--color-otter-deep);
+    background-color: var(--color-otter-deep);
+    color: var(--color-otter-stone);
   }
 }

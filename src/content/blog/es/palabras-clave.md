@@ -20,7 +20,7 @@ card:
 
 <div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
   <p
-    class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+    class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-stone first-letter:mr-2 first-letter:float-left"
   >
     Imagina que tienes una ferretería increíble. Vendes los mejores
     martillos de la ciudad. Pero en el letrero de la entrada, en lugar de
@@ -38,9 +38,9 @@ card:
     que están buscando en Google. Hoy en <strong>Otterock</strong> queremos enseñarte
     qué son las Palabras Clave y por qué son los cimientos de tu éxito digital.
   </p>
-  <hr class="border-otter-deep/10 my-12" />
+  <hr class="border-otter-stone/10 my-12" />
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display">
+    <h2 class="text-3xl font-bold text-otter-stone mb-4 font-display">
       1. ¿Qué son las "Palabras Clave" (Keywords)?
     </h2>
     <p class="mb-4">
@@ -49,9 +49,9 @@ card:
       buscador cuando tienen una necesidad real.
     </p>
     <div
-      class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-6"
+      class="bg-otter-deep/50 p-6 rounded-2xl border-l-4 border-otter-stone my-6"
     >
-      <p class="text-otter-deep italic">
+      <p class="text-otter-stone italic">
         "El cliente no busca: 'Prestador de servicios legales
         multidisciplinarios'. El cliente escribe: <strong
           >'Abogado de divorcios en Bogotá'</strong
@@ -65,7 +65,7 @@ card:
     </p>
   </section>
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12">
+    <h2 class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12">
       2. El error de las páginas "Mudas"
     </h2>
     <p class="mb-4">
@@ -82,7 +82,7 @@ card:
     </p>
   </section>
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12">
+    <h2 class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12">
       3. ¿Por qué la tecnología importa aquí?
     </h2>
     <p class="mb-4">
@@ -90,7 +90,7 @@ card:
       rápido. Imagina que Google es un lector muy impaciente.
     </p>
     <p
-      class="text-xl font-bold text-otter-deep text-center my-8 font-display bg-otter-surface/60 border border-otter-deep/10 p-8 rounded-2xl italic"
+      class="text-xl font-bold text-otter-stone text-center my-8 font-display bg-otter-surface/60 border border-otter-stone/10 p-8 rounded-2xl italic"
     >
       "En una web de Otterock, el código es limpio. Le entregamos a Google
       un libro perfectamente impreso y fácil de leer."
@@ -102,12 +102,12 @@ card:
     </p>
   </section>
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12">
+    <h2 class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12">
       Nuestra Estrategia en 3 Pasos:
     </h2>
     <div class="grid md:grid-cols-3 gap-4 text-center text-sm">
       <div
-        class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+        class="p-6 bg-otter-surface border border-otter-stone/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
       >
         <div class="text-3xl mb-2">🔍</div>
         <p class="text-otter-muted">
@@ -116,7 +116,7 @@ card:
         </p>
       </div>
       <div
-        class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+        class="p-6 bg-otter-surface border border-otter-stone/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
       >
         <div class="text-3xl mb-2">✍️</div>
         <p class="text-otter-muted">
@@ -125,7 +125,7 @@ card:
         </p>
       </div>
       <div
-        class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+        class="p-6 bg-otter-surface border border-otter-stone/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
       >
         <div class="text-3xl mb-2">🚀</div>
         <p class="text-otter-muted">
@@ -135,9 +135,9 @@ card:
       </div>
     </div>
   </section>
-  <hr class="border-otter-deep/10 my-12" />
+  <hr class="border-otter-stone/10 my-12" />
   <section
-    class="bg-otter-deep text-otter-surface p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
+    class="bg-otter-forest text-otter-stone p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
   >
     <div
       class="absolute top-0 right-0 w-32 h-32 bg-otter-surface/10 rounded-full -mr-10 -mt-10 blur-2xl"
@@ -155,7 +155,7 @@ card:
     </p>
     <a
       href="/contacto"
-      class="inline-block bg-otter-surface text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-surface transition-all hover:-translate-y-1 shadow-lg relative z-10"
+      class="inline-block bg-otter-stone text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-deep transition-all hover:-translate-y-1 shadow-lg relative z-10"
     >
       Hagamos que te encuentren
     </a>

@@ -12,16 +12,16 @@ imageAlt: "Speed optimization and web performance"
 tags: ["SEO", "Performance", "Astro", "Core Web Vitals"]
 card:
   emoji: "⏳"
-  badgeClass: "bg-otter-sand text-otter-deep"
+  badgeClass: "bg-otter-deep text-otter-stone"
   title: "The 3-Second Rule"
   excerpt: "Does your website invite people in or slam the door in their face? Discover why speed is the new language of trust."
 ---
 
 <div
-        class="bg-otter-surface border border-otter-deep/10 rounded-2xl p-8 text-left mb-12"
+        class="bg-otter-surface border border-otter-stone/10 rounded-2xl p-8 text-left mb-12"
     >
         <h2
-            class="text-lg font-black text-otter-deep uppercase tracking-wider mb-4 flex items-center gap-2"
+            class="text-lg font-black text-otter-stone uppercase tracking-wider mb-4 flex items-center gap-2"
         >
             <span class="text-2xl">⚡</span> Key Takeaways (TL;DR)
         </h2>
@@ -49,7 +49,7 @@ card:
     class="space-y-8 text-lg text-otter-muted leading-relaxed font-body"
 >
     <p
-        class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+        class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-stone first-letter:mr-2 first-letter:float-left"
     >
         Imagine you decide to treat yourself and go to that luxury 
         restaurant everyone is talking about. You get to the entrance, 
@@ -63,7 +63,7 @@ card:
     </p>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             The invisible timer of desire
         </h2>
@@ -73,9 +73,9 @@ card:
             decide; it's pure instinct.
         </p>
         <div
-            class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-6"
+            class="bg-otter-deep/50 p-6 rounded-2xl border-l-4 border-otter-stone my-6"
         >
-            <p class="text-otter-deep italic">
+            <p class="text-otter-stone italic">
                 "The statistics are relentless: if your page takes more 
                 than 3 seconds to load, <strong>53% of users</strong> will 
                 abandon the site before even seeing your first photo."
@@ -91,7 +91,7 @@ card:
     </section>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             Why does Google hate waiting?
         </h2>
@@ -109,7 +109,7 @@ card:
     </section>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             The "Weight" of Generic vs. The Lightness of Craftsmanship
         </h2>
@@ -120,7 +120,7 @@ card:
             showing anything.
         </p>
         <p
-            class="text-xl font-bold text-otter-deep text-center my-8 font-display bg-otter-surface/60 border border-otter-deep/10 p-8 rounded-2xl italic"
+            class="text-xl font-bold text-otter-stone text-center my-8 font-display bg-otter-surface/60 border border-otter-stone/10 p-8 rounded-2xl italic"
         >
             "At Otterock, we use next-generation technologies like Astro 
             to build only what your business needs. Not an ounce of extra code."
@@ -129,7 +129,7 @@ card:
             class="grid md:grid-cols-3 gap-4 text-center text-sm mt-8"
         >
             <div
-                class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                class="p-6 bg-otter-surface border border-otter-stone/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
             >
                 <div class="text-3xl mb-2">🍃</div>
                 <p class="text-otter-muted">
@@ -138,7 +138,7 @@ card:
                 </p>
             </div>
             <div
-                class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                class="p-6 bg-otter-surface border border-otter-stone/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
             >
                 <div class="text-3xl mb-2">📱</div>
                 <p class="text-otter-muted">
@@ -147,7 +147,7 @@ card:
                 </p>
             </div>
             <div
-                class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                class="p-6 bg-otter-surface border border-otter-stone/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
             >
                 <div class="text-3xl mb-2">💯</div>
                 <p class="text-otter-muted">
@@ -159,7 +159,7 @@ card:
     </section>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             Speed is the New Luxury
         </h2>
@@ -174,9 +174,9 @@ card:
             is red, you're losing money every time someone clicks.
         </p>
     </section>
-    <hr class="border-otter-deep/10 my-12" />
+    <hr class="border-otter-stone/10 my-12" />
     <section
-        class="bg-otter-deep text-otter-surface p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
+        class="bg-otter-forest text-otter-stone p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
     >
         <div
             class="absolute top-0 right-0 w-32 h-32 bg-otter-surface/10 rounded-full -mr-10 -mt-10 blur-2xl"
@@ -198,15 +198,15 @@ card:
         </p>
         <a
             href="/en/contacto"
-            class="inline-block bg-otter-surface text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-surface transition-all hover:-translate-y-1 shadow-lg relative z-10"
+            class="inline-block bg-otter-stone text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-deep transition-all hover:-translate-y-1 shadow-lg relative z-10"
         >
             Request a Speed Audit 🚀
         </a>
     </section>
-    <footer class="mt-16 pt-12 border-t border-otter-deep/10">
+    <footer class="mt-16 pt-12 border-t border-otter-stone/10">
         <div class="flex items-center gap-6">
             <div
-                class="w-20 h-20 rounded-full bg-otter-deep flex items-center justify-center text-3xl shrink-0 overflow-hidden"
+                class="w-20 h-20 rounded-full bg-otter-forest flex items-center justify-center text-3xl shrink-0 overflow-hidden"
             >
                 👨‍💻 
             </div>
@@ -216,7 +216,7 @@ card:
                 >
                     Written by
                 </p>
-                <h3 class="text-xl font-bold text-otter-deep">
+                <h3 class="text-xl font-bold text-otter-stone">
                     Sergio Bello
                 </h3>
                 <p class="text-otter-muted text-sm mt-1 max-w-lg">

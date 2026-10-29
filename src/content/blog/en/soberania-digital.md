@@ -19,16 +19,16 @@ card:
 
 <div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
   <p
-    class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+    class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-stone first-letter:mr-2 first-letter:float-left"
   >
     Imagine you wake up tomorrow and your favorite social network has decided to close your account, or worse, has changed its algorithm and now nobody sees what you post. For many entrepreneurs, this is not a nightmare, it is a real vulnerability.
   </p>
   <p>
     In this post, we talk about <strong>Digital Sovereignty</strong> and why it is your brand's most valuable asset.
   </p>
-  <hr class="border-otter-deep/10 my-12" />
+  <hr class="border-otter-stone/10 my-12" />
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-6 font-display">
+    <h2 class="text-3xl font-bold text-otter-stone mb-6 font-display">
       1. The risk of "Rented Ground"
     </h2>
     <p class="mb-6">
@@ -50,25 +50,25 @@ card:
     </p>
   </section>
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-6 font-display mt-12">
+    <h2 class="text-3xl font-bold text-otter-stone mb-6 font-display mt-12">
       2. Your Web: Your Land, Your Rock
     </h2>
     <p class="mb-6">
       Digital Craftsmanship was born to give you back control. Having your own website, developed with high-level technology, means that you are the owner of the plot.
     </p>
     <div
-      class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-8"
+      class="bg-otter-deep/50 p-6 rounded-2xl border-l-4 border-otter-stone my-8"
     >
       <ul class="space-y-4">
         <li>
-          <strong class="text-otter-deep font-bold">Total Experience Control:</strong>
-          <p class="text-sm mt-1 text-otter-deep">
+          <strong class="text-otter-stone font-bold">Total Experience Control:</strong>
+          <p class="text-sm mt-1 text-otter-stone">
             On your website, clean of distractions from notifications or advertising from the competition, you guide your customer's path from interest to booking or purchase.
           </p>
         </li>
         <li>
-          <strong class="text-otter-deep font-bold">Technological Independence:</strong>
-          <p class="text-sm mt-1 text-otter-deep">
+          <strong class="text-otter-stone font-bold">Technological Independence:</strong>
+          <p class="text-sm mt-1 text-otter-stone">
             By using tools like Astro, we guarantee that your site is fast and efficient, without depending on heavy "builders" that keep you tied to their monthly fees.
           </p>
         </li>
@@ -76,7 +76,7 @@ card:
     </div>
   </section>
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-6 font-display mt-12">
+    <h2 class="text-3xl font-bold text-otter-stone mb-6 font-display mt-12">
       3. Data is the new Gold
     </h2>
     <p class="mb-6">
@@ -88,12 +88,12 @@ card:
       <li>You have their emails and contacts safely and directly.</li>
       <li>You can automate processes with n8n so your business works while you rest.</li>
     </ul>
-    <p class="text-center font-bold text-otter-deep text-xl mt-8">
+    <p class="text-center font-bold text-otter-stone text-xl mt-8">
       This isn't just a page; it's an infrastructure of freedom.
     </p>
   </section>
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-6 font-display mt-12">
+    <h2 class="text-3xl font-bold text-otter-stone mb-6 font-display mt-12">
       4. The Value of Hand-Made
     </h2>
     <p class="mb-6">
@@ -103,20 +103,20 @@ card:
       Our mission is for you to stop being an internet tenant and become the owner of your digital ecosystem. Because when the code is artisanal, independence is total.
     </p>
   </section>
-  <hr class="border-otter-deep/10 my-12" />
+  <hr class="border-otter-stone/10 my-12" />
   <section class="text-center">
-    <h2 class="text-3xl font-bold text-otter-deep mb-6 font-display">
+    <h2 class="text-3xl font-bold text-otter-stone mb-6 font-display">
       Conclusion
     </h2>
     <p class="mb-8">
       The digital world changes fast, but the assets you own are the only ones that will give you long-term peace of mind. Don't leave the future of your brand in the hands of an algorithm. It's time to claim your sovereignty.
     </p>
-    <p class="text-2xl font-black text-otter-deep mb-12">
+    <p class="text-2xl font-black text-otter-stone mb-12">
       Is your business truly yours or does it belong to a social network?
     </p>
   </section>
   <section
-    class="bg-otter-deep text-otter-surface p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
+    class="bg-otter-forest text-otter-stone p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
   >
     <div
       class="absolute top-0 right-0 w-32 h-32 bg-otter-surface/10 rounded-full -mr-10 -mt-10 blur-2xl"
@@ -130,7 +130,7 @@ card:
     </p>
     <a
       href="/en/contacto"
-      class="inline-block bg-otter-surface text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-surface transition-all hover:-translate-y-1 shadow-lg relative z-10"
+      class="inline-block bg-otter-stone text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-deep transition-all hover:-translate-y-1 shadow-lg relative z-10"
     >
       Let's talk about your digital sovereignty
     </a>

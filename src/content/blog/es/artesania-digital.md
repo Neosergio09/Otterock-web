@@ -12,7 +12,7 @@ imageAlt: "Programación artesanal con alma"
 tags: ["Artesanía Digital", "Desarrollo Web", "Astro", "Tailwind CSS"]
 card:
   emoji: "✨"
-  badgeClass: "bg-otter-sand text-otter-deep"
+  badgeClass: "bg-otter-deep text-otter-stone"
   category: "Filosofía"
   title: "Más que código: Por qué tu negocio merece \"Artesanía Digital\""
   excerpt: "Descubre por qué dejar de buscar la web más rápida y empezar a buscar la web más humana es la mejor estrategia para conectar de verdad."
@@ -20,7 +20,7 @@ card:
 
 <div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
   <p
-    class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+    class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-stone first-letter:mr-2 first-letter:float-left"
   >
     Vivimos en la era de lo instantáneo. Todo el mundo quiere resultados ya.
     Y en esa carrera frenética, internet se ha llenado de "ruido": páginas
@@ -31,7 +31,7 @@ card:
     Si has llegado a <strong>Otterock</strong> y has visto el texto escribirse
     letra por letra en tu pantalla, quizás te hayas detenido un segundo.
     <br />
-    <span class="text-otter-deep font-bold italic"
+    <span class="text-otter-stone font-bold italic"
       >Esa es exactamente nuestra intención: que te detengas.</span
     >
   </p>
@@ -42,9 +42,9 @@ card:
     hamburguesas, sino que las confeccionamos a medida, con alma y
     estrategia.
   </p>
-  <hr class="border-otter-deep/10 my-12" />
+  <hr class="border-otter-stone/10 my-12" />
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display">
+    <h2 class="text-3xl font-bold text-otter-stone mb-4 font-display">
       1. La diferencia entre "Estar en internet" y "Destacar en internet"
     </h2>
     <p class="mb-4">
@@ -57,12 +57,12 @@ card:
       mal a todo el mundo.
     </p>
     <div
-      class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-6"
+      class="bg-otter-deep/50 p-6 rounded-2xl border-l-4 border-otter-stone my-6"
     >
-      <p class="font-bold text-otter-deep">
+      <p class="font-bold text-otter-stone">
         Nosotros apostamos por la programación a medida.
       </p>
-      <p class="text-sm mt-2 text-otter-deep">
+      <p class="text-sm mt-2 text-otter-stone">
         No usamos "moldes" pesados que hacen que tu web cargue lento (y que
         Google odia). Escribimos el código pensando específicamente en tu
         panadería, tu bufete de abogados o tu tienda de ropa.
@@ -80,7 +80,7 @@ card:
     </ul>
   </section>
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12">
+    <h2 class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12">
       2. Velocidad no es prisa; es respeto
     </h2>
     <p class="mb-4">
@@ -88,7 +88,7 @@ card:
       términos técnicos un momento.
     </p>
     <p
-      class="text-xl font-bold text-otter-deep text-center my-8 font-display bg-otter-surface/60 border border-otter-deep/10 p-8 rounded-2xl italic"
+      class="text-xl font-bold text-otter-stone text-center my-8 font-display bg-otter-surface/60 border border-otter-stone/10 p-8 rounded-2xl italic"
     >
       "Para nosotros, una web rápida es una muestra de respeto por el tiempo
       de tu cliente."
@@ -103,7 +103,7 @@ card:
     </p>
   </section>
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12">
+    <h2 class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12">
       3. Desarrollo con Alma: El factor humano
     </h2>
     <p class="mb-4">
@@ -117,7 +117,7 @@ card:
     </p>
     <div class="grid md:grid-cols-3 gap-4 text-center text-sm">
       <div
-        class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+        class="p-6 bg-otter-surface border border-otter-stone/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
       >
         <div class="text-3xl mb-2">👂</div>
         <p class="text-otter-muted">
@@ -125,7 +125,7 @@ card:
         </p>
       </div>
       <div
-        class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+        class="p-6 bg-otter-surface border border-otter-stone/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
       >
         <div class="text-3xl mb-2">🤖</div>
         <p class="text-otter-muted">
@@ -134,7 +134,7 @@ card:
         </p>
       </div>
       <div
-        class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+        class="p-6 bg-otter-surface border border-otter-stone/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
       >
         <div class="text-3xl mb-2">✨</div>
         <p class="text-otter-muted">
@@ -143,9 +143,9 @@ card:
       </div>
     </div>
   </section>
-  <hr class="border-otter-deep/10 my-12" />
+  <hr class="border-otter-stone/10 my-12" />
   <section
-    class="bg-otter-deep text-otter-surface p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
+    class="bg-otter-forest text-otter-stone p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
   >
     <div
       class="absolute top-0 right-0 w-32 h-32 bg-otter-surface/10 rounded-full -mr-10 -mt-10 blur-2xl"
@@ -164,7 +164,7 @@ card:
     </p>
     <a
       href="/contacto"
-      class="inline-block bg-otter-surface text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-surface transition-all hover:-translate-y-1 shadow-lg relative z-10"
+      class="inline-block bg-otter-stone text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-deep transition-all hover:-translate-y-1 shadow-lg relative z-10"
     >
       Hablemos de tu proyecto
     </a>

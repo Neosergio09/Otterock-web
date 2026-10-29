@@ -17,10 +17,10 @@ card:
 ---
 
 <div
-        class="bg-otter-surface border border-otter-deep/10 rounded-2xl p-8 text-left mb-12"
+        class="bg-otter-surface border border-otter-stone/10 rounded-2xl p-8 text-left mb-12"
     >
         <h2
-            class="text-lg font-black text-otter-deep uppercase tracking-wider mb-4 flex items-center gap-2"
+            class="text-lg font-black text-otter-stone uppercase tracking-wider mb-4 flex items-center gap-2"
         >
             <span class="text-2xl">💡</span> Key Takeaways (TL;DR)
         </h2>
@@ -47,7 +47,7 @@ card:
     </div>
 <div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
     <p
-        class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+        class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-stone first-letter:mr-2 first-letter:float-left"
     >
         When you start a business, the temptation is huge. You see an ad 
         that says: "Create your website in 5 minutes, without knowing how 
@@ -63,7 +63,7 @@ card:
     </p>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             1. The "All in One" Problem (Junk Code)
         </h2>
@@ -92,7 +92,7 @@ card:
     </section>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             2. The Plugin Nightmare (Paper Security)
         </h2>
@@ -111,7 +111,7 @@ card:
     </section>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             3. The Twin Syndrome
         </h2>
@@ -122,7 +122,7 @@ card:
             exclusivity.
         </p>
         <div
-            class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-6 italic text-otter-deep"
+            class="bg-otter-deep/50 p-6 rounded-2xl border-l-4 border-otter-stone my-6 italic text-otter-stone"
         >
             A template tells your client: "I'm just one of the crowd". 
             Custom development tells them: "I'm unique".
@@ -130,7 +130,7 @@ card:
     </section>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             4. Technical Debt: The glass ceiling
         </h2>
@@ -142,7 +142,7 @@ card:
     </section>
     <section>
         <h2
-            class="text-3xl font-bold text-otter-deep mb-4 font-display mt-12"
+            class="text-3xl font-bold text-otter-stone mb-4 font-display mt-12"
         >
             Conclusion: Expense or Investment?
         </h2>
@@ -153,15 +153,15 @@ card:
             for years and with the guarantee that Google will find a perfect 
             piece of engineering.
         </p>
-        <p class="font-bold text-otter-deep">
+        <p class="font-bold text-otter-stone">
             At Otterock, we don't use molds. We sculpt your digital presence 
             so that it fits perfectly with the greatness of your business.
         </p>
     </section>
-    <footer class="mt-16 pt-12 border-t border-otter-deep/10">
+    <footer class="mt-16 pt-12 border-t border-otter-stone/10">
         <div class="flex items-center gap-6">
             <div
-                class="w-20 h-20 rounded-full bg-otter-deep flex items-center justify-center text-3xl shrink-0 overflow-hidden"
+                class="w-20 h-20 rounded-full bg-otter-forest flex items-center justify-center text-3xl shrink-0 overflow-hidden"
             >
                 👨‍💻
             </div>
@@ -171,7 +171,7 @@ card:
                 >
                     Written by
                 </p>
-                <h3 class="text-xl font-bold text-otter-deep">
+                <h3 class="text-xl font-bold text-otter-stone">
                     Sergio Bello
                 </h3>
                 <p class="text-otter-muted text-sm mt-1 max-w-lg">

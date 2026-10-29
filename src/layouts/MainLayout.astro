@@ -121,11 +121,11 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
     />
   </head>
 
-  <body class="min-h-screen flex flex-col bg-otter-sand">
+  <body class="min-h-screen flex flex-col bg-otter-deep">
     <header class="p-6 max-w-7xl mx-auto w-full flex flex-row items-center justify-between">
       <a
         href="/"
-        class="text-2xl font-bold text-otter-deep hover:opacity-80 transition-opacity"
+        class="text-2xl font-bold text-otter-stone hover:opacity-80 transition-opacity"
       >
         Otterock<span class="text-otter-accent">.</span>
       </a>
@@ -137,7 +137,7 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
 
       <!-- Desktop Nav -->
       <nav
-        class="hidden md:flex flex-wrap justify-center items-center gap-8 text-base font-medium text-otter-deep"
+        class="hidden md:flex flex-wrap justify-center items-center gap-8 text-base font-medium text-otter-stone"
       >
         <a href={translatePath("/")} class="hover:text-otter-accent transition"
           >{t("nav.home")}
@@ -159,18 +159,18 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
         </a>
         <a
           href={translatePath("/blog")}
-          class="font-bold text-otter-deep hover:text-otter-accent transition"
+          class="font-bold text-otter-stone hover:text-otter-accent transition"
           >{t("nav.blog")}
         </a>
 
         <div
-          class="flex items-center gap-6 pl-4 border-l border-otter-deep/20 ml-2"
+          class="flex items-center gap-6 pl-4 border-l border-otter-stone/20 ml-2"
         >
           <LanguagePicker />
 
           <a
             href={translatePath("/contacto")}
-            class="bg-otter-deep text-white px-6 py-2 rounded-full font-bold hover:bg-otter-accent transition-all shadow-md hover:-translate-y-0.5"
+            class="bg-otter-stone text-otter-deep px-6 py-2 rounded-full font-bold hover:bg-otter-accent transition-all shadow-md hover:-translate-y-0.5"
           >
             {t("nav.contact")}
           </a>
@@ -182,7 +182,7 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
       <slot />
     </main>
 
-    <footer class="bg-otter-deep text-otter-sand p-10 mt-20 mb-[100px] md:mb-0">
+    <footer class="bg-otter-surface border-t border-otter-stone/10 text-otter-stone p-10 mt-20 mb-[100px] md:mb-0">
       <div class="max-w-7xl mx-auto text-center">
         <p class="text-lg font-medium">Otterock</p>
         <p class="text-sm opacity-80 mt-2">

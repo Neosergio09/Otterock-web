@@ -32,13 +32,13 @@ const currentIndex = activeIndex === -1 ? 0 : activeIndex;
 ---
 
 <div class="fixed bottom-0 left-0 w-full flex justify-center z-50 md:hidden bg-transparent pb-6 px-4 pointer-events-none">
-  <nav aria-label="Menú principal" class="navigation pointer-events-auto relative w-full max-w-[344px] h-[70px] bg-otter-deep rounded-2xl flex justify-center items-center px-2 shadow-xl border border-white/5">
+  <nav aria-label="Menú principal" class="navigation pointer-events-auto relative w-full max-w-[344px] h-[70px] bg-otter-surface rounded-2xl flex justify-center items-center px-2 shadow-xl border border-otter-stone/10">
 
     <div class="relative w-[312px]" style={`--active-index: ${currentIndex};`}>
 
-      <div class="indicator absolute -top-[31px] left-0 w-[52px] h-[52px] bg-otter-accent rounded-full border-[5px] border-otter-sand transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] z-0 shadow-[0_8px_16px_rgba(45,90,76,0.45)]">
-        <div class="before-curve absolute top-[50%] -left-[22px] w-[20px] h-[20px] bg-transparent rounded-tr-[20px] shadow-[2px_-10px_0_0_var(--color-otter-sand)]"></div>
-        <div class="after-curve absolute top-[50%] -right-[22px] w-[20px] h-[20px] bg-transparent rounded-tl-[20px] shadow-[-2px_-10px_0_0_var(--color-otter-sand)]"></div>
+      <div class="indicator absolute -top-[31px] left-0 w-[52px] h-[52px] bg-otter-accent rounded-full border-[5px] border-otter-deep transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] z-0 shadow-[0_8px_16px_rgba(45,90,76,0.45)]">
+        <div class="before-curve absolute top-[50%] -left-[22px] w-[20px] h-[20px] bg-transparent rounded-tr-[20px] shadow-[2px_-10px_0_0_var(--color-otter-deep)]"></div>
+        <div class="after-curve absolute top-[50%] -right-[22px] w-[20px] h-[20px] bg-transparent rounded-tl-[20px] shadow-[-2px_-10px_0_0_var(--color-otter-deep)]"></div>
       </div>
 
       <ul class="flex relative w-full justify-between items-center h-full">
@@ -46,11 +46,11 @@ const currentIndex = activeIndex === -1 ? 0 : activeIndex;
           <li class={`list relative w-[52px] h-[70px] z-10 flex-shrink-0 ${index === currentIndex ? 'active' : ''}`} data-index={index}>
             <a href={item.href} aria-label={item.label} aria-current={index === activeIndex ? 'page' : undefined} class="relative flex justify-center items-center flex-col w-full text-center font-medium h-full">
 
-              <span class="icon relative block text-otter-sand transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] flex justify-center items-center h-[70px] z-20">
+              <span class="icon relative block text-otter-stone transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] flex justify-center items-center h-[70px] z-20">
                 <item.icon class="w-[22px] h-[22px] stroke-[2px]" />
               </span>
 
-              <span class="text absolute whitespace-nowrap text-otter-deep bg-otter-surface px-2 py-0.5 rounded-full text-[9px] font-black tracking-wider opacity-0 transition-all duration-500 translate-y-5 z-10 shadow-sm uppercase">
+              <span class="text absolute whitespace-nowrap text-otter-deep bg-otter-stone px-2 py-0.5 rounded-full text-[9px] font-black tracking-wider opacity-0 transition-all duration-500 translate-y-5 z-10 shadow-sm uppercase">
                 {item.label}
               </span>
 
@@ -77,7 +77,7 @@ const currentIndex = activeIndex === -1 ? 0 : activeIndex;
   /* Sube el ícono activo al centro de la burbuja */
   .list.active .icon {
     transform: translateY(-40px) scale(1.1);
-    color: white;
+    color: var(--color-otter-deep);
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
   }
 

@@ -40,7 +40,7 @@ const faqs = [
         >
           Let's talk
         </p>
-        <h1 class="text-5xl font-black text-otter-deep mb-8">
+        <h1 class="text-5xl font-black text-otter-stone mb-8">
           Ready to leave your mark?
         </h1>
         <p class="text-lg text-otter-muted mb-8 leading-relaxed">
@@ -51,7 +51,7 @@ const faqs = [
         <div class="space-y-6">
           <div class="flex items-center gap-4">
             <div
-              class="w-12 h-12 bg-otter-deep text-otter-surface rounded-full flex items-center justify-center"
+              class="w-12 h-12 bg-otter-forest text-otter-stone rounded-full flex items-center justify-center"
             >
               📍
             </div>
@@ -59,7 +59,7 @@ const faqs = [
           </div>
           <div class="flex items-center gap-4">
             <div
-              class="w-12 h-12 bg-otter-deep text-otter-surface rounded-full flex items-center justify-center"
+              class="w-12 h-12 bg-otter-forest text-otter-stone rounded-full flex items-center justify-center"
             >
               ✉️
             </div>
@@ -71,16 +71,16 @@ const faqs = [
 
         <!-- FAQ Section for GEO -->
         <div class="mt-16">
-          <h2 class="text-2xl font-bold text-otter-deep mb-6 font-display">
+          <h2 class="text-2xl font-bold text-otter-stone mb-6 font-display">
             Frequently Asked Questions
           </h2>
           <div class="space-y-6">
             {faqs.map((faq) => (
               <details
-                class="group p-4 bg-otter-surface rounded-2xl border border-otter-deep/10 transition-all hover:bg-otter-surface/80 open:bg-otter-surface"
+                class="group p-4 bg-otter-surface rounded-2xl border border-otter-stone/10 transition-all hover:bg-otter-surface/80 open:bg-otter-surface"
               >
                 <summary
-                  class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
+                  class="flex justify-between items-center font-bold text-otter-stone cursor-pointer list-none"
                 >
                   <span>{faq.question}</span>
                   <span class="transition group-open:rotate-180">
@@ -108,7 +108,7 @@ const faqs = [
       </div>
 
       <div
-        class="bg-otter-surface p-10 rounded-[2.5rem] shadow-xl border border-otter-deep/10 sticky top-24 self-start"
+        class="bg-otter-surface p-10 rounded-[2.5rem] shadow-xl border border-otter-stone/10 sticky top-24 self-start"
       >
         <form id="contact-form" class="space-y-6">
           <!-- Honeypot anti-spam: oculto para humanos -->
@@ -116,7 +116,7 @@ const faqs = [
             <input type="text" name="website" tabindex="-1" autocomplete="off" />
           </div>
           <div>
-            <label class="block text-sm font-bold text-otter-deep mb-2"
+            <label class="block text-sm font-bold text-otter-stone mb-2"
               >Your Name</label
             >
             <input
@@ -125,12 +125,12 @@ const faqs = [
               maxlength="100"
               required
               placeholder="e.g. John Doe"
-              class="w-full px-5 py-4 rounded-2xl bg-otter-sand border-none focus:ring-2 focus:ring-otter-accent transition-all"
+              class="w-full px-5 py-4 rounded-2xl bg-otter-deep border-none focus:ring-2 focus:ring-otter-accent transition-all"
             />
           </div>
 
           <div>
-            <label class="block text-sm font-bold text-otter-deep mb-2"
+            <label class="block text-sm font-bold text-otter-stone mb-2"
               >Email Address</label
             >
             <input
@@ -139,12 +139,12 @@ const faqs = [
               maxlength="254"
               required
               placeholder="you@email.com"
-              class="w-full px-5 py-4 rounded-2xl bg-otter-sand border-none focus:ring-2 focus:ring-otter-accent transition-all"
+              class="w-full px-5 py-4 rounded-2xl bg-otter-deep border-none focus:ring-2 focus:ring-otter-accent transition-all"
             />
           </div>
 
           <div>
-            <label class="block text-sm font-bold text-otter-deep mb-2"
+            <label class="block text-sm font-bold text-otter-stone mb-2"
               >Tell us about your idea</label
             >
             <textarea
@@ -153,14 +153,14 @@ const faqs = [
               required
               rows="4"
               placeholder="How can we help you transcend?"
-              class="w-full px-5 py-4 rounded-2xl bg-otter-sand border-none focus:ring-2 focus:ring-otter-accent transition-all"
+              class="w-full px-5 py-4 rounded-2xl bg-otter-deep border-none focus:ring-2 focus:ring-otter-accent transition-all"
             ></textarea>
           </div>
 
           <button
             type="submit"
             id="submit-btn"
-            class="w-full bg-otter-deep text-otter-surface py-5 rounded-2xl font-black text-lg hover:bg-otter-accent hover:-translate-y-1 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            class="w-full bg-otter-stone text-otter-deep py-5 rounded-2xl font-black text-lg hover:bg-otter-accent hover:-translate-y-1 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Send Message 🐾
           </button>

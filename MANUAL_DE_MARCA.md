@@ -92,25 +92,29 @@ Rechazamos los constructores visuales pesados y el código inflado. Cada compone
 - **Nombre de Marca:** `Otterock`
 - **Sintaxis de Logotipo:** `Otterock.`
   - Tipografía sans-serif con peso extranegrita (`font-bold` / `font-black`).
-  - El cuerpo de la palabra se expresa en color profundo (`otter-deep`).
+  - El cuerpo de la palabra se expresa en el color de texto principal (`otter-stone` sobre el fondo grafito).
   - El punto final (`.`) se destaca en el color acento (`otter-accent`), simbolizando precisión, cierre y decisión.
 
-### 6.2. Paleta Cromática (Monolito & Verde Bosque)
+### 6.2. Paleta Cromática (Monolito & Verde Bosque — versión oscura)
+
+El sitio es **siempre oscuro**: el grafito es el lienzo y la luz la ponen el texto piedra y los acentos. La sobriedad viene de fondos sólidos, sin degradados ni colores saturados.
 
 | Nombre Token | Valor HEX | Rol en la Identidad | Significado Emocional |
 | :--- | :--- | :--- | :--- |
-| **`--color-otter-deep`** | `#111615` | Color Principal / Texto / Monolito | Grafito mineral profundo que transmite autoridad técnica, firmeza de roca y madurez ejecutiva. |
-| **`--color-otter-forest`** | `#1B382F` | Bloques Sólidos Oscuros / Secciones de Impacto | Verde bosque profundo que conecta la naturaleza orgánica con estabilidad y seguridad bancaria. |
-| **`--color-otter-sand`** | `#E7E8E3` | Fondo Sólido Base / Lienzo Principal | Tono liquen/piedra sólido que aporta carácter arquitectónico, serenidad y contraste descansado. |
-| **`--color-otter-surface`** | `#F5F5F2` | Tarjetas / Contenedores Elevados | Papel artesanal limpio que destaca los bloques de contenido sobre el lienzo de piedra. |
-| **`--color-otter-accent`**| `#2D5A4C` | Color de Acento / Botones / Destacados | Verde bosque esmeralda sobrio que representa precisión, vitalidad e ingeniería sostenible. |
-| **`--color-otter-mint`** | `#65B89E` | Acento Luminoso sobre Fondos Oscuros | Esmeralda mineral claro para garantizar lectura impecable sobre bloques grafito y bosque. |
-| **`--color-otter-warm`** | `#8C5A32` | Acento Cálido / Sello de Legado / Badges | Tierra noble que refleja calidez, fidelidad, el vínculo canino y el corazón de Rocko. |
+| **`--color-otter-deep`** | `#111615` | Fondo Base / Lienzo Principal / Texto sobre botones claros | Grafito mineral profundo que transmite autoridad técnica, firmeza de roca y madurez ejecutiva. |
+| **`--color-otter-surface`** | `#1A201E` | Tarjetas / Contenedores Elevados / Footer / Menú móvil | Grafito apenas más claro que separa los bloques de contenido sin romper la sobriedad. |
+| **`--color-otter-forest`** | `#1B382F` | Bloques Destacados / Secciones de Impacto / CTA | Verde bosque profundo que conecta la naturaleza orgánica con estabilidad y seguridad. |
+| **`--color-otter-stone`** | `#E7E8E3` | Texto Principal / Botones Principales | Tono piedra/liquen que da lectura descansada sobre grafito y se usa como píldora clara en los botones. |
+| **`--color-otter-muted`** | `#A3ACA8` | Texto Secundario / Descripciones | Gris mineral verdoso para párrafos de apoyo, sin competir con el texto principal. |
+| **`--color-otter-accent`**| `#65B89E` | Color de Acento / Enlaces / Destacados / Punto del logo | Esmeralda mineral luminoso que representa precisión, vitalidad e ingeniería sostenible. |
+| **`--color-otter-warm`** | `#C98E5E` | Acento Cálido / Sello de Legado / Badges | Tierra noble que refleja calidez, fidelidad, el vínculo canino y el corazón de Rocko. |
 
-**Reglas de contraste (WCAG AA):**
-- Sobre fondos oscuros (`otter-deep`, `otter-forest`) los textos y acentos van en `otter-mint` o `otter-surface`. **Nunca** `otter-accent`: su contraste ahí es de 1,6–2,3:1 y no se lee.
-- `otter-accent` y `otter-warm` se usan como texto solo sobre fondos claros (`otter-sand`, `otter-surface`).
-- En badges con texto pequeño, el fondo tintado no debe superar el 10 % de opacidad para `otter-warm` (`bg-otter-warm/10`) ni el 15 % para `otter-accent` (`bg-otter-accent/15`).
+**Reglas de uso y contraste (WCAG AA):**
+- Texto sobre `otter-deep`, `otter-surface` u `otter-forest`: `otter-stone`, `otter-muted`, `otter-accent` u `otter-warm` (todas ≥ 4,5:1).
+- Botones principales: píldora `bg-otter-stone` con texto `text-otter-deep`. Botones de acento: `bg-otter-accent` o `bg-otter-warm` con texto `text-otter-deep`. **Nunca** texto claro sobre `otter-accent` u `otter-warm`.
+- Botones secundarios: contorno `border-otter-stone` con texto `text-otter-stone`; al pasar el mouse se rellenan en `otter-stone`.
+- Bordes y divisores: `otter-stone` al 10 % (`border-otter-stone/10`).
+- Badges: fondo tintado `bg-otter-accent/15` o `bg-otter-warm/10` con el texto del mismo color.
 
 ### 6.3. Tipografías
 

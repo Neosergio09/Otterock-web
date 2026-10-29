@@ -19,16 +19,16 @@ card:
 
 <div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
   <p
-    class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
+    class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-stone first-letter:mr-2 first-letter:float-left"
   >
     A few days ago, watching an analysis by Nate Gentile about Apple's new hardware, I came across a reflection that fascinated me and confirms what we have been promoting at Otterock: hardware is changing, and with it, the way we consume software.
   </p>
   <p>
     The conclusion is clear: we are entering an era where it will no longer be profitable (or efficient) to have giant applications installed on our devices. The future is web, and here we explain why your business should be there right now.
   </p>
-  <hr class="border-otter-deep/10 my-12" />
+  <hr class="border-otter-stone/10 my-12" />
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-6 font-display">
+    <h2 class="text-3xl font-bold text-otter-stone mb-6 font-display">
       1. The RAM Crisis and the Rise of AI
     </h2>
     <p class="mb-6">
@@ -38,16 +38,16 @@ card:
       This creates a bottleneck. If the computers of the near future are going to use a large part of their power just to keep AI alive, there will be no room for heavy applications running natively.
     </p>
     <div
-      class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-8"
+      class="bg-otter-deep/50 p-6 rounded-2xl border-l-4 border-otter-stone my-8"
     >
-      <p class="text-otter-deep font-bold mb-2">The solution?</p>
+      <p class="text-otter-stone font-bold mb-2">The solution?</p>
       <p class="text-otter-muted">
         Web applications that run on powerful servers and are delivered lightly to the user. Your hardware doesn't suffer; the cloud does the dirty work.
       </p>
     </div>
   </section>
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-6 font-display mt-12">
+    <h2 class="text-3xl font-bold text-otter-stone mb-6 font-display mt-12">
       2. The "Pros of Pros" of Betting on the Web
     </h2>
     <p class="mb-6">
@@ -55,19 +55,19 @@ card:
     </p>
     <div class="space-y-8">
       <div>
-        <h3 class="text-xl font-bold text-otter-deep mb-3">A. Total Universality (Zero Friction)</h3>
+        <h3 class="text-xl font-bold text-otter-stone mb-3">A. Total Universality (Zero Friction)</h3>
         <p>
           A native application forces you to download, install, and update. A Web App is one click away. It doesn't matter if your customer has the latest Mac or a mid-range phone; if they have a browser, they have your business. It's the fluidity of the otter at its peak.
         </p>
       </div>
       <div>
-        <h3 class="text-xl font-bold text-otter-deep mb-3">B. Centralized Maintenance</h3>
+        <h3 class="text-xl font-bold text-otter-stone mb-3">B. Centralized Maintenance</h3>
         <p>
           Forget about old versions. When we update a web application at Otterock, the change is instantaneous for all users. There are no patches, no errors due to lack of disk space on the customer's side. The "firmness of the rock" is on the server.
         </p>
       </div>
       <div>
-        <h3 class="text-xl font-bold text-otter-deep mb-3">C. Smart Infrastructure Costs</h3>
+        <h3 class="text-xl font-bold text-otter-stone mb-3">C. Smart Infrastructure Costs</h3>
         <p>
           Developing for iOS, Android, Windows, and Mac separately is astronomically expensive. A well-built web application (using technologies like Astro and Tailwind CSS v4) works everywhere with a single development. Less expense, more reach.
         </p>
@@ -75,7 +75,7 @@ card:
     </div>
   </section>
   <section>
-    <h2 class="text-3xl font-bold text-otter-deep mb-6 font-display mt-12">
+    <h2 class="text-3xl font-bold text-otter-stone mb-6 font-display mt-12">
       3. The Browser is the New Operating System
     </h2>
     <p class="mb-6">
@@ -90,9 +90,9 @@ card:
       <li>Scale to infinity with databases like Supabase.</li>
     </ul>
   </section>
-  <hr class="border-otter-deep/10 my-12" />
+  <hr class="border-otter-stone/10 my-12" />
   <section class="text-center">
-    <h2 class="text-3xl font-bold text-otter-deep mb-6 font-display">
+    <h2 class="text-3xl font-bold text-otter-stone mb-6 font-display">
       Conclusion: Don't Stay Behind
     </h2>
     <p class="mb-8">
@@ -101,12 +101,12 @@ card:
     <p class="mb-8">
       Betting on a web architecture today is guaranteeing that your business is accessible, fast, and modern, no matter how much RAM tomorrow's AI consumes.
     </p>
-    <p class="text-2xl font-black text-otter-deep mb-12">
+    <p class="text-2xl font-black text-otter-stone mb-12">
       At Otterock, we don't just write code; we design the future of your digital sovereignty.
     </p>
   </section>
   <section
-    class="bg-otter-deep text-otter-surface p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
+    class="bg-otter-forest text-otter-stone p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
   >
     <div
       class="absolute top-0 right-0 w-32 h-32 bg-otter-surface/10 rounded-full -mr-10 -mt-10 blur-2xl"
@@ -120,7 +120,7 @@ card:
     </p>
     <a
       href="/en/contacto"
-      class="inline-block bg-otter-surface text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-surface transition-all hover:-translate-y-1 shadow-lg relative z-10"
+      class="inline-block bg-otter-stone text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-deep transition-all hover:-translate-y-1 shadow-lg relative z-10"
     >
       I want to evolve my business
     </a>
