@@ -6,7 +6,7 @@ pubDate: "2026-02-02T08:00:00-05:00"
 category: "Web Strategy"
 section: "Web Strategy"
 readingTime: 5
-image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
+image: "../../../assets/trampa-de-las-plantillas.jpg"
 imageAlt: "Modern architecture representing solid structure"
 tags: ["Technical Debt", "WordPress", "Performance", "Scalability"]
 card:

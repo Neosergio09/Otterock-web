@@ -6,7 +6,7 @@ pubDate: "2026-02-21T08:00:00-05:00"
 category: "Estrategia"
 section: "Estrategia"
 readingTime: 4
-image: "../../../assets/museo-difital.png"
+image: "../../../assets/museo-digital.jpg"
 imageAlt: "Diferencia entre un diseño estético y un diseño funcional para conversión"
 tags: ["Estrategia", "Conversión", "UX/UI"]
 card:

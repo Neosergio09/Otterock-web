@@ -6,7 +6,7 @@ pubDate: "2026-02-21T08:00:00-05:00"
 category: "Strategy"
 section: "Strategy"
 readingTime: 4
-image: "../../../assets/museo-difital.png"
+image: "../../../assets/museo-digital.jpg"
 imageAlt: "Difference between aesthetic design and functional design for conversion"
 tags: ["Strategy", "Conversion", "UX/UI"]
 card:

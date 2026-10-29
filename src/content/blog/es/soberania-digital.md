@@ -7,7 +7,7 @@ category: "Estrategia"
 section: "Estrategia"
 readingTime: 5
 quote: "\"Si tu única presencia digital depende de una plataforma externa, no tienes un negocio sólido; tienes una habitación decorada en un hotel que no te pertenece.\""
-image: "../../../assets/soberania-digital.png"
+image: "../../../assets/soberania-digital.jpg"
 imageAlt: "Soberanía Digital y Artesanía Digital"
 tags: ["Soberanía Digital", "Negocios Digitales", "Sitio Web Propio", "Estrategia"]
 card:

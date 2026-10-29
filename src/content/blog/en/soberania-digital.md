@@ -7,7 +7,7 @@ category: "Strategy"
 section: "Strategy"
 readingTime: 5
 quote: "\"If your only digital presence depends on an external platform, you don't have a solid business; you have a room decorated in a hotel that doesn't belong to you.\""
-image: "../../../assets/soberania-digital.png"
+image: "../../../assets/soberania-digital.jpg"
 imageAlt: "Digital Sovereignty and Digital Craftsmanship"
 tags: ["Digital Sovereignty", "Digital Business", "Custom Web", "Strategy"]
 card:

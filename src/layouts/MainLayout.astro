@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import { Font } from "astro:assets";
 import SEOSchema from "../components/SEOSchema.astro";
+import { getImage } from "astro:assets";
+import type { ImageMetadata } from "astro";
 // import SpeedInsights from "@vercel/speed-insights/astro";
 import LanguagePicker from "../components/LanguagePicker.astro";
 import {
@@ -15,7 +17,8 @@ interface Props {
   title: string;
   lang?: "es" | "en";
   description?: string;
-  image?: string;
+  // Ruta pública o imagen importada (se optimiza a 1200px para redes sociales)
+  image?: string | ImageMetadata;
   // SEO Props
   type?: "website" | "article" | "profile" | "faq";
   articleData?: {
@@ -40,6 +43,11 @@ const {
   faqData,
   lang = getLangFromUrl(Astro.url),
 } = Astro.props;
+
+const ogImage =
+  typeof image === "string"
+    ? image
+    : (await getImage({ src: image, width: 1200, quality: 80, format: "jpg" })).src;
 
 const { pathname } = Astro.url;
 
@@ -81,7 +89,7 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="og:image" content={new URL(ogImage, Astro.url)} />
     <meta property="og:site_name" content="Otterock" />
     <meta property="og:locale" content={lang === "en" ? "en_US" : "es_CO"} />
 
@@ -90,7 +98,7 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(image, Astro.url)} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.url)} />
 
     <meta
       name="google-site-verification"
@@ -102,7 +110,7 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
     <SEOSchema
       title={title}
       description={description}
-      image={image}
+      image={ogImage}
       type={type}
       articleData={articleData}
       faqData={faqData}

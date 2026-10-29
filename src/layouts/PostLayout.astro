@@ -12,7 +12,6 @@ interface Props {
 const { post, lang } = Astro.props;
 const data = post.data;
 const translatePath = useTranslatedPath(lang);
-const ogImage = typeof data.image === "string" ? data.image : data.image.src;
 
 const labels = {
   es: { back: "← Volver al Blog", reading: "min de lectura" },
@@ -23,7 +22,7 @@ const labels = {
 <MainLayout
   title={data.seoTitle}
   description={data.description}
-  image={ogImage}
+  image={data.image}
   lang={lang}
   type="article"
   articleData={{
