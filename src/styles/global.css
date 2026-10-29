@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* Definimos nuestros colores de marca aquí para la versión 4 */
-  --color-otter-deep: #083344;
-  --color-otter-sand: #F5F5F4;
-  --color-otter-accent: #8B5CF6;
+  /* Paleta Monolito & Verde Bosque (Fondos Sólidos y Sobriedad Mineral) */
+  --color-otter-deep: #111615;
+  --color-otter-forest: #1B382F;
+  --color-otter-sand: #E7E8E3;
+  --color-otter-surface: #F5F5F2;
+  --color-otter-accent: #2D5A4C;
+  --color-otter-mint: #65B89E;
+  --color-otter-warm: #8C5A32;
+  --color-otter-muted: #4E5653;
 
   /* Tipografías (cargadas con <Font /> en MainLayout) */
   --font-display: var(--font-playfair);
@@ -12,7 +17,7 @@
   --font-sans: var(--font-inter);
 }
 
-/* Aplicamos el fondo arena por defecto a toda la web */
+/* Aplicamos el fondo sólido Piedra Liquen por defecto a toda la web */
 @layer base {
   body {
     background-color: var(--color-otter-sand);

@@ -16,11 +16,11 @@ const { card, category, readingTime } = post.data;
   class="blog-card group block opacity-0 translate-y-4 transition-all duration-700"
 >
   <div
-    class="relative overflow-hidden p-8 border border-otter-deep/10 rounded-[2rem] bg-white hover:border-otter-accent/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all"
+    class="relative overflow-hidden p-8 border border-otter-deep/10 rounded-[2rem] bg-otter-surface hover:border-otter-accent/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all"
   >
     <div class="flex flex-col md:flex-row gap-8 items-start">
       <div
-        class="w-full md:w-32 h-32 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-4xl group-hover:bg-otter-accent/10 transition-colors shrink-0"
+        class="w-full md:w-32 h-32 rounded-2xl bg-otter-sand flex items-center justify-center text-4xl group-hover:bg-otter-accent/15 transition-colors shrink-0"
       >
         {card.emoji}
       </div>
@@ -31,7 +31,7 @@ const { card, category, readingTime } = post.data;
             class={`${card.badgeClass} text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full`}
             >{card.category ?? category}</span
           >
-          <span class="text-slate-500 text-xs font-body"
+          <span class="text-otter-muted text-xs font-body"
             >{readingTime} {readingLabel}</span
           >
         </div>
@@ -41,14 +41,14 @@ const { card, category, readingTime } = post.data;
         >
           {card.title}
         </h2>
-        <p class="text-slate-600 font-body leading-relaxed text-base">
+        <p class="text-otter-muted font-body leading-relaxed text-base">
           {card.excerpt}
         </p>
       </div>
 
       <div class="hidden md:block self-center">
         <div
-          class="w-12 h-12 rounded-full border border-otter-deep/10 flex items-center justify-center group-hover:bg-otter-deep group-hover:text-white transition-all transform group-hover:translate-x-2"
+          class="w-12 h-12 rounded-full border border-otter-deep/10 flex items-center justify-center group-hover:bg-otter-deep group-hover:text-otter-surface transition-all transform group-hover:translate-x-2"
         >
           <span class="text-xl">→</span>
         </div>

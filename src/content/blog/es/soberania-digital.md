@@ -12,12 +12,12 @@ imageAlt: "Soberanía Digital y Artesanía Digital"
 tags: ["Soberanía Digital", "Negocios Digitales", "Sitio Web Propio", "Estrategia"]
 card:
   emoji: "🔑"
-  badgeClass: "bg-violet-50 text-otter-accent"
+  badgeClass: "bg-otter-accent/15 text-otter-accent"
   title: "Soberanía Digital: Por qué dejar de construir tu negocio en terreno alquilado"
   excerpt: "Si tu única presencia digital depende de una plataforma externa, no tienes un negocio sólido. Reclama tu independencia."
 ---
 
-<div class="space-y-8 text-lg text-slate-700 leading-relaxed font-body">
+<div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
   <p
     class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
   >
@@ -34,7 +34,7 @@ card:
     <p class="mb-6">
       Plataformas como Instagram, TikTok o Booking son herramientas increíbles de visibilidad, pero tienen un problema: tú no pones las reglas.
     </p>
-    <ul class="list-disc pl-6 space-y-4 text-slate-700 mb-8">
+    <ul class="list-disc pl-6 space-y-4 text-otter-muted mb-8">
       <li>
         <strong>El Algoritmo es el dueño:</strong> Él decide quién te ve y cuándo.
       </li>
@@ -62,13 +62,13 @@ card:
       <ul class="space-y-4">
         <li>
           <strong class="text-otter-deep font-bold">Control Total de la Experiencia:</strong>
-          <p class="text-sm mt-1 text-slate-800">
+          <p class="text-sm mt-1 text-otter-deep">
             En tu web, el cliente no se distrae con notificaciones o publicidad de la competencia. Tú guías su camino desde el interés hasta la reserva o compra.
           </p>
         </li>
         <li>
           <strong class="text-otter-deep font-bold">Independencia Tecnológica:</strong>
-          <p class="text-sm mt-1 text-slate-800">
+          <p class="text-sm mt-1 text-otter-deep">
             Al usar herramientas como Astro, garantizamos que tu sitio sea rápido y eficiente, sin depender de "constructores" pesados que te mantienen atado a sus cuotas mensuales.
           </p>
         </li>
@@ -83,7 +83,7 @@ card:
       La soberanía digital no se trata solo de estética; se trata de inteligencia de negocio.
       Cuando tienes tu propia plataforma (apoyada en bases de datos sólidas como Supabase), cada interacción cuenta:
     </p>
-    <ul class="list-disc pl-6 space-y-2 text-slate-700 italic mb-8">
+    <ul class="list-disc pl-6 space-y-2 text-otter-muted italic mb-8">
       <li>Sabes qué buscan tus clientes.</li>
       <li>Tienes sus correos y contactos de forma segura y directa.</li>
       <li>Puedes automatizar procesos con n8n para que tu negocio trabaje mientras tú descansas.</li>
@@ -116,10 +116,10 @@ card:
     </p>
   </section>
   <section
-    class="bg-otter-deep text-white p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
+    class="bg-otter-deep text-otter-surface p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
   >
     <div
-      class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 blur-2xl"
+      class="absolute top-0 right-0 w-32 h-32 bg-otter-surface/10 rounded-full -mr-10 -mt-10 blur-2xl"
     >
     </div>
     <h3 class="text-2xl font-bold font-display mb-4 relative z-10">
@@ -130,7 +130,7 @@ card:
     </p>
     <a
       href="/contacto"
-      class="inline-block bg-white text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-white transition-all hover:-translate-y-1 shadow-lg relative z-10"
+      class="inline-block bg-otter-surface text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-surface transition-all hover:-translate-y-1 shadow-lg relative z-10"
     >
       Hablemos de tu soberanía digital
     </a>

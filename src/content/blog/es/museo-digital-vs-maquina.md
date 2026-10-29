@@ -11,13 +11,13 @@ imageAlt: "Diferencia entre un diseño estético y un diseño funcional para con
 tags: ["Estrategia", "Conversión", "UX/UI"]
 card:
   emoji: "🏛️"
-  badgeClass: "bg-emerald-50 text-emerald-600"
+  badgeClass: "bg-otter-accent/15 text-otter-accent"
   title: "Museo Digital vs. Máquina de Reservas"
   excerpt: "La diferencia entre un \"museo digital\" hermoso para mirar y una máquina de reservas diseñada estratégicamente para vender."
 ---
 
 <div
-        class="bg-indigo-50 border border-indigo-100 rounded-2xl p-8 text-left mb-12"
+        class="bg-otter-surface border border-otter-deep/10 rounded-2xl p-8 text-left mb-12"
     >
         <h2
             class="text-lg font-black text-otter-deep uppercase tracking-wider mb-4 flex items-center gap-2 font-display"
@@ -25,7 +25,7 @@ card:
             <span class="text-2xl">💡</span> Puntos Clave (TL;DR)
         </h2>
         <ul
-            class="space-y-3 text-slate-700 list-disc list-inside font-medium font-body"
+            class="space-y-3 text-otter-muted list-disc list-inside font-medium font-body"
         >
             <li>
                 <strong>Diseño vs Estrategia:</strong> Una web hermosa no
@@ -46,7 +46,7 @@ card:
             </li>
         </ul>
     </div>
-<div class="space-y-8 text-lg text-slate-700 leading-relaxed font-body">
+<div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
     <p
         class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
     >
@@ -147,12 +147,12 @@ card:
         class="mt-16 bg-otter-deep text-otter-sand rounded-3xl p-10 text-center shadow-2xl"
     >
         <h3
-            class="text-3xl md:text-4xl font-black font-display mb-4 text-white"
+            class="text-3xl md:text-4xl font-black font-display mb-4 text-otter-surface"
         >
             ¿Tu web es un museo o una máquina?
         </h3>
         <p
-            class="text-lg opacity-90 mb-8 max-w-xl mx-auto font-body text-slate-300"
+            class="text-lg opacity-90 mb-8 max-w-xl mx-auto font-body text-otter-sand"
         >
             Deja de perder reservas por culpa de un diseño que no
             convierte. Hablemos sobre cómo optimizar la experiencia de
@@ -160,12 +160,12 @@ card:
         </p>
         <a
             href="/contacto"
-            class="inline-block bg-otter-accent text-otter-deep font-bold text-lg px-8 py-4 rounded-full hover:bg-white transition-all shadow-lg hover:-translate-y-1"
+            class="inline-block bg-otter-warm text-otter-surface hover:text-otter-deep font-bold text-lg px-8 py-4 rounded-full hover:bg-otter-surface transition-all shadow-lg hover:-translate-y-1"
         >
             Construyamos una Máquina de Reservas 🚀
         </a>
     </section>
-    <footer class="mt-16 pt-12 border-t border-slate-200">
+    <footer class="mt-16 pt-12 border-t border-otter-deep/10">
         <div class="flex items-center gap-6">
             <div
                 class="w-20 h-20 rounded-full bg-otter-deep flex items-center justify-center text-3xl shrink-0 overflow-hidden"
@@ -174,7 +174,7 @@ card:
             </div>
             <div>
                 <p
-                    class="text-xs font-bold text-slate-600 uppercase tracking-widest mb-1 font-body"
+                    class="text-xs font-bold text-otter-muted uppercase tracking-widest mb-1 font-body"
                 >
                     Escrito por
                 </p>
@@ -184,7 +184,7 @@ card:
                     Sergio Bello
                 </h3>
                 <p
-                    class="text-slate-600 text-sm mt-1 max-w-lg font-body"
+                    class="text-otter-muted text-sm mt-1 max-w-lg font-body"
                 >
                     Director & Lead Developer. Especialista en crear
                     arquitecturas digitales escalables y de alto

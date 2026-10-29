@@ -11,13 +11,13 @@ imageAlt: "Difference between aesthetic design and functional design for convers
 tags: ["Strategy", "Conversion", "UX/UI"]
 card:
   emoji: "🏛️"
-  badgeClass: "bg-emerald-50 text-emerald-600"
+  badgeClass: "bg-otter-accent/15 text-otter-accent"
   title: "Digital Museum vs. Booking Machine"
   excerpt: "The difference between a \"digital museum\" that's beautiful to look at and a strategically designed booking machine that converts."
 ---
 
 <div
-        class="bg-indigo-50 border border-indigo-100 rounded-2xl p-8 text-left mb-12"
+        class="bg-otter-surface border border-otter-deep/10 rounded-2xl p-8 text-left mb-12"
     >
         <h2
             class="text-lg font-black text-otter-deep uppercase tracking-wider mb-4 flex items-center gap-2 font-display"
@@ -25,7 +25,7 @@ card:
             <span class="text-2xl">💡</span> Key Takeaways (TL;DR)
         </h2>
         <ul
-            class="space-y-3 text-slate-700 list-disc list-inside font-medium font-body"
+            class="space-y-3 text-otter-muted list-disc list-inside font-medium font-body"
         >
             <li>
                 <strong>Design vs Strategy:</strong> A beautiful website is 
@@ -45,7 +45,7 @@ card:
             </li>
         </ul>
     </div>
-<div class="space-y-8 text-lg text-slate-700 leading-relaxed font-body">
+<div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
     <p
         class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
     >
@@ -143,24 +143,24 @@ card:
         class="mt-16 bg-otter-deep text-otter-sand rounded-3xl p-10 text-center shadow-2xl"
     >
         <h3
-            class="text-3xl md:text-4xl font-black font-display mb-4 text-white"
+            class="text-3xl md:text-4xl font-black font-display mb-4 text-otter-surface"
         >
             Is your website a museum or a machine?
         </h3>
         <p
-            class="text-lg opacity-90 mb-8 max-w-xl mx-auto font-body text-slate-300"
+            class="text-lg opacity-90 mb-8 max-w-xl mx-auto font-body text-otter-sand"
         >
             Stop losing bookings due to a design that doesn't convert. Let's 
             talk about how to optimize your clients' experience.
         </p>
         <a
             href="/en/contacto"
-            class="inline-block bg-otter-accent text-otter-deep font-bold text-lg px-8 py-4 rounded-full hover:bg-white transition-all shadow-lg hover:-translate-y-1"
+            class="inline-block bg-otter-warm text-otter-surface hover:text-otter-deep font-bold text-lg px-8 py-4 rounded-full hover:bg-otter-surface transition-all shadow-lg hover:-translate-y-1"
         >
             Let's Build a Booking Machine 🚀
         </a>
     </section>
-    <footer class="mt-16 pt-12 border-t border-slate-200">
+    <footer class="mt-16 pt-12 border-t border-otter-deep/10">
         <div class="flex items-center gap-6">
             <div
                 class="w-20 h-20 rounded-full bg-otter-deep flex items-center justify-center text-3xl shrink-0 overflow-hidden"
@@ -169,7 +169,7 @@ card:
             </div>
             <div>
                 <p
-                    class="text-xs font-bold text-slate-600 uppercase tracking-widest mb-1 font-body"
+                    class="text-xs font-bold text-otter-muted uppercase tracking-widest mb-1 font-body"
                 >
                     Written by
                 </p>
@@ -179,7 +179,7 @@ card:
                     Sergio Bello
                 </h3>
                 <p
-                    class="text-slate-600 text-sm mt-1 max-w-lg font-body"
+                    class="text-otter-muted text-sm mt-1 max-w-lg font-body"
                 >
                     Director & Lead Developer. Specialist in creating 
                     scalable and high-performance digital architectures.

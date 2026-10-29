@@ -11,13 +11,13 @@ imageAlt: "Modern architecture representing solid structure"
 tags: ["Technical Debt", "WordPress", "Performance", "Scalability"]
 card:
   emoji: "🏗️"
-  badgeClass: "bg-rose-50 text-rose-600"
+  badgeClass: "bg-otter-warm/10 text-otter-warm"
   title: "The Template Trap"
   excerpt: "Is your website a house you own or a rented room? The truth about why the easy path of templates destroys your scalability."
 ---
 
 <div
-        class="bg-indigo-50 border border-indigo-100 rounded-2xl p-8 text-left mb-12"
+        class="bg-otter-surface border border-otter-deep/10 rounded-2xl p-8 text-left mb-12"
     >
         <h2
             class="text-lg font-black text-otter-deep uppercase tracking-wider mb-4 flex items-center gap-2"
@@ -25,7 +25,7 @@ card:
             <span class="text-2xl">💡</span> Key Takeaways (TL;DR)
         </h2>
         <ul
-            class="space-y-3 text-slate-700 list-disc list-inside font-medium font-body"
+            class="space-y-3 text-otter-muted list-disc list-inside font-medium font-body"
         >
             <li>
                 <strong>Cheap is expensive:</strong> Templates save money today 
@@ -45,7 +45,7 @@ card:
             </li>
         </ul>
     </div>
-<div class="space-y-8 text-lg text-slate-700 leading-relaxed font-body">
+<div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
     <p
         class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
     >
@@ -122,7 +122,7 @@ card:
             exclusivity.
         </p>
         <div
-            class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-6 italic text-slate-800"
+            class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-6 italic text-otter-deep"
         >
             A template tells your client: "I'm just one of the crowd". 
             Custom development tells them: "I'm unique".
@@ -158,7 +158,7 @@ card:
             so that it fits perfectly with the greatness of your business.
         </p>
     </section>
-    <footer class="mt-16 pt-12 border-t border-slate-200">
+    <footer class="mt-16 pt-12 border-t border-otter-deep/10">
         <div class="flex items-center gap-6">
             <div
                 class="w-20 h-20 rounded-full bg-otter-deep flex items-center justify-center text-3xl shrink-0 overflow-hidden"
@@ -167,14 +167,14 @@ card:
             </div>
             <div>
                 <p
-                    class="text-xs font-bold text-slate-600 uppercase tracking-widest mb-1"
+                    class="text-xs font-bold text-otter-muted uppercase tracking-widest mb-1"
                 >
                     Written by
                 </p>
                 <h3 class="text-xl font-bold text-otter-deep">
                     Sergio Bello
                 </h3>
-                <p class="text-slate-600 text-sm mt-1 max-w-lg">
+                <p class="text-otter-muted text-sm mt-1 max-w-lg">
                     Director & Lead Developer. Specialist in creating 
                     scalable and high-performance digital architectures.
                 </p>

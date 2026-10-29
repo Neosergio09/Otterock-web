@@ -95,14 +95,22 @@ Rechazamos los constructores visuales pesados y el código inflado. Cada compone
   - El cuerpo de la palabra se expresa en color profundo (`otter-deep`).
   - El punto final (`.`) se destaca en el color acento (`otter-accent`), simbolizando precisión, cierre y decisión.
 
-### 6.2. Paleta Cromática
+### 6.2. Paleta Cromática (Monolito & Verde Bosque)
 
 | Nombre Token | Valor HEX | Rol en la Identidad | Significado Emocional |
 | :--- | :--- | :--- | :--- |
-| **`--color-otter-deep`** | `#083344` | Color Principal / Texto / Fondos contrastantes | Azul petróleo profundo que transmite estabilidad, seriedad técnica, madurez y seguridad bancaria. |
-| **`--color-otter-sand`** | `#F5F5F4` | Fondo Base / Contenedores suaves | Tono piedra/arena claro que aporta calidez orgánica, serenidad y sensación de papel artesanal noble. |
-| **`--color-otter-accent`**| `#8B5CF6` | Color de Acento / Botones / Destacados | Violeta digital moderno que representa la chispa innovadora, la visión de vanguardia y la creatividad. |
-| **Acento Secundario** | `#92400E` (`amber-800`) | Acento Cálido / Badges / Íconos | Tono ámbar/tierra que refleja calidez, fidelidad, el vínculo canino y el corazón noble de la marca. |
+| **`--color-otter-deep`** | `#111615` | Color Principal / Texto / Monolito | Grafito mineral profundo que transmite autoridad técnica, firmeza de roca y madurez ejecutiva. |
+| **`--color-otter-forest`** | `#1B382F` | Bloques Sólidos Oscuros / Secciones de Impacto | Verde bosque profundo que conecta la naturaleza orgánica con estabilidad y seguridad bancaria. |
+| **`--color-otter-sand`** | `#E7E8E3` | Fondo Sólido Base / Lienzo Principal | Tono liquen/piedra sólido que aporta carácter arquitectónico, serenidad y contraste descansado. |
+| **`--color-otter-surface`** | `#F5F5F2` | Tarjetas / Contenedores Elevados | Papel artesanal limpio que destaca los bloques de contenido sobre el lienzo de piedra. |
+| **`--color-otter-accent`**| `#2D5A4C` | Color de Acento / Botones / Destacados | Verde bosque esmeralda sobrio que representa precisión, vitalidad e ingeniería sostenible. |
+| **`--color-otter-mint`** | `#65B89E` | Acento Luminoso sobre Fondos Oscuros | Esmeralda mineral claro para garantizar lectura impecable sobre bloques grafito y bosque. |
+| **`--color-otter-warm`** | `#8C5A32` | Acento Cálido / Sello de Legado / Badges | Tierra noble que refleja calidez, fidelidad, el vínculo canino y el corazón de Rocko. |
+
+**Reglas de contraste (WCAG AA):**
+- Sobre fondos oscuros (`otter-deep`, `otter-forest`) los textos y acentos van en `otter-mint` o `otter-surface`. **Nunca** `otter-accent`: su contraste ahí es de 1,6–2,3:1 y no se lee.
+- `otter-accent` y `otter-warm` se usan como texto solo sobre fondos claros (`otter-sand`, `otter-surface`).
+- En badges con texto pequeño, el fondo tintado no debe superar el 10 % de opacidad para `otter-warm` (`bg-otter-warm/10`) ni el 15 % para `otter-accent` (`bg-otter-accent/15`).
 
 ### 6.3. Tipografías
 

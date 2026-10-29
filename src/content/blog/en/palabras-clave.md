@@ -12,13 +12,13 @@ imageAlt: "Keyword optimization and digital visibility"
 tags: ["SEO", "Keywords", "Content Marketing", "Strategy"]
 card:
   emoji: "🔍"
-  badgeClass: "bg-blue-50 text-blue-600"
+  badgeClass: "bg-otter-accent/15 text-otter-accent"
   category: "Strategy"
   title: "Does your website speak the same language as your clients?"
   excerpt: "The truth about keywords and how the right language can turn your website from an invisible brochure into a sales magnet."
 ---
 
-<div class="space-y-8 text-lg text-slate-700 leading-relaxed font-body">
+<div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
   <p
     class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
   >
@@ -48,7 +48,7 @@ card:
     <div
       class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-6"
     >
-      <p class="text-slate-800 italic">
+      <p class="text-otter-deep italic">
         "The client doesn't search for: 'Multidisciplinary legal service provider'. 
         The client types: <strong>'Divorce lawyer in Bogotá'</strong>."
       </p>
@@ -81,7 +81,7 @@ card:
       Google as a very impatient reader.
     </p>
     <p
-      class="text-xl font-bold text-otter-deep text-center my-8 font-display bg-white/60 border border-otter-deep/10 p-8 rounded-2xl italic"
+      class="text-xl font-bold text-otter-deep text-center my-8 font-display bg-otter-surface/60 border border-otter-deep/10 p-8 rounded-2xl italic"
     >
       "In an Otterock website, the code is clean. We hand Google a perfectly 
       printed and easy-to-read book."
@@ -97,26 +97,26 @@ card:
     </h2>
     <div class="grid md:grid-cols-3 gap-4 text-center text-sm">
       <div
-        class="p-6 bg-white border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+        class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
       >
         <div class="text-3xl mb-2">🔍</div>
-        <p class="text-slate-700">
+        <p class="text-otter-muted">
           <strong>Research:</strong> We discover how your ideal client searches for you.
         </p>
       </div>
       <div
-        class="p-6 bg-white border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+        class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
       >
         <div class="text-3xl mb-2">✍️</div>
-        <p class="text-slate-700">
+        <p class="text-otter-muted">
           <strong>Copywriting:</strong> We create texts that convince humans and Google.
         </p>
       </div>
       <div
-        class="p-6 bg-white border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+        class="p-6 bg-otter-surface border border-otter-deep/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
       >
         <div class="text-3xl mb-2">🚀</div>
-        <p class="text-slate-700">
+        <p class="text-otter-muted">
           <strong>Indexing:</strong> We make sure Google finds you and shows you first.
         </p>
       </div>
@@ -124,10 +124,10 @@ card:
   </section>
   <hr class="border-otter-deep/10 my-12" />
   <section
-    class="bg-otter-deep text-white p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
+    class="bg-otter-deep text-otter-surface p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
   >
     <div
-      class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 blur-2xl"
+      class="absolute top-0 right-0 w-32 h-32 bg-otter-surface/10 rounded-full -mr-10 -mt-10 blur-2xl"
     >
     </div>
     <h3 class="text-2xl font-bold font-display mb-4 relative z-10">
@@ -142,7 +142,7 @@ card:
     </p>
     <a
       href="/en/contacto"
-      class="inline-block bg-white text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-white transition-all hover:-translate-y-1 shadow-lg relative z-10"
+      class="inline-block bg-otter-surface text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-surface transition-all hover:-translate-y-1 shadow-lg relative z-10"
     >
       Let's make them find you
     </a>

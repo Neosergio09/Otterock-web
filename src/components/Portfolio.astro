@@ -50,17 +50,17 @@ const t = {
 
 <section class="max-w-6xl mx-auto py-20 px-6">
   <header class="text-center max-w-3xl mx-auto mb-20">
-    <p class="text-amber-800 font-bold tracking-widest uppercase text-sm mb-4">
+    <p class="text-otter-warm font-bold tracking-widest uppercase text-sm mb-4">
       {t.eyebrow}
     </p>
     <h1 class="text-4xl md:text-6xl font-black text-otter-deep mb-6 font-display leading-tight">
       {t.title}
     </h1>
-    <p class="text-lg text-slate-600 font-body leading-relaxed">{t.intro}</p>
+    <p class="text-lg text-otter-muted font-body leading-relaxed">{t.intro}</p>
   </header>
 
   <h2 class="text-3xl font-bold text-otter-deep mb-2 font-display">{t.live}</h2>
-  <p class="text-slate-600 font-body mb-10">{t.liveIntro}</p>
+  <p class="text-otter-muted font-body mb-10">{t.liveIntro}</p>
 
   <div class="space-y-12 mb-24">
     {
@@ -68,7 +68,7 @@ const t = {
         const text = project.data[lang];
         return (
           <article
-            class={`bg-white rounded-[2.5rem] overflow-hidden border border-otter-deep/10 shadow-sm flex flex-col ${
+            class={`bg-otter-surface rounded-[2.5rem] overflow-hidden border border-otter-deep/10 shadow-sm flex flex-col ${
               index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
             }`}
           >
@@ -91,14 +91,14 @@ const t = {
               </a>
             )}
             <div class="lg:w-1/2 p-8 md:p-12 flex flex-col">
-              <span class="self-start bg-otter-accent/10 text-otter-accent text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+              <span class="self-start bg-otter-accent/15 text-otter-accent text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4">
                 {text.type}
               </span>
               <h3 class="text-3xl font-black text-otter-deep font-display mb-4">
                 {project.data.name}
               </h3>
-              <p class="text-slate-700 font-body leading-relaxed mb-6">{text.summary}</p>
-              <ul class="space-y-2 text-slate-600 font-body text-sm mb-8">
+              <p class="text-otter-muted font-body leading-relaxed mb-6">{text.summary}</p>
+              <ul class="space-y-2 text-otter-muted font-body text-sm mb-8">
                 {text.highlights.map((item) => (
                   <li class="flex gap-2">
                     <span class="text-otter-accent font-bold">✔</span>
@@ -118,7 +118,7 @@ const t = {
                   href={project.data.url}
                   target="_blank"
                   rel="noopener"
-                  class="mt-auto self-start bg-otter-deep text-otter-sand px-6 py-3 rounded-full font-bold hover:bg-otter-accent transition-all"
+                  class="mt-auto self-start bg-otter-deep text-otter-surface px-6 py-3 rounded-full font-bold hover:bg-otter-accent transition-all"
                 >
                   {t.visit} ↗
                 </a>
@@ -131,24 +131,24 @@ const t = {
   </div>
 
   <h2 class="text-3xl font-bold text-otter-deep mb-2 font-display">{t.demos}</h2>
-  <p class="text-slate-600 font-body mb-10">{t.demosIntro}</p>
+  <p class="text-otter-muted font-body mb-10">{t.demosIntro}</p>
 
   <div class="grid md:grid-cols-3 gap-6 mb-24">
     {
       demos.map((project) => {
         const text = project.data[lang];
         return (
-          <article class="bg-white rounded-[2rem] p-8 border border-otter-deep/10 flex flex-col">
-            <div class="w-16 h-16 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-3xl mb-6">
+          <article class="bg-otter-surface rounded-[2rem] p-8 border border-otter-deep/10 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-otter-sand flex items-center justify-center text-3xl mb-6">
               {project.data.emoji}
             </div>
-            <span class="text-[10px] font-black uppercase tracking-widest text-amber-800 mb-2">
+            <span class="text-[10px] font-black uppercase tracking-widest text-otter-warm mb-2">
               {text.type}
             </span>
             <h3 class="text-xl font-bold text-otter-deep font-display mb-3">
               {project.data.name}
             </h3>
-            <p class="text-slate-600 font-body text-sm leading-relaxed mb-6">{text.summary}</p>
+            <p class="text-otter-muted font-body text-sm leading-relaxed mb-6">{text.summary}</p>
             <div class="mt-auto flex flex-wrap gap-2">
               {project.data.stack.map((tech) => (
                 <span class="text-[11px] font-bold text-otter-deep bg-otter-sand px-2.5 py-1 rounded-full">
@@ -162,12 +162,12 @@ const t = {
     }
   </div>
 
-  <div class="bg-otter-deep text-white p-10 md:p-16 rounded-[3rem] text-center">
+  <div class="bg-otter-forest text-otter-surface p-10 md:p-16 rounded-[3rem] text-center">
     <h2 class="text-3xl md:text-4xl font-black font-display mb-4">{t.ctaTitle}</h2>
     <p class="opacity-90 font-body mb-8 max-w-2xl mx-auto">{t.ctaText}</p>
     <a
       href={translatePath("/contacto")}
-      class="inline-block bg-otter-accent text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-otter-deep transition-all"
+      class="inline-block bg-otter-warm text-otter-surface px-10 py-4 rounded-full font-bold hover:bg-otter-surface hover:text-otter-deep transition-all"
     >
       {t.cta}
     </a>

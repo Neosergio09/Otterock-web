@@ -12,12 +12,12 @@ imageAlt: "El futuro de las aplicaciones web"
 tags: ["Edge Computing", "Web Performance", "Astro", "Arquitectura Web"]
 card:
   emoji: "☁️"
-  badgeClass: "bg-blue-50 text-blue-600"
+  badgeClass: "bg-otter-accent/15 text-otter-accent"
   title: "El fin de las aplicaciones pesadas: Por qué el futuro es (y será) 100% Web"
   excerpt: "Estamos entrando en una era donde el hardware y la IA cambian las reglas. Descubre por qué tu negocio debe ser 100% web ahora mismo."
 ---
 
-<div class="space-y-8 text-lg text-slate-700 leading-relaxed font-body">
+<div class="space-y-8 text-lg text-otter-muted leading-relaxed font-body">
   <p
     class="first-letter:text-5xl first-letter:font-bold first-letter:text-otter-deep first-letter:mr-2 first-letter:float-left"
   >
@@ -40,8 +40,8 @@ card:
     <div
       class="bg-otter-sand/50 p-6 rounded-2xl border-l-4 border-otter-deep my-8"
     >
-      <p class="text-slate-800 font-bold mb-2">¿La solución?</p>
-      <p class="text-slate-700">
+      <p class="text-otter-deep font-bold mb-2">¿La solución?</p>
+      <p class="text-otter-muted">
         Aplicaciones web que corren en servidores potentes y se entregan de forma ligera al usuario. Tu equipo ya no sufre; la nube hace el trabajo sucio.
       </p>
     </div>
@@ -84,7 +84,7 @@ card:
     <p class="mb-6">
       En Otterock, nos especializamos en este cambio de paradigma. No hacemos sitios que "se ven bien", construimos herramientas que:
     </p>
-    <ul class="list-disc pl-6 space-y-4 text-slate-700 italic mb-8">
+    <ul class="list-disc pl-6 space-y-4 text-otter-muted italic mb-8">
       <li>No consumen los recursos de tu cliente.</li>
       <li>Son ultra veloces gracias al renderizado en el borde (Edge Computing).</li>
       <li>Escalan al infinito con bases de datos como Supabase.</li>
@@ -106,10 +106,10 @@ card:
     </p>
   </section>
   <section
-    class="bg-otter-deep text-white p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
+    class="bg-otter-deep text-otter-surface p-8 md:p-12 rounded-3xl text-center relative overflow-hidden"
   >
     <div
-      class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 blur-2xl"
+      class="absolute top-0 right-0 w-32 h-32 bg-otter-surface/10 rounded-full -mr-10 -mt-10 blur-2xl"
     >
     </div>
     <h3 class="text-2xl font-bold font-display mb-4 relative z-10">
@@ -120,7 +120,7 @@ card:
     </p>
     <a
       href="/contacto"
-      class="inline-block bg-white text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-white transition-all hover:-translate-y-1 shadow-lg relative z-10"
+      class="inline-block bg-otter-surface text-otter-deep px-8 py-4 rounded-full font-bold hover:bg-otter-accent hover:text-otter-surface transition-all hover:-translate-y-1 shadow-lg relative z-10"
     >
       Quiero evolucionar mi negocio
     </a>

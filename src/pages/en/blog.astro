@@ -17,7 +17,7 @@ const posts = (await getCollection("blog", (post) => post.id.startsWith("en/")))
   image={blogHero}
 >
   <section
-    class="flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 bg-slate-50/50"
+    class="flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 bg-otter-sand"
   >
     <div class="max-w-4xl w-full text-center">
       <h1
@@ -30,7 +30,7 @@ const posts = (await getCollection("blog", (post) => post.id.startsWith("en/")))
         id="blog-content"
         class="opacity-0 translate-y-8 transition-all duration-1000 mt-12 text-left"
       >
-        <p class="text-slate-600 mb-12 italic text-xl text-center font-body">
+        <p class="text-otter-muted mb-12 italic text-xl text-center font-body">
           Stories about code, loyalty, and the digital future.
         </p>
 
