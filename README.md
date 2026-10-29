@@ -45,11 +45,11 @@ La plataforma de **Otterock** está construida con un stack de ingeniería de va
 
 | Comando | Acción |
 | :--- | :--- |
-| `npm install` | Instala todas las dependencias del proyecto |
-| `npm run dev` | Inicia el servidor de desarrollo local en `http://localhost:4321` |
-| `npm run astro check` | Valida tipos TypeScript y diagnósticos de componentes Astro |
-| `npm run build` | Compila el sitio para producción en `./dist/` |
-| `npm run preview` | Previsualiza la compilación de producción localmente |
+| `pnpm install` | Instala todas las dependencias del proyecto |
+| `pnpm dev` | Inicia el servidor de desarrollo local en `http://localhost:4321` |
+| `pnpm astro check` | Valida tipos TypeScript y diagnósticos de componentes Astro |
+| `pnpm build` | Compila el sitio para producción en `./dist/` |
+| `pnpm preview` | Previsualiza la compilación de producción localmente |
 
 ---
 
