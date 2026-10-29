@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { Font } from "astro:assets";
 import SEOSchema from "../components/SEOSchema.astro";
 // import SpeedInsights from "@vercel/speed-insights/astro";
 import LanguagePicker from "../components/LanguagePicker.astro";
@@ -58,6 +59,9 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <Font cssVariable="--font-inter" preload={[{ style: "normal" }]} />
+    <Font cssVariable="--font-playfair" />
 
 
     <title>{title}</title>

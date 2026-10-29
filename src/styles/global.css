@@ -5,6 +5,11 @@
   --color-otter-deep: #083344;
   --color-otter-sand: #F5F5F4;
   --color-otter-accent: #8B5CF6;
+
+  /* Tipografías (cargadas con <Font /> en MainLayout) */
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-inter);
+  --font-sans: var(--font-inter);
 }
 
 /* Aplicamos el fondo arena por defecto a toda la web */
