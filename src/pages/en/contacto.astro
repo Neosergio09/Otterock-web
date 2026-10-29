@@ -1,33 +1,36 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+
+// Fuente única: alimenta el schema FAQPage y el acordeón visible
+const faqs = [
+  {
+    question: "Do you design custom websites or use templates?",
+    answer:
+      "At Otterock we create 100% custom and 'Handcrafted' designs. We write clean code from scratch using Astro and Tailwind to guarantee speed and exclusivity. We do not use generic WordPress templates.",
+  },
+  {
+    question: "How long does it take for my website to be ready?",
+    answer:
+      "Depending on the complexity, a 'Lightweight' corporate website takes 2 to 4 weeks. E-commerce or custom web platforms can take from 6 to 12 weeks.",
+  },
+  {
+    question: "What does the SEO and Optimization service include?",
+    answer:
+      "We include advanced Technical SEO: speed optimization (Core Web Vitals), semantic structure, meta tags, Schema.org, and image optimization. Your website is born ready to compete on Google.",
+  },
+  {
+    question: "Why are your websites faster?",
+    answer:
+      "We use Astro, a modern architecture that ships 'Zero JavaScript' by default to the browser. This makes our websites load instantly, even on slow connections, unlike heavy visual builders.",
+  },
+];
 ---
 
 <MainLayout
   title="Contact | Otterock - Let's Build Your Bespoke Web"
   description="Get in touch with Otterock in Bogotá. Let's discuss your custom web project, quotes, digital architecture, and how we can collaborate."
   type="faq"
-  faqData={[
-    {
-      question: "Do you design custom websites or use templates?",
-      answer:
-        "At Otterock we create 100% custom and 'Handcrafted' designs. We write clean code from scratch using Astro and Tailwind to guarantee speed and exclusivity. We do not use generic WordPress templates.",
-    },
-    {
-      question: "How long does it take for my website to be ready?",
-      answer:
-        "Depending on the complexity, a 'Lightweight' corporate website takes 2 to 4 weeks. E-commerce or custom web platforms can take from 6 to 12 weeks.",
-    },
-    {
-      question: "What does the SEO and Optimization service include?",
-      answer:
-        "We include advanced Technical SEO: speed optimization (Core Web Vitals), semantic structure, meta tags, Schema.org, and image optimization. Your website is born ready to compete on Google.",
-    },
-    {
-      question: "Why are your websites faster?",
-      answer:
-        "We use Astro, a modern architecture that ships 'Zero JavaScript' by default to the browser. This makes our websites load instantly, even on slow connections, unlike heavy visual builders.",
-    },
-  ]}
+  faqData={faqs}
 >
   <section class="max-w-6xl mx-auto py-20 px-6">
     <div class="grid md:grid-cols-2 gap-16">
@@ -72,89 +75,34 @@ import MainLayout from "../../layouts/MainLayout.astro";
             Frequently Asked Questions
           </h2>
           <div class="space-y-6">
-            <details
-              class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
-            >
-              <summary
-                class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
+            {faqs.map((faq) => (
+              <details
+                class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
               >
-                <span>Do you design custom websites?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg
-                    fill="none"
-                    height="24"
-                    shape-rendering="geometricPrecision"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    ><path d="M6 9l6 6 6-6"></path>
-                  </svg>
-                </span>
-              </summary>
-              <p class="text-slate-600 mt-4 text-sm leading-relaxed">
-                Yes. At Otterock we create 100% custom and 'Handcrafted'
-                designs. We develop clean code from scratch using Astro and
-                Tailwind.
-              </p>
-            </details>
-            <details
-              class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
-            >
-              <summary
-                class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
-              >
-                <span>Why are your websites faster?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg
-                    fill="none"
-                    height="24"
-                    shape-rendering="geometricPrecision"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    ><path d="M6 9l6 6 6-6"></path>
-                  </svg>
-                </span>
-              </summary>
-              <p class="text-slate-600 mt-4 text-sm leading-relaxed">
-                We use Astro, an architecture that sends 'Zero JavaScript' by
-                default. This guarantees highly instant loads and scores of 100
-                in Google.
-              </p>
-            </details>
-            <details
-              class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
-            >
-              <summary
-                class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
-              >
-                <span>How long does web development take?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg
-                    fill="none"
-                    height="24"
-                    shape-rendering="geometricPrecision"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    ><path d="M6 9l6 6 6-6"></path>
-                  </svg>
-                </span>
-              </summary>
-              <p class="text-slate-600 mt-4 text-sm leading-relaxed">
-                Standard corporate projects: 2-4 weeks. Complex projects: 6-12
-                weeks. We always prioritize quality over hasty urgency.
-              </p>
-            </details>
+                <summary
+                  class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
+                >
+                  <span>{faq.question}</span>
+                  <span class="transition group-open:rotate-180">
+                    <svg
+                      fill="none"
+                      height="24"
+                      shape-rendering="geometricPrecision"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      ><path d="M6 9l6 6 6-6"></path>
+                    </svg>
+                  </span>
+                </summary>
+                <p class="text-slate-600 mt-4 text-sm leading-relaxed">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </div>
@@ -163,6 +111,10 @@ import MainLayout from "../../layouts/MainLayout.astro";
         class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-otter-deep/5 sticky top-24 self-start"
       >
         <form id="contact-form" class="space-y-6">
+          <!-- Honeypot anti-spam: oculto para humanos -->
+          <div class="hidden" aria-hidden="true">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" />
+          </div>
           <div>
             <label class="block text-sm font-bold text-otter-deep mb-2"
               >Your Name</label
@@ -170,6 +122,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <input
               type="text"
               name="nombre"
+              maxlength="100"
               required
               placeholder="e.g. John Doe"
               class="w-full px-5 py-4 rounded-2xl bg-otter-sand border-none focus:ring-2 focus:ring-otter-accent transition-all"
@@ -183,6 +136,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <input
               type="email"
               name="email"
+              maxlength="254"
               required
               placeholder="you@email.com"
               class="w-full px-5 py-4 rounded-2xl bg-otter-sand border-none focus:ring-2 focus:ring-otter-accent transition-all"
@@ -195,6 +149,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             >
             <textarea
               name="mensaje"
+              maxlength="5000"
               required
               rows="4"
               placeholder="How can we help you transcend?"

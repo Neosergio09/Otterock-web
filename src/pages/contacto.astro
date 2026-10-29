@@ -1,33 +1,36 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+// Fuente única: alimenta el schema FAQPage y el acordeón visible
+const faqs = [
+  {
+    question: "¿Diseñan sitios web personalizados o usan plantillas?",
+    answer:
+      "En Otterock creamos diseños 100% personalizados y 'Artesanales'. Desarrollamos código limpio desde cero usando Astro y Tailwind para garantizar velocidad y exclusividad. No usamos plantillas genéricas de WordPress.",
+  },
+  {
+    question: "¿Cuánto tarda en estar lista mi web?",
+    answer:
+      "Dependiendo de la complejidad, una web corporativa 'Lightweight' toma entre 2 a 4 semanas. E-commerce o plataformas web personalizadas pueden tomar de 6 a 12 semanas.",
+  },
+  {
+    question: "¿Qué incluye el servicio de SEO y Optimización?",
+    answer:
+      "Incluimos SEO Técnico avanzado: optimización de velocidad (Core Web Vitals), estructura semántica, metadatos, Schema.org y optimización de imágenes. Tu web nace lista para competir en Google.",
+  },
+  {
+    question: "¿Por qué sus webs son más rápidas?",
+    answer:
+      "Usamos Astro, una arquitectura moderna que envía 'Cero JavaScript' por defecto al navegador. Esto hace que nuestras webs carguen instantáneamente, incluso en conexiones lentas, a diferencia de constructores visuales pesados.",
+  },
+];
 ---
 
 <MainLayout
   title="Contacto | Otterock - Construyamos tu Web a Medida"
   description="Ponte en contacto con Otterock en Bogotá. Hablemos sobre tu proyecto web a medida, cotizaciones, arquitectura digital y cómo podemos colaborar."
   type="faq"
-  faqData={[
-    {
-      question: "¿Diseñan sitios web personalizados o usan plantillas?",
-      answer:
-        "En Otterock creamos diseños 100% personalizados y 'Artesanales'. Desarrollamos código limpio desde cero usando Astro y Tailwind para garantizar velocidad y exclusividad. No usamos plantillas genéricas de WordPress.",
-    },
-    {
-      question: "¿Cuánto tarda en estar lista mi web?",
-      answer:
-        "Dependiendo de la complejidad, una web corporativa 'Lightweight' toma entre 2 a 4 semanas. E-commerce o plataformas web personalizadas pueden tomar de 6 a 12 semanas.",
-    },
-    {
-      question: "¿Qué incluye el servicio de SEO y Optimización?",
-      answer:
-        "Incluimos SEO Técnico avanzado: optimización de velocidad (Core Web Vitals), estructura semántica, metadatos, Schema.org y optimización de imágenes. Tu web nace lista para competir en Google.",
-    },
-    {
-      question: "¿Por qué sus webs son más rápidas?",
-      answer:
-        "Usamos Astro, una arquitectura moderna que envía 'Cero JavaScript' por defecto al navegador. Esto hace que nuestras webs carguen instantáneamente, incluso en conexiones lentas, a diferencia de constructores visuales pesados.",
-    },
-  ]}
+  faqData={faqs}
 >
   <section class="max-w-6xl mx-auto py-20 px-6">
     <div class="grid md:grid-cols-2 gap-16">
@@ -72,87 +75,33 @@ import MainLayout from "../layouts/MainLayout.astro";
             Preguntas Frecuentes
           </h2>
           <div class="space-y-6">
-            <details
-              class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
-            >
-              <summary
-                class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
+            {faqs.map((faq) => (
+              <details
+                class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
               >
-                <span>¿Diseñan sitios web personalizados?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg
-                    fill="none"
-                    height="24"
-                    shape-rendering="geometricPrecision"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    width="24"><path d="M6 9l6 6 6-6"></path></svg
-                  >
-                </span>
-              </summary>
-              <p class="text-slate-600 mt-4 text-sm leading-relaxed">
-                Sí. En Otterock creamos diseños 100% personalizados y
-                'Artesanales'. Desarrollamos código limpio desde cero usando
-                Astro y Tailwind.
-              </p>
-            </details>
-            <details
-              class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
-            >
-              <summary
-                class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
-              >
-                <span>¿Por qué sus webs son más rápidas?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg
-                    fill="none"
-                    height="24"
-                    shape-rendering="geometricPrecision"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    width="24"><path d="M6 9l6 6 6-6"></path></svg
-                  >
-                </span>
-              </summary>
-              <p class="text-slate-600 mt-4 text-sm leading-relaxed">
-                Usamos Astro, una arquitectura que envía 'Cero JavaScript' por
-                defecto. Esto garantiza cargas casi instantáneas y puntuaciones
-                de 100 en Google.
-              </p>
-            </details>
-            <details
-              class="group p-4 bg-white rounded-2xl border border-otter-deep/5 transition-all hover:bg-otter-sand/30 open:bg-otter-sand/50"
-            >
-              <summary
-                class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
-              >
-                <span>¿Cuánto tarda un desarrollo web?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg
-                    fill="none"
-                    height="24"
-                    shape-rendering="geometricPrecision"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    width="24"><path d="M6 9l6 6 6-6"></path></svg
-                  >
-                </span>
-              </summary>
-              <p class="text-slate-600 mt-4 text-sm leading-relaxed">
-                Proyectos corporativos estándar: 2-4 semanas. Proyectos
-                complejos: 6-12 semanas. Siempre priorizamos calidad sobre prisa
-                desmedida.
-              </p>
-            </details>
+                <summary
+                  class="flex justify-between items-center font-bold text-otter-deep cursor-pointer list-none"
+                >
+                  <span>{faq.question}</span>
+                  <span class="transition group-open:rotate-180">
+                    <svg
+                      fill="none"
+                      height="24"
+                      shape-rendering="geometricPrecision"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      width="24"><path d="M6 9l6 6 6-6"></path></svg
+                    >
+                  </span>
+                </summary>
+                <p class="text-slate-600 mt-4 text-sm leading-relaxed">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </div>
@@ -161,6 +110,10 @@ import MainLayout from "../layouts/MainLayout.astro";
         class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-otter-deep/5 sticky top-24 self-start"
       >
         <form id="contact-form" class="space-y-6">
+          <!-- Honeypot anti-spam: oculto para humanos -->
+          <div class="hidden" aria-hidden="true">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" />
+          </div>
           <div>
             <label class="block text-sm font-bold text-otter-deep mb-2"
               >Tu Nombre</label
@@ -168,6 +121,7 @@ import MainLayout from "../layouts/MainLayout.astro";
             <input
               type="text"
               name="nombre"
+              maxlength="100"
               required
               placeholder="Ej. Juan Pérez"
               class="w-full px-5 py-4 rounded-2xl bg-otter-sand border-none focus:ring-2 focus:ring-otter-accent transition-all"
@@ -181,6 +135,7 @@ import MainLayout from "../layouts/MainLayout.astro";
             <input
               type="email"
               name="email"
+              maxlength="254"
               required
               placeholder="tu@correo.com"
               class="w-full px-5 py-4 rounded-2xl bg-otter-sand border-none focus:ring-2 focus:ring-otter-accent transition-all"
@@ -193,6 +148,7 @@ import MainLayout from "../layouts/MainLayout.astro";
             >
             <textarea
               name="mensaje"
+              maxlength="5000"
               required
               rows="4"
               placeholder="¿Cómo podemos ayudarte a trascender?"

@@ -36,7 +36,6 @@ export default defineConfig({
         },
       },
       changefreq: 'weekly',
-      lastmod: new Date(),
     })
   ],
 

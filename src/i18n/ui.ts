@@ -13,7 +13,7 @@ export const ui = {
         "nav.blog": "Blog",
         "nav.contact": "Contacto",
         "footer.subtitle": "Construido con amor y código sólido en honor a Rocko.",
-        "footer.copyright": "© 2025 Otterock – Desarrollo web que trasciende.",
+        "footer.copyright": `© ${new Date().getFullYear()} Otterock – Desarrollo web que trasciende.`,
     },
     en: {
         "nav.home": "Home",
@@ -22,6 +22,6 @@ export const ui = {
         "nav.blog": "Blog",
         "nav.contact": "Contact",
         "footer.subtitle": "Built with love and solid code in honor of Rocko.",
-        "footer.copyright": "© 2025 Otterock – Web development that transcends.",
+        "footer.copyright": `© ${new Date().getFullYear()} Otterock – Web development that transcends.`,
     },
 } as const;
