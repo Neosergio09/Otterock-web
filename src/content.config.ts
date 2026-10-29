@@ -31,4 +31,27 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+const projectText = z.object({
+  type: z.string(),
+  summary: z.string(),
+  highlights: z.array(z.string()),
+});
+
+// Portafolio: un JSON por proyecto con los textos en ambos idiomas
+const projects = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/projects' }),
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      url: z.url().optional(),
+      status: z.enum(['production', 'demo']),
+      order: z.number(),
+      image: image().optional(),
+      emoji: z.string(),
+      stack: z.array(z.string()),
+      es: projectText,
+      en: projectText,
+    }),
+});
+
+export const collections = { blog, projects };

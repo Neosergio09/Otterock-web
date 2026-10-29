@@ -1,0 +1,30 @@
+{
+  "name": "Automatizaciones con IA",
+  "status": "demo",
+  "order": 7,
+  "emoji": "🤖",
+  "stack": [
+    "n8n",
+    "Google Gemini",
+    "WhatsApp Cloud API",
+    "Telegram"
+  ],
+  "es": {
+    "type": "Automatización e IA",
+    "summary": "Flujos que atienden clientes solos: un autorespondedor de WhatsApp con Gemini y un agendador por Telegram que crea la reunión en Google Calendar con enlace de Meet.",
+    "highlights": [
+      "Respuestas automáticas por WhatsApp con lista blanca",
+      "Agendamiento en lenguaje natural",
+      "Invitaciones por correo y Google Meet"
+    ]
+  },
+  "en": {
+    "type": "Automation & AI",
+    "summary": "Workflows that serve customers on their own: a WhatsApp auto-responder powered by Gemini and a Telegram scheduler that books the meeting in Google Calendar with a Meet link.",
+    "highlights": [
+      "Automatic WhatsApp replies with an allow list",
+      "Natural-language scheduling",
+      "Email invitations and Google Meet"
+    ]
+  }
+}

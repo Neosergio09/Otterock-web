@@ -9,6 +9,7 @@ export const ui = {
     es: {
         "nav.home": "Inicio",
         "nav.services": "Servicios",
+        "nav.portfolio": "Portafolio",
         "nav.legacy": "El Legado",
         "nav.blog": "Blog",
         "nav.contact": "Contacto",
@@ -18,6 +19,7 @@ export const ui = {
     en: {
         "nav.home": "Home",
         "nav.services": "Services",
+        "nav.portfolio": "Portfolio",
         "nav.legacy": "The Legacy",
         "nav.blog": "Blog",
         "nav.contact": "Contact",

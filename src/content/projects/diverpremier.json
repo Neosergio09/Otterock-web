@@ -1,0 +1,35 @@
+{
+  "name": "Diverpremier",
+  "url": "https://www.diverpremier.com",
+  "status": "production",
+  "order": 3,
+  "image": "../../assets/portfolio/diverpremier.jpg",
+  "emoji": "🥃",
+  "stack": [
+    "Astro 7",
+    "Supabase Realtime",
+    "Tailwind CSS v4",
+    "GSAP",
+    "Vercel"
+  ],
+  "es": {
+    "type": "Tienda online + panel en tiempo real",
+    "summary": "Tienda online para una licorera con domicilios en Bogotá, con un panel donde los pedidos llegan en tiempo real.",
+    "highlights": [
+      "Catálogo con filtros, carrito persistente y checkout con reporte de pago",
+      "Seguimiento del pedido y mapa de cobertura con pedido por WhatsApp",
+      "Panel con inventario, pedidos en vivo y analíticas",
+      "Verificación de mayoría de edad al ingresar"
+    ]
+  },
+  "en": {
+    "type": "Online store + real-time dashboard",
+    "summary": "Online store for a liquor shop with home delivery in Bogotá, with a dashboard where orders arrive in real time.",
+    "highlights": [
+      "Filterable catalog, persistent cart and checkout with payment report",
+      "Order tracking and coverage map with WhatsApp ordering",
+      "Dashboard with inventory, live orders and analytics",
+      "Age verification on entry"
+    ]
+  }
+}

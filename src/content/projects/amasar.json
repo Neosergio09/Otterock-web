@@ -1,0 +1,35 @@
+{
+  "name": "Amasar",
+  "url": "https://amasarsya.com",
+  "status": "production",
+  "order": 2,
+  "image": "../../assets/portfolio/amasar.jpg",
+  "emoji": "🍪",
+  "stack": [
+    "Astro",
+    "Supabase",
+    "Tailwind CSS v4",
+    "Resend",
+    "Vercel"
+  ],
+  "es": {
+    "type": "Sitio web + ERP ligero",
+    "summary": "Sitio y sistema de gestión para una panadería y café artesanal de Bogotá: lo que ve el cliente y lo que pasa en la cocina, conectados.",
+    "highlights": [
+      "Catálogo por categorías y rastreo de pedidos para clientes",
+      "Recetas por producto y órdenes de producción que descuentan insumos automáticamente",
+      "Inventario de materias primas, clientes y registro de gastos",
+      "Terminal para vendedores con toma y confirmación de pedidos"
+    ]
+  },
+  "en": {
+    "type": "Website + lightweight ERP",
+    "summary": "Website and management system for an artisan bakery and café in Bogotá: what customers see and what happens in the kitchen, connected.",
+    "highlights": [
+      "Catalog by category and order tracking for customers",
+      "Per-product recipes and production orders that deduct ingredients automatically",
+      "Raw-material inventory, customers and expense tracking",
+      "Sales terminal to take and confirm orders"
+    ]
+  }
+}

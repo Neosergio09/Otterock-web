@@ -1,0 +1,34 @@
+{
+  "name": "Cuarent4y2",
+  "url": "https://www.cuarent4y2.com.co",
+  "status": "production",
+  "order": 4,
+  "image": "../../assets/portfolio/cuarent4y2.jpg",
+  "emoji": "🧵",
+  "stack": [
+    "Astro",
+    "Supabase",
+    "Tailwind CSS v4",
+    "Vercel"
+  ],
+  "es": {
+    "type": "Plataforma multimarca",
+    "summary": "Portal que agrupa las divisiones de una empresa de manufactura, moda y merchandising, cada una con su propio espacio.",
+    "highlights": [
+      "Página sombrilla con acceso a .WORK, .MAKE, .SHOP y .SCHOOL",
+      "Tienda de moda con inventario que evita vender sin stock",
+      "Checkout conectado a WhatsApp",
+      "Base de datos con seguridad por roles (RLS)"
+    ]
+  },
+  "en": {
+    "type": "Multi-brand platform",
+    "summary": "A portal that brings together the divisions of a manufacturing, fashion and merchandising company, each with its own space.",
+    "highlights": [
+      "Umbrella page leading to .WORK, .MAKE, .SHOP and .SCHOOL",
+      "Fashion store with inventory that prevents overselling",
+      "Checkout connected to WhatsApp",
+      "Database secured with role-based access (RLS)"
+    ]
+  }
+}

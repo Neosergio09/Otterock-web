@@ -1,0 +1,29 @@
+{
+  "name": "Otterock Kiosk",
+  "status": "demo",
+  "order": 6,
+  "emoji": "👕",
+  "stack": [
+    "Astro",
+    "Supabase",
+    "GSAP"
+  ],
+  "es": {
+    "type": "Kiosco de personalización · Google Cloud Day 2026",
+    "summary": "Kiosco táctil para personalizar camisetas, hoodies y tote bags en eventos, con el pedido final enviado por WhatsApp.",
+    "highlights": [
+      "Modo tótem vertical para pantallas táctiles",
+      "Carga de diseños en alta resolución",
+      "Pedido listo para enviar por WhatsApp"
+    ]
+  },
+  "en": {
+    "type": "Customization kiosk · Google Cloud Day 2026",
+    "summary": "Touch kiosk to customize t-shirts, hoodies and tote bags at events, with the final order sent via WhatsApp.",
+    "highlights": [
+      "Vertical totem mode for touch screens",
+      "High-resolution design uploads",
+      "Order ready to send via WhatsApp"
+    ]
+  }
+}

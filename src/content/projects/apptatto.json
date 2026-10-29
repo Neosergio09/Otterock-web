@@ -1,0 +1,30 @@
+{
+  "name": "Apptatto · BarrientosINK",
+  "status": "demo",
+  "order": 5,
+  "emoji": "🖋️",
+  "stack": [
+    "Astro",
+    "Three.js",
+    "Supabase",
+    "n8n"
+  ],
+  "es": {
+    "type": "Plataforma para estudios de tatuaje",
+    "summary": "El cliente elige la zona del cuerpo en un maniquí 3D, describe su idea y sube una referencia; la consulta llega al panel del artista y a una automatización.",
+    "highlights": [
+      "Selector 3D de zona del cuerpo",
+      "Panel privado por artista (multi-estudio)",
+      "Notificación automática con n8n"
+    ]
+  },
+  "en": {
+    "type": "Platform for tattoo studios",
+    "summary": "Clients pick the body area on a 3D mannequin, describe their idea and upload a reference; the request reaches the artist's dashboard and an automation.",
+    "highlights": [
+      "3D body-area picker",
+      "Private dashboard per artist (multi-studio)",
+      "Automatic notification with n8n"
+    ]
+  }
+}

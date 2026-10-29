@@ -144,6 +144,11 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
           >{t("nav.services")}
         </a>
         <a
+          href={translatePath("/portafolio")}
+          class="hover:text-otter-accent transition"
+          >{t("nav.portfolio")}
+        </a>
+        <a
           href={translatePath("/legado")}
           class="hover:text-otter-accent transition"
           >{t("nav.legacy")}

@@ -1,0 +1,35 @@
+{
+  "name": "Capibara Pets",
+  "url": "https://www.capibarapets.com",
+  "status": "production",
+  "order": 1,
+  "image": "../../assets/portfolio/capibara-pets.jpg",
+  "emoji": "🐾",
+  "stack": [
+    "Astro 7",
+    "Supabase",
+    "Tailwind CSS v4",
+    "Wompi",
+    "Vercel"
+  ],
+  "es": {
+    "type": "E-commerce + POS veterinario",
+    "summary": "Sistema integral para una tienda y veterinaria: tienda en línea, punto de venta, inventario y registro de clientes y pacientes en una sola plataforma.",
+    "highlights": [
+      "Tienda en línea con pagos por Wompi (tarjeta y PSE)",
+      "Punto de venta e historial de ventas para el mostrador",
+      "Inventario, reportes de productos y registro de mascotas",
+      "Tres roles con acceso controlado: administrador, inventario y vendedor"
+    ]
+  },
+  "en": {
+    "type": "E-commerce + veterinary POS",
+    "summary": "An all-in-one system for a pet store and vet clinic: online store, point of sale, inventory and customer/patient records on a single platform.",
+    "highlights": [
+      "Online store with Wompi payments (cards and PSE)",
+      "Point of sale and sales history for the counter",
+      "Inventory, product reports and pet records",
+      "Three roles with controlled access: admin, inventory and sales"
+    ]
+  }
+}

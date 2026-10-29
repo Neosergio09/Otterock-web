@@ -1,0 +1,175 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import { useTranslatedPath } from "../i18n/utils";
+
+interface Props {
+  lang: "es" | "en";
+}
+
+const { lang } = Astro.props;
+const translatePath = useTranslatedPath(lang);
+
+const all = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+const production = all.filter((p) => p.data.status === "production");
+const demos = all.filter((p) => p.data.status === "demo");
+
+const t = {
+  es: {
+    eyebrow: "Portafolio",
+    title: "Proyectos que ya trabajan para sus dueños.",
+    intro:
+      "Tiendas, sistemas de gestión y automatizaciones construidos a medida para negocios reales en Colombia. Sin plantillas: cada uno resuelve un problema distinto.",
+    live: "En producción",
+    liveIntro: "Sitios y sistemas que hoy reciben clientes, pedidos y pagos.",
+    demos: "Proyectos y demos",
+    demosIntro: "Prototipos y herramientas internas que muestran de qué más somos capaces.",
+    visit: "Visitar sitio",
+    screenshot: "Captura de la página de inicio de",
+    ctaTitle: "¿Tu negocio es el siguiente?",
+    ctaText: "Cuéntanos qué necesitas y te proponemos la solución, con el mismo cuidado que ves aquí.",
+    cta: "Cotizar mi proyecto",
+  },
+  en: {
+    eyebrow: "Portfolio",
+    title: "Projects already working for their owners.",
+    intro:
+      "Online stores, management systems and automations custom-built for real businesses in Colombia. No templates: each one solves a different problem.",
+    live: "Live",
+    liveIntro: "Sites and systems that receive customers, orders and payments today.",
+    demos: "Projects & demos",
+    demosIntro: "Prototypes and internal tools that show what else we can build.",
+    visit: "Visit site",
+    screenshot: "Homepage screenshot of",
+    ctaTitle: "Is your business next?",
+    ctaText: "Tell us what you need and we'll propose a solution, with the same care you see here.",
+    cta: "Quote my project",
+  },
+}[lang];
+---
+
+<section class="max-w-6xl mx-auto py-20 px-6">
+  <header class="text-center max-w-3xl mx-auto mb-20">
+    <p class="text-amber-800 font-bold tracking-widest uppercase text-sm mb-4">
+      {t.eyebrow}
+    </p>
+    <h1 class="text-4xl md:text-6xl font-black text-otter-deep mb-6 font-display leading-tight">
+      {t.title}
+    </h1>
+    <p class="text-lg text-slate-600 font-body leading-relaxed">{t.intro}</p>
+  </header>
+
+  <h2 class="text-3xl font-bold text-otter-deep mb-2 font-display">{t.live}</h2>
+  <p class="text-slate-600 font-body mb-10">{t.liveIntro}</p>
+
+  <div class="space-y-12 mb-24">
+    {
+      production.map((project, index) => {
+        const text = project.data[lang];
+        return (
+          <article
+            class={`bg-white rounded-[2.5rem] overflow-hidden border border-otter-deep/10 shadow-sm flex flex-col ${
+              index % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
+            }`}
+          >
+            {project.data.image && (
+              <a
+                href={project.data.url}
+                target="_blank"
+                rel="noopener"
+                class="lg:w-1/2 block bg-otter-deep/5 group overflow-hidden"
+              >
+                <Image
+                  src={project.data.image}
+                  alt={`${t.screenshot} ${project.data.name}`}
+                  width={800}
+                  quality="mid"
+                  format="webp"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  class="w-full h-full object-cover object-left-top aspect-[16/10] group-hover:scale-[1.02] transition-transform duration-500"
+                />
+              </a>
+            )}
+            <div class="lg:w-1/2 p-8 md:p-12 flex flex-col">
+              <span class="self-start bg-otter-accent/10 text-otter-accent text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+                {text.type}
+              </span>
+              <h3 class="text-3xl font-black text-otter-deep font-display mb-4">
+                {project.data.name}
+              </h3>
+              <p class="text-slate-700 font-body leading-relaxed mb-6">{text.summary}</p>
+              <ul class="space-y-2 text-slate-600 font-body text-sm mb-8">
+                {text.highlights.map((item) => (
+                  <li class="flex gap-2">
+                    <span class="text-otter-accent font-bold">✔</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div class="flex flex-wrap gap-2 mb-8">
+                {project.data.stack.map((tech) => (
+                  <span class="text-xs font-bold text-otter-deep bg-otter-sand px-3 py-1 rounded-full">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              {project.data.url && (
+                <a
+                  href={project.data.url}
+                  target="_blank"
+                  rel="noopener"
+                  class="mt-auto self-start bg-otter-deep text-otter-sand px-6 py-3 rounded-full font-bold hover:bg-otter-accent transition-all"
+                >
+                  {t.visit} ↗
+                </a>
+              )}
+            </div>
+          </article>
+        );
+      })
+    }
+  </div>
+
+  <h2 class="text-3xl font-bold text-otter-deep mb-2 font-display">{t.demos}</h2>
+  <p class="text-slate-600 font-body mb-10">{t.demosIntro}</p>
+
+  <div class="grid md:grid-cols-3 gap-6 mb-24">
+    {
+      demos.map((project) => {
+        const text = project.data[lang];
+        return (
+          <article class="bg-white rounded-[2rem] p-8 border border-otter-deep/10 flex flex-col">
+            <div class="w-16 h-16 rounded-2xl bg-otter-deep/5 flex items-center justify-center text-3xl mb-6">
+              {project.data.emoji}
+            </div>
+            <span class="text-[10px] font-black uppercase tracking-widest text-amber-800 mb-2">
+              {text.type}
+            </span>
+            <h3 class="text-xl font-bold text-otter-deep font-display mb-3">
+              {project.data.name}
+            </h3>
+            <p class="text-slate-600 font-body text-sm leading-relaxed mb-6">{text.summary}</p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              {project.data.stack.map((tech) => (
+                <span class="text-[11px] font-bold text-otter-deep bg-otter-sand px-2.5 py-1 rounded-full">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </article>
+        );
+      })
+    }
+  </div>
+
+  <div class="bg-otter-deep text-white p-10 md:p-16 rounded-[3rem] text-center">
+    <h2 class="text-3xl md:text-4xl font-black font-display mb-4">{t.ctaTitle}</h2>
+    <p class="opacity-90 font-body mb-8 max-w-2xl mx-auto">{t.ctaText}</p>
+    <a
+      href={translatePath("/contacto")}
+      class="inline-block bg-otter-accent text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-otter-deep transition-all"
+    >
+      {t.cta}
+    </a>
+  </div>
+</section>

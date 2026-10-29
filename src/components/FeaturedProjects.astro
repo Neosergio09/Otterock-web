@@ -1,0 +1,82 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import { useTranslatedPath } from "../i18n/utils";
+
+interface Props {
+  lang: "es" | "en";
+}
+
+const { lang } = Astro.props;
+const translatePath = useTranslatedPath(lang);
+
+const projects = (await getCollection("projects", (p) => p.data.status === "production")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const t = {
+  es: {
+    title: "Proyectos en producción",
+    intro: "Negocios reales que ya venden, gestionan y atienden con lo que construimos.",
+    all: "Ver portafolio completo",
+    screenshot: "Captura de",
+  },
+  en: {
+    title: "Live projects",
+    intro: "Real businesses already selling, managing and serving customers with what we built.",
+    all: "See the full portfolio",
+    screenshot: "Screenshot of",
+  },
+}[lang];
+---
+
+<section class="py-20 px-6 max-w-6xl mx-auto">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-otter-deep mb-4 font-display">{t.title}</h2>
+    <p class="text-slate-600 font-body">{t.intro}</p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-6 mb-10">
+    {
+      projects.map((project) => (
+        <a
+          href={project.data.url}
+          target="_blank"
+          rel="noopener"
+          class="group block bg-white rounded-[2rem] overflow-hidden border border-otter-deep/10 hover:border-otter-accent/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all"
+        >
+          {project.data.image && (
+            <div class="overflow-hidden bg-otter-deep/5">
+              <Image
+                src={project.data.image}
+                alt={`${t.screenshot} ${project.data.name}`}
+                width={600}
+                quality="mid"
+                format="webp"
+                loading="lazy"
+                class="w-full aspect-[16/10] object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+              />
+            </div>
+          )}
+          <div class="p-6">
+            <span class="text-[10px] font-black uppercase tracking-widest text-amber-800">
+              {project.data[lang].type}
+            </span>
+            <h3 class="text-xl font-bold text-otter-deep font-display mt-1 group-hover:text-otter-accent transition-colors">
+              {project.data.name} ↗
+            </h3>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+
+  <div class="text-center">
+    <a
+      href={translatePath("/portafolio")}
+      class="inline-block border-2 border-otter-deep text-otter-deep px-8 py-3 rounded-full font-bold hover:bg-otter-deep hover:text-otter-sand transition-all"
+    >
+      {t.all} →
+    </a>
+  </div>
+</section>
