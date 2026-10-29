@@ -4,7 +4,7 @@ import { Font } from "astro:assets";
 import SEOSchema from "../components/SEOSchema.astro";
 import { getImage } from "astro:assets";
 import type { ImageMetadata } from "astro";
-// import SpeedInsights from "@vercel/speed-insights/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import LanguagePicker from "../components/LanguagePicker.astro";
 import {
   getLangFromUrl,
@@ -190,7 +190,7 @@ const enUrl = new URL(useTranslatedPath("en")(pathname), Astro.site);
       </div>
     </footer>
 
-    <!-- <SpeedInsights /> -->
+    <SpeedInsights />
     <MagicNavbar />
   </body>
 </html>
