@@ -8,8 +8,8 @@ import vercel from '@astrojs/vercel'; // <--- CAMBIO: Importación limpia sin /s
 export default defineConfig({
   site: 'https://otterock.tech',
 
-  // ACTIVAR EL MODO SERVIDOR
-  output: 'server',
+  // Estático por defecto; solo las rutas con `prerender = false` (la API) corren en servidor
+  output: 'static',
 
   trailingSlash: 'never',
 
